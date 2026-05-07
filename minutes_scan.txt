@@ -1,0 +1,67 @@
+L3: '    <!-- 状态横�?-->\n'
+L6: '      纪要已发布，等待会议端审签。发布后内容不可修改，如需修改请等待会议端驳回�?    </div>\n'
+L9: '      纪要审签中，等待会议端审签�?    </div>\n'
+L12: '      纪要已被会议端驳回，请修改后重新发布�?      <span v-if="rejectReason" style="margin-left:8px;color:#f56c6c">驳回原因：{{ rejectReason }}</span>\n'
+L16: '      所有人已完成审签，纪要签署流程已结束�?      <el-button\n'
+L23: '        前往问题记录审查 �?      </el-button>\n'
+L25: '    <!-- 上部：纰要编辑区 + 参考面�?-->\n'
+L35: "                <el-icon><InfoFilled /></el-icon>{{ showRefPanel ? '收起参�? : '展开参考资�? }}\n"
+L43: '              <!-- 编辑工具栏：�?draft / rejected 可操�?-->\n'
+L57: '                      <el-dropdown-item command="office">办公会纪�?/el-dropdown-item>\n'
+L109: '          <!-- 专家组长签署状�?-->\n'
+L112: "              {{ draftSigned ? '已签�? : '待签�? }}\n"
+L119: '            <el-tag type="success" size="large">�?专家组长已完成签�?/el-tag>\n'
+L126: '      <!-- 右侧参考面�?-->\n'
+L129: '          <span class="ref-panel-title">📋 参考资�?/span>\n'
+L139: '              <div class="ref-section-title">�?关键要点</div>\n'
+L146: "              生成�?{{ new Date(refData.generatedAt).toLocaleString('zh-CN', {hour12:false}) }}\n"
+L152: '              <p style="color:#5e8aad;margin:12px 0 6px;font-size:14px">暂无参考资�?/p>\n'
+L153: '              <p class="ref-empty-tip">在会议进行中生成摘要后，参考资料将自动显示在此�?/p>\n'
+L160: '    <!-- 签到管理（审签结束后�?-->\n'
+L171: '        <p class="checkin-mgmt-tip">对于签字不清晰的人员，可点击"回退"让其重新签到（退回后可通过会议端或此界面重新签名）；对于无设备人员，可直接点击"签到"代为签字�?/p>\n'
+L177: '          <el-table-column label="状�? width="100" align="center">\n'
+L179: '              <el-tag :type="row.checked_in ? \'success\' : \'info\'" size="small">{{ row.checked_in ? \'已签�? : \'未签�? }}</el-tag>\n'
+L198: '    <!-- 代签到弹�?-->\n'
+L199: '    <el-dialog v-model="offlineSignVisible" :title="`签到�?{offlineSignTarget?.real_name || \'\'}`" width="580px" destroy-on-close>\n'
+L200: '      <p style="text-align:center;margin:0 0 12px;color:#606266">�?<strong>{{ offlineSignTarget?.real_name }}</strong> 在下方手写签�?/p>\n'
+L226: '      :title="`签到（放大）�?{offlineSignTarget?.real_name || \'\'}`"\n'
+L248: '        <el-button type="primary" @click="confirmOfflineExpand">使用此签�?/el-button>\n'
+L256: '        <el-table-column prop="editor" label="编辑�? width="100" />\n'
+L283: "// 会议状�?const meetingStatus = ref('')\n"
+L328: "    ElMessage.error(e?.response?.data?.detail || '退回失�?)\n"
+L526: "      ElMessageBox.confirm('确认结束本次会议�?, '结束会议', {\n"
+L538: "    ElMessage.success('会议已结�?)\n"
+L570: "    ElMessage.success('已强制结束审签，纪要签署流程已完�?)\n"
+L578: '// 编辑�?const editorToolbarRef = ref(null)\n'
+L584: "// 纪要状�?const minutesStatus = ref('none') // none | draft | published | rejected | signed\n"
+L588: "  const map = { draft: '草稿', published: '已发�?, rejected: '已驳�?, signed: '已签�?, reviewing: '审签�?, none: '未创�? }\n"
+L592: '// 审签状�?const loadingStatus = ref(false)\n'
+L593: "const draftSignature = ref(null)    // sign_step='draft' 的记�?const reviewSignatures = ref([])    // sign_step='review' 的所有记�?const totalParticipants = ref(0)\n"
+L611: '// 参考面�?const showRefPanel = ref(false)\n'
+L647: '  // 发布/审签中状态自动轮询签署进�?  startSignPoll()\n'
+L648: "  // 若已完成签署，加载签到管理数�?  if (minutesStatus.value === 'signed') {\n"
+L697: "        editorContainerRef.value.innerHTML = '<h1>会议纪要</h1><h2>一、会议概�?/h2><p><strong>时间�?/strong>待填�?/p><p><strong>地点�?/strong>待填�?/p><p><strong>参会人员�?/strong>待填�?/p><h2>二、议题讨论记�?/h2><p>请点击上�?<b>AI 生成纪要</b> 按钮，AI 将自动生成完整纪要。也可直接在此手动编写�?/p><h2>三、决策结�?/h2><ol><li>待填�?/li></ol><h2>四、待办事�?/h2><p>待填�?/p>'\n"
+L700: "    // 载入纪要状�?    minutesStatus.value = data?.status || 'none'\n"
+L703: '    // 载入签名状�?    const sigs = data?.signatures || []\n'
+L706: '    // 从后端取与会人数（可选，为了判断"全部已签"�?    if (data?.participant_count != null) {\n'
+L709: '    // 控制编辑器只�?    if (editorContainerRef.value) {\n'
+L719: "      editorContainerRef.value.innerHTML = '<p>纪要加载失败，请刷新页面�?/p>'\n"
+L727: "  general: '<h1>会议纪要</h1><h2>一、会议概�?/h2><p><strong>会议时间�?/strong>待填�?nbsp;&nbsp;<strong>会议地点�?/strong>待填�?/p><p><strong>主持人：</strong>待填�?nbsp;&nbsp;<strong>记录人：</strong>待填�?/p><p><strong>参会人员�?/strong>待填�?/p><h2>二、会议内�?/h2><h3>1. 议题研讨</h3><p>待填�?/p><h3>2. 主要意见</h3><p>待填�?/p><h2>三、会议决�?/h2><ol><li>待填�?/li></ol><h2>四、待办事�?/h2><table><thead><tr><th>事项</th><th>责任�?/th><th>完成时限</th></tr></thead><tbody><tr><td>待填�?/td><td>待填�?/td><td>待填�?/td></tr></tbody></table>',\n"
+L728: "  review: '<h1>评审会议纪要</h1><h2>一、会议概�?/h2><p><strong>会议时间�?/strong>待填�?nbsp;&nbsp;<strong>地点�?/strong>待填�?/p><p><strong>主持人：</strong>待填�?nbsp;&nbsp;<strong>记录人：</strong>待填�?/p><p><strong>参会专家及代表：</strong>待填�?/p><h2>二、评审项目概�?/h2><p>待填写（项目名称、基本情况、评审目的）</p><h2>三、主要审查意�?/h2><ol><li>待填�?/li></ol><h2>四、尚列问题清�?/h2><ol><li>待填�?/li></ol><h2>五、专家评审结�?/h2><p>待填�?/p><h2>六、评审愿�?/h2><p>待填�?/p>',\n"
+L729: "  special: '<h1>专题研讨会纪�?/h1><h2>一、会议概�?/h2><p><strong>时间�?/strong>待填�?nbsp;&nbsp;<strong>地点�?/strong>待填�?/p><p><strong>主议题：</strong>待填�?/p><p><strong>主持人：</strong>待填�?nbsp;&nbsp;<strong>记录人：</strong>待填�?/p><h2>二、情况通报</h2><p>待填�?/p><h2>三、主要讨论意�?/h2><h3>支持意见</h3><p>待填�?/p><h3>待商榷事�?/h3><p>待填�?/p><h2>四、研讨结论与下一步工�?/h2><ol><li>待填�?/li></ol>',\n"
+L730: "  office: '<h1>办公会纪�?/h1><h2>一、基本信�?/h2><p><strong>会议时间�?/strong>待填�?nbsp;&nbsp;<strong>会议地点�?/strong>待填�?/p><p><strong>主持人：</strong>待填�?nbsp;&nbsp;<strong>记录人：</strong>待填�?/p><p><strong>参会人：</strong>待填�?/p><h2>二、据办事�?/h2><h3>1. 研讨</h3><p>待填�?/p><h3>2. �?/h3><p>待填�?/p><h3>3. 决议</h3><p>待填�?/p><h2>三、其他事�?/h2><p>待填�?/p><h2>四、散�?/h2><p>会议于待填写散会�?/p>',\n"
+L740: "      await ElMessageBox.confirm('应用模板将覆盖当前编辑内容，确认继续�?, '选择模板', { type: 'warning', confirmButtonText: '确定', cancelButtonText: '取消' })\n"
+L764: '  // 仅在已发�?审签中时轮询（等待会议端签署或驳回）\n'
+L778: "      // 如果已签署完成或被驳回，停止轮询并更新编辑器状�?      if (newStatus === 'signed' || newStatus === 'rejected') {\n"
+L811: "  if (!content || content.includes('纪要内容加载�?) || content.includes('纪要加载失败')) {\n"
+L824: "    ElMessage.success('纪要已发布，等待会议端审�?)\n"
+L825: '    // 初始化签名画�?    setTimeout(() => initCanvas(), 100)\n'
+L837: "  if (!content || content === '<p>纪要内容加载�?..</p>') {\n"
+L842: '  // 如果有选中文本，只润色选中部分，否则润色全�?  const selection = window.getSelection()\n'
+L866: "    ElMessage.error('AI 润色失败，请检查网络连�?)\n"
+L878: "    ElMessage.warning('当前浏览器不支持语音播报功能，请使用 Chrome �?Edge')\n"
+L890: "    ElMessage.warning('纪要内容为空，无法播�?)\n"
+L894: '  // 分段处理（SpeechSynthesis 对长文本可能截断�?  const chunks = []\n'
+L902: "    let splitIdx = remaining.lastIndexOf('�?, maxLen)\n"
+L903: "    if (splitIdx < 0) splitIdx = remaining.lastIndexOf('�?, maxLen)\n"
+L991: "    ElMessage.success('拟稿签署成功�?)\n"

@@ -1,0 +1,29 @@
+# LLM API 配置（默认 provider）
+LLM_API_KEY=sk-9GuNxTmB5eU9QV1N2bV9Slt93svFmFj4fDHEMEV5i9JQlrlg
+LLM_API_BASE_URL=https://www.yxaiapp.com
+LLM_MODEL_NAME=anthropic/claude-opus-4
+# 可选模型列表（逗号分隔）
+LLM_AVAILABLE_MODELS=anthropic/claude-opus-4,anthropic/claude-3.5-haiku,anthropic/claude-3.7-sonnet,anthropic/claude-opus-4.1,anthropic/claude-sonnet-4,anthropic/claude-sonnet-4.5,anthropic/claude-haiku-4.5,anthropic/claude-opus-4.5,anthropic/claude-opus-4.6,anthropic/claude-sonnet-4.6,openai/gpt-5,google/gemini-2.5-flash-lite,google/gemini-2.5-flash,google/gemini-2.5-pro,google/gemini-3-pro-preview,google/gemini-3-flash-preview,google/gemini-3.1-pro-preview,google/gemini-3.1-flash-lite-preview,minimax/minimax-m2,minimax/minimax-m2.1,minimax/minimax-m2.5-lightning,minimax/minimax-m2.5,deepseek/deepseek-chat,deepseek/deepseek-v3.2-exp,deepseek/deepseek-v3.2
+
+# ★ DeepSeek API 配置
+DEEPSEEK_API_KEY=sk-8a15df628a69470db74cc62bb22ed074
+DEEPSEEK_API_BASE_URL=https://api.deepseek.com
+
+# 模型→Provider 映射（JSON 格式，key=模型名, value=provider名）
+# 未在此映射中的模型默认使用 LLM_API_KEY / LLM_API_BASE_URL
+MODEL_PROVIDER_MAP={}
+
+# 搜索 API 配置（Phase 23）
+TAVILY_API_KEY=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
+SERPER_API_KEY=a3d9b4407ec1d54c8085a1cfa947871082d4ffc2
+
+# ★ Phase 38: 图片搜索引擎配置
+# IMAGE_SEARCH_ENGINE: 选择图片搜索引擎 - "serper" (Google Images API) 或 "searxng" (本地部署)
+IMAGE_SEARCH_ENGINE=serper
+# SEARXNG_BASE_URL: SearXNG 服务地址（当 IMAGE_SEARCH_ENGINE=searxng 时使用）
+SEARXNG_BASE_URL=http://localhost:8888
+
+# 服务配置
+HOST=0.0.0.0
+PORT=8000
+CORS_ORIGINS=["http://localhost:5173","http://localhost:3000"]

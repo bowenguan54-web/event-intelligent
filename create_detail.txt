@@ -1,0 +1,63 @@
+
+L423:
+'        <!-- ==================== Tab 3: 会议材料 & 签到表 ==================== --> -->\n'
+
+L524:
+'                        <el-button size="small" :disabled="idx === 0" @click="moveExpertRowUp(idx)">上</el-button>\n'
+
+L525:
+'                        <el-button size="small" :disabled="idx === checkinExpertRows.length - 1" @click="moveExpertRowDown(idx)">下</el-button>\n'
+
+L526:
+'                        <el-button size="small" type="danger" plain @click="removeExpertRow(idx)">删</el-button>\n'
+
+L681:
+'                    <span class="quick-icon">🤖</span>自动生成议程\n'
+
+L683:
+'                  <button class="quick-btn" @click="quickSend(\'请生成包含开场致辞、工作汇报、讨论环节、总结的详细议�?)">\n'
+  FFFD at pos 89: '论环节、总结的详细议�?)">'
+
+L687:
+'                    <span class="quick-icon">�?/span>简洁议�?                  </button>\n'
+  FFFD at pos 45: 'ick-icon">�?/sp'
+  FFFD at pos 56: '?/span>简洁议�?   '
+
+L699:
+'                      <span v-if="msg.role === \'assistant\' && generating.agenda && i === chatMessages.length - 1 && msg.content" class="typing-dot">•</span>\n'
+
+L744:
+'                  <el-tag v-else-if="agendaContent" type="success" size="small" effect="plain" round style="margin-left:8px">✅ 已生成</el-tag>\n'
+
+L827:
+'              <div class="s-row"><span class="s-label">议程</span><span class="s-value" :class="{ \'s-highlight\': agendaContent }">{{ agendaContent ? \'✅ 已生成\' : \'未生成\' }}</span></div>\n'
+
+L1083:
+'  // 优先从 form.location 匹配，找不到则回退到第一个可用布局\n'
+
+L1398:
+'        message: `${user.real_name} 在 ${extConflict.timeRange} 有「${extConflict.task}」，与本次会议时间冲突，无法添加。`,\n'
+
+L1431:
+'        message: `已选人员 ${u.real_name} 在 ${info.timeRange} 有「${info.task}」，与变更后的会议时间冲突，已自动移除。`,\n'
+
+L1575:
+'3. 议程条目：用中文序号（一、二、三...），格式：序号、时间段、内容（负责人：XXX）\n'
+
+L1579:
+'- 时间安排要合理，开场5分钟、每个议程5-30分钟、最后留10分钟总结\n'
+
+L1619:
+'会议名称：${form.title}\n'
+
+L1714:
+"    review: '# 评审会议议程\\n\\n一、会议开始，宣读会议纪律（5分钟）\\n二、项目情况介绍（15分钟）\\n三、专家提问与讨论（30分钟）\\n四、形成评审意见（20分钟）\\n五、宣读评审结论（5分钟）\\n六、散会',\n"
+
+L1757:
+'      html += `<p style="font-size:14px;line-height:2.2;margin:1px 0;color:#303133;"><span style="color:#606266;min-width:70px;display:inline-block;">${label}：</span>${value}</p>`\n'
+
+L1934:
+'  let html = `<h3 style="text-align:center;margin-bottom:16px">${form.title || \'会议\'} - 签到表</h3>\n'
+
+L1986:
+"<title>${form.title || '会议'} - 签到表</title>\n"

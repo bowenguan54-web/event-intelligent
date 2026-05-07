@@ -1,0 +1,1 @@
+import{bb as o}from"./index-Uhjd68P1.js";function u(){return o.get("/api/room/list")}function e(t,r){return o.put(`/api/room/${t}`,r)}function a(){return o.get("/api/room/public/all")}export{u as a,a as g,e as u};

@@ -1,0 +1,520 @@
+=== MeetingLive.vue: 0 corruptions ===
+
+
+=== MeetingMinutes.vue: 157 corruptions ===
+  Prefix e5 86 → U+5180-U+51BF: 45 times
+  Prefix ef bc → U+FF00-U+FF3F: 21 times
+  Prefix e3 80 → U+3000-U+303F: 9 times
+  Prefix e6 80 → U+6000-U+603F: 8 times
+  Prefix e6 96 → U+6580-U+65BF: 5 times
+  Prefix e8 a6 → U+8980-U+89BF: 5 times
+  Prefix e9 a1 → U+9840-U+987F: 5 times
+  Prefix e6 9d → U+6740-U+677F: 4 times
+  Prefix e7 bd → U+7F40-U+7F7F: 4 times
+  Prefix e4 ba → U+4E80-U+4EBF: 3 times
+  Prefix e8 af → U+8BC0-U+8BFF: 3 times
+  Prefix e5 b8 → U+5E00-U+5E3F: 3 times
+  Prefix e4 b8 → U+4E00-U+4E3F: 3 times
+  Prefix e5 bd → U+5F40-U+5F7F: 3 times
+  Prefix e4 bd → U+4F40-U+4F7F: 2 times
+  Prefix e5 88 → U+5200-U+523F: 2 times
+  Prefix e5 90 → U+5400-U+543F: 2 times
+  Prefix e6 88 → U+6200-U+623F: 2 times
+  Prefix e8 ae → U+8B80-U+8BBF: 2 times
+  Prefix e7 ad → U+7B40-U+7B7F: 2 times
+  Prefix e8 a7 → U+89C0-U+89FF: 2 times
+  Prefix e5 b9 → U+5E40-U+5E7F: 1 times
+  Prefix e2 86 → U+2180-U+21BF: 1 times
+  Prefix e8 80 → U+8000-U+803F: 1 times
+  Prefix e4 bb → U+4EC0-U+4EFF: 1 times
+  Prefix e2 9c → U+2700-U+273F: 1 times
+  Prefix e2 ad → U+2B40-U+2B7F: 1 times
+  Prefix e5 a4 → U+5900-U+593F: 1 times
+  Prefix e7 aa → U+7A80-U+7ABF: 1 times
+  Prefix e8 b4 → U+8D00-U+8D3F: 1 times
+  Prefix e5 99 → U+5640-U+567F: 1 times
+  Prefix e5 9b → U+56C0-U+56FF: 1 times
+  Prefix e5 bb → U+5EC0-U+5EFF: 1 times
+  Prefix e5 ba → U+5E80-U+5EBF: 1 times
+  Prefix e6 8d → U+6340-U+637F: 1 times
+  Prefix e5 ae → U+5B80-U+5BBF: 1 times
+  Prefix e8 bf → U+8FC0-U+8FFF: 1 times
+  Prefix e5 8d → U+5340-U+537F: 1 times
+  Prefix e6 99 → U+6640-U+667F: 1 times
+  Prefix e6 81 → U+6040-U+607F: 1 times
+  Prefix e4 bc → U+4F00-U+4F3F: 1 times
+  Prefix e6 8e → U+6380-U+63BF: 1 times
+  Prefix e6 8a → U+6280-U+62BF: 1 times
+
+  [e5 b9 3f] pos=73 after=2d 2d 3e 0a 20
+    ctx: 'utes-page">\n    <!-- 状态横�?-->\n    <div v-if="minutesStatus === '
+  [e3 80 3f] pos=312 after=20 20 20 20 3c
+    ctx: '修改请等待会议端驳回�?    </div>\n    <div v-else-if="minute'
+  [e3 80 3f] pos=494 after=20 20 20 20 3c
+    ctx: '签中，等待会议端审签�?    </div>\n    <div v-else-if="minute'
+  [e3 80 3f] pos=687 after=20 20 20 20 20
+    ctx: '回，请修改后重新发布�?      <span v-if="rejectReason" style'
+  [e2 86 3f] pos=1216 after=20 20 20 20 20
+    ctx: '     前往问题记录审查 �?      </el-button>\n    </div>\n    <!-'
+  [e6 9d 3f] pos=1294 after=2d 2d 3e 0a 20
+    ctx: '：纰要编辑区 + 参考面�?-->\n    <div class="minutes-body-layo'
+  [e8 80 3f] pos=1871 after=20 3a 20 27 e5
+    ctx: "n>{{ showRefPanel ? '收起参�? : '展开参考资�? }}\n           "
+  [e6 96 3f] pos=1893 after=20 7d 7d 0a 20
+    ctx: "��起参�? : '展开参考资�? }}\n              </el-button>\n      "
+  [e4 bb 3f] pos=2300 after=64 72 61 66 74
+    ctx: '       <!-- 编辑工具栏：�?draft / rejected 可操�?-->\n       '
+  [e4 bd 3f] pos=2326 after=2d 2d 3e 0a 20
+    ctx: '�：�?draft / rejected 可操�?-->\n              <template v-if="isE'
+  [e8 a6 3f] pos=3231 after=2f 65 6c 2d 64
+    ctx: ' command="office">办公会纪�?/el-dropdown-item>\n                  '
+  [e6 80 3f] pos=5669 after=2d 2d 3e 0a 20
+    ctx: '    <!-- 专家组长签署状�?-->\n          <div class="sign-status'
+  [e7 bd 3f] pos=5830 after=20 3a 20 27 e5
+    ctx: "      {{ draftSigned ? '已签�? : '待签�? }}\n            </el-tag"
+  [e7 bd 3f] pos=5843 after=20 7d 7d 0a 20
+    ctx: "tSigned ? '已签�? : '待签�? }}\n            </el-tag>\n           "
+  [e2 9c 3f] pos=6187 after=e4 b8 93 e5 ae
+    ctx: 'g type="success" size="large">�?专家组长已完成签�?/el-tag>\n '
+  [e7 bd 3f] pos=6214 after=2f 65 6c 2d 74
+    ctx: 'e">�?专家组长已完成签�?/el-tag>\n          </div>\n        </d'
+  [e6 9d 3f] pos=6348 after=2d 2d 3e 0a 20
+    ctx: '->\n\n      <!-- 右侧参考面�?-->\n      <div v-if="showRefPanel" cl'
+  [e6 96 3f] pos=6506 after=2f 73 70 61 6e
+    ctx: 'ef-panel-title">📋 参考资�?/span>\n          <el-button link size'
+  [e2 ad 3f] pos=7083 after=e5 85 b3 e9 94
+    ctx: 'div class="ref-section-title">�?关键要点</div>\n              <div'
+  [e4 ba 3f] pos=7455 after=7b 7b 20 6e 65
+    ctx: 'ratedAt">\n              生成�?{{ new Date(refData.generatedAt).toLo'
+  [e6 96 3f] pos=7799 after=2f 70 3e 0a 20
+    ctx: 'ont-size:14px">暂无参考资�?/p>\n              <p class="ref-empty'
+  [e5 a4 3f] pos=7914 after=2f 70 3e 0a 20
+    ctx: '考资料将自动显示在此�?/p>\n            </div>\n          </te'
+  [ef bc 3f] pos=8070 after=2d 2d 3e 0a 20
+    ctx: '签到管理（审签结束后�?-->\n    <div v-if="minutesStatus === '
+  [e6 80 3f] pos=9185 after=20 77 69 64 74
+    ctx: '   <el-table-column label="状�? width="100" align="center">\n        '
+  [e5 88 3f] pos=9365 after=20 3a 20 27 e6
+    ctx: 'l">{{ row.checked_in ? \'已签�? : \'未签�? }}</el-tag>\n           '
+  [e5 88 3f] pos=9378 after=20 7d 7d 3c 2f
+    ctx: "cked_in ? '已签�? : '未签�? }}</el-tag>\n            </template>\n"
+  [e7 aa 3f] pos=10356 after=2d 2d 3e 0a 20
+    ctx: ' </div>\n\n    <!-- 代签到弹�?-->\n    <el-dialog v-model="offlineSi'
+  [ef bc 3f] pos=10422 after=7b 6f 66 66 6c
+    ctx: 'neSignVisible" :title="`签到�?{offlineSignTarget?.real_name || \'\'}`'
+  [e8 af 3f] pos=10561 after=3c 73 74 72 6f
+    ctx: 'argin:0 0 12px;color:#606266">�?<strong>{{ offlineSignTarget?.real_na'
+  [e5 90 3f] pos=10634 after=2f 70 3e 0a 20
+    ctx: '}}</strong> 在下方手写签�?/p>\n      <div style="display:flex;al'
+  [ef bc 3f] pos=11756 after=7b 6f 66 66 6c
+    ctx: '   :title="`签到（放大）�?{offlineSignTarget?.real_name || \'\'}`'
+  [e5 90 3f] pos=12735 after=2f 65 6c 2d 62
+    ctx: 'irmOfflineExpand">使用此签�?/el-button>\n      </template>\n    </e'
+  [e4 ba 3f] pos=13056 after=20 77 69 64 74
+    ctx: 'mn prop="editor" label="编辑�? width="100" />\n        <el-table-col'
+  [e6 80 3f] pos=14068 after=63 6f 6e 73 74
+    ctx: " route.params.id\n\n// 会议状�?const meetingStatus = ref('')\nconst e"
+  [e8 b4 3f] pos=15653 after=29 0a 20 20 7d
+    ctx: "se?.data?.detail || '退回失�?)\n  } finally {\n    rollbackLoading.v"
+  [e6 9d 3f] pos=22290 after=29 0a 20 20 7d
+    ctx: "lMessage.success('会议已结�?)\n  } catch (e) {\n    ElMessage.error"
+  [e6 88 3f] pos=23330 after=29 0a 20 20 7d
+    ctx: '签，纪要签署流程已完�?)\n  } catch (e) {\n    ElMessage.error'
+  [e5 99 3f] pos=23492 after=63 6f 6e 73 74
+    ctx: 'value = false\n  }\n}\n\n// 编辑�?const editorToolbarRef = ref(null)\nco'
+  [e5 b8 3f] pos=23970 after=2c 20 72 65 6a
+    ctx: ": '草稿', published: '已发�?, rejected: '已驳�?, signed: '已�"
+  [e5 9b 3f] pos=23992 after=2c 20 73 69 67
+    ctx: " '已发�?, rejected: '已驳�?, signed: '已签�?, reviewing: '审"
+  [e4 b8 3f] pos=24035 after=2c 20 6e 6f 6e
+    ctx: "'已签�?, reviewing: '审签�?, none: '未创�? }\n  return map[min"
+  [e5 bb 3f] pos=24053 after=20 7d 0a 20 20
+    ctx: "ing: '审签�?, none: '未创�? }\n  return map[minutesStatus.value] "
+  [e5 bd 3f] pos=24231 after=63 6f 6e 73 74
+    ctx: "   // sign_step='draft' 的记�?const reviewSignatures = ref([])    /"
+  [e5 bd 3f] pos=24304 after=63 6f 6e 73 74
+    ctx: "ign_step='review' 的所有记�?const totalParticipants = ref(0)\n\ncon"
+  [e5 ba 3f] pos=25811 after=20 20 73 74 61
+    ctx: '中状态自动轮询签署进�?  startSignPoll()\n  // 若已完成�'
+  [e6 8d 3f] pos=25879 after=20 20 69 66 20
+    ctx: "签署，加载签到管理数�?  if (minutesStatus.value === 'signed"
+  [e8 a6 3f] pos=27316 after=2f 68 32 3e 3c
+    ctx: '纪要</h1><h2>一、会议概�?/h2><p><strong>时间�?/strong>待�'
+  [e5 86 3f] pos=27357 after=2f 70 3e 3c 70
+    ctx: 'strong>时间�?/strong>待填�?/p><p><strong>地点�?/strong>待填'
+  [e5 86 3f] pos=27397 after=2f 70 3e 3c 70
+    ctx: 'strong>地点�?/strong>待填�?/p><p><strong>参会人员�?/strong>'
+  [e5 86 3f] pos=27443 after=2f 70 3e 3c 68
+    ctx: '>参会人员�?/strong>待填�?/p><h2>二、议题讨论记�?/h2><p'
+  [e5 bd 3f] pos=27474 after=2f 68 32 3e 3c
+    ctx: '�?/p><h2>二、议题讨论记�?/h2><p>请点击上�?<b>AI 生成纪'
+  [e8 ae 3f] pos=27619 after=2f 68 32 3e 3c
+    ctx: '��写�?/p><h2>三、决策结�?/h2><ol><li>待填�?/li></ol><h2>四'
+  [e9 a1 3f] pos=27671 after=2f 68 32 3e 3c
+    ctx: "�?/li></ol><h2>四、待办事�?/h2><p>待填�?/p>'\n      }\n    }\n  "
+  [e8 af 3f] pos=28306 after=20 20 20 20 69
+    ctx: '   }\n    // 控制编辑器只�?    if (editorContainerRef.value) {\n '
+  [e8 a6 3f] pos=28995 after=2f 68 32 3e 3c
+    ctx: '纪要</h1><h2>一、会议概�?/h2><p><strong>会议时间�?/strong'
+  [e5 ae 3f] pos=29257 after=2f 68 32 3e 3c
+    ctx: '��填�?/p><h2>二、会议内�?/h2><h3>1. 议题研讨</h3><p>待填'
+  [e7 ad 3f] pos=29361 after=2f 68 32 3e 3c
+    ctx: '��填�?/p><h2>三、会议决�?/h2><ol><li>待填�?/li></ol><h2>四'
+  [e9 a1 3f] pos=29413 after=2f 68 32 3e 3c
+    ctx: '�?/li></ol><h2>四、待办事�?/h2><table><thead><tr><th>事项</th>'
+  [e4 ba 3f] pos=29463 after=2f 74 68 3e 3c
+    ctx: '><tr><th>事项</th><th>责任�?/th><th>完成时限</th></tr></thead'
+  [e8 bf 3f] pos=29919 after=2f 68 32 3e 3c
+    ctx: '�?/p><h2>二、评审项目概�?/h2><p>待填写（项目名称、基'
+  [e8 a7 3f] pos=30015 after=2f 68 32 3e 3c
+    ctx: '�</p><h2>三、主要审查意�?/h2><ol><li>待填�?/li></ol><h2>四'
+  [e5 8d 3f] pos=30073 after=2f 68 32 3e 3c
+    ctx: '</ol><h2>四、尚列问题清�?/h2><ol><li>待填�?/li></ol><h2>五'
+  [e8 ae 3f] pos=30131 after=2f 68 32 3e 3c
+    ctx: '</ol><h2>五、专家评审结�?/h2><p>待填�?/p><h2>六、评审�'
+  [e6 99 3f] pos=30172 after=2f 68 32 3e 3c
+    ctx: "��填�?/p><h2>六、评审愿�?/h2><p>待填�?/p>',\n  special: '<h1"
+  [e8 a7 3f] pos=30553 after=2f 68 32 3e 3c
+    ctx: '�?/p><h2>三、主要讨论意�?/h2><h3>支持意见</h3><p>待填�?'
+  [e9 a1 3f] pos=30612 after=2f 68 33 3e 3c
+    ctx: 'p>待填�?/p><h3>待商榷事�?/h3><p>待填�?/p><h2>四、研讨�'
+  [e4 bd 3f] pos=30671 after=2f 68 32 3e 3c
+    ctx: "、研讨结论与下一步工�?/h2><ol><li>待填�?/li></ol>',\n  of"
+  [e6 81 3f] pos=30760 after=2f 68 32 3e 3c
+    ctx: '�纪�?/h1><h2>一、基本信�?/h2><p><strong>会议时间�?/strong'
+  [e8 af 3f] pos=31067 after=2f 68 33 3e 3c
+    ctx: '讨</h3><p>待填�?/p><h3>2. �?/h3><p>待填�?/p><h3>3. 决议</h3>'
+  [e4 bc 3f] pos=31176 after=2f 68 32 3e 3c
+    ctx: '2><p>待填�?/p><h2>四、散�?/h2><p>会议于待填写散会�?/p>'
+  [e5 b8 3f] pos=32436 after=e5 ae a1 e7 ad
+    ctx: 'gnPollTimer)\n  // 仅在已发�?审签中时轮询（等待会议端�'
+  [e4 b8 3f] pos=34267 after=29 20 7c 7c 20
+    ctx: "t.includes('纪要内容加载�?) || content.includes('纪要加载�"
+  [e7 ad 3f] pos=34720 after=29 0a 20 20 20
+    ctx: '已发布，等待会议端审�?)\n    // 初始化签名画�?    set'
+  [e5 b8 3f] pos=34750 after=20 20 20 20 73
+    ctx: '�?)\n    // 初始化签名画�?    setTimeout(() => initCanvas(), 10'
+  [e4 b8 3f] pos=35120 after=2e 2e 3c 2f 70
+    ctx: "ent === '<p>纪要内容加载�?..</p>') {\n    ElMessage.warning('请"
+  [e6 8e 3f] pos=36208 after=29 0a 20 20 7d
+    ctx: '色失败，请检查网络连�?)\n  } finally {\n    polishing.value ='
+  [e6 88 3f] pos=36507 after=45 64 67 65 27
+    ctx: "�报功能，请使用 Chrome �?Edge')\n    return\n  }\n\n  if (isSpeaki"
+  [e6 8a 3f] pos=36767 after=29 0a 20 20 20
+    ctx: '纪要内容为空，无法播�?)\n    return\n  }\n\n  // 分段处理�'
+
+=== MeetingCreate.vue: 0 corruptions ===
+
+
+=== MeetingArchiveTab.vue: 228 corruptions ===
+  Prefix e3 80 → U+3000-U+303F: 26 times
+  Prefix e2 95 → U+2540-U+257F: 22 times
+  Prefix e4 ba → U+4E80-U+4EBF: 18 times
+  Prefix e4 b8 → U+4E00-U+4E3F: 13 times
+  Prefix ef bc → U+FF00-U+FF3F: 10 times
+  Prefix e6 a1 → U+6840-U+687F: 9 times
+  Prefix e6 88 → U+6200-U+623F: 7 times
+  Prefix e5 9b → U+56C0-U+56FF: 7 times
+  Prefix e2 91 → U+2440-U+247F: 6 times
+  Prefix e5 86 → U+5180-U+51BF: 6 times
+  Prefix e8 ae → U+8B80-U+8BBF: 5 times
+  Prefix e6 9c → U+6700-U+673F: 5 times
+  Prefix e8 8a → U+8280-U+82BF: 5 times
+  Prefix e5 8a → U+5280-U+52BF: 4 times
+  Prefix e6 80 → U+6000-U+603F: 4 times
+  Prefix e7 a7 → U+79C0-U+79FF: 4 times
+  Prefix e5 bc → U+5F00-U+5F3F: 4 times
+  Prefix e5 a8 → U+5A00-U+5A3F: 4 times
+  Prefix e7 84 → U+7100-U+713F: 4 times
+  Prefix e2 80 → U+2000-U+203F: 3 times
+  Prefix e5 ae → U+5B80-U+5BBF: 3 times
+  Prefix e6 b5 → U+6D40-U+6D7F: 3 times
+  Prefix e4 bd → U+4F40-U+4F7F: 3 times
+  Prefix e8 8e → U+8380-U+83BF: 3 times
+  Prefix e7 90 → U+7400-U+743F: 3 times
+  Prefix e5 85 → U+5140-U+517F: 2 times
+  Prefix e7 ba → U+7E80-U+7EBF: 2 times
+  Prefix e6 94 → U+6500-U+653F: 2 times
+  Prefix e7 bd → U+7F40-U+7F7F: 2 times
+  Prefix e8 bf → U+8FC0-U+8FFF: 2 times
+  Prefix e9 ab → U+9AC0-U+9AFF: 2 times
+  Prefix e5 91 → U+5440-U+547F: 2 times
+  Prefix e8 be → U+8F80-U+8FBF: 2 times
+  Prefix e5 ad → U+5B40-U+5B7F: 2 times
+  Prefix e8 b0 → U+8C00-U+8C3F: 2 times
+  Prefix e5 8c → U+5300-U+533F: 1 times
+  Prefix e6 83 → U+60C0-U+60FF: 1 times
+  Prefix e5 a7 → U+59C0-U+59FF: 1 times
+  Prefix e5 a4 → U+5900-U+593F: 1 times
+  Prefix e4 bc → U+4F00-U+4F3F: 1 times
+  Prefix e6 9e → U+6780-U+67BF: 1 times
+  Prefix e2 9c → U+2700-U+273F: 1 times
+  Prefix e7 a8 → U+7A00-U+7A3F: 1 times
+  Prefix e7 8e → U+7380-U+73BF: 1 times
+  Prefix e7 ad → U+7B40-U+7B7F: 1 times
+  Prefix e5 af → U+5BC0-U+5BFF: 1 times
+  Prefix e6 ac → U+6B00-U+6B3F: 1 times
+  Prefix e5 8f → U+53C0-U+53FF: 1 times
+  Prefix e5 8d → U+5340-U+537F: 1 times
+  Prefix e6 a5 → U+6940-U+697F: 1 times
+  Prefix e5 b8 → U+5E00-U+5E3F: 1 times
+  Prefix e6 b3 → U+6CC0-U+6CFF: 1 times
+  Prefix e7 bb → U+7EC0-U+7EFF: 1 times
+  Prefix e5 b2 → U+5C80-U+5CBF: 1 times
+  Prefix e6 8d → U+6340-U+637F: 1 times
+  Prefix e6 96 → U+6580-U+65BF: 1 times
+  Prefix e9 99 → U+9640-U+967F: 1 times
+  Prefix e7 a9 → U+7A40-U+7A7F: 1 times
+  Prefix e6 9d → U+6740-U+677F: 1 times
+  Prefix e8 b4 → U+8D00-U+8D3F: 1 times
+  Prefix e5 ba → U+5E80-U+5EBF: 1 times
+  Prefix e5 bb → U+5EC0-U+5EFF: 1 times
+
+  [e5 8c 3f] pos=61 after=2d 2d 3e 0a 20
+    ctx: 'e-page">\n    <!-- 页面标题�?-->\n    <div class="page-header">\n   '
+  [e6 83 3f] pos=355 after=2d 2d 3e 0a 20
+    ctx: '-- 主体：左列表 + 右详�?-->\n    <div class="main-layout">\n\n  '
+  [e2 80 3f] pos=764 after=20 73 74 61 72
+    ctx: '="daterange" range-separator="�? start-placeholder="开�?\n          '
+  [e5 a7 3f] pos=790 after=0a 20 20 20 20
+    ctx: 'or="�? start-placeholder="开�?\n            end-placeholder="结束"'
+  [e5 85 3f] pos=973 after=3c 62 3e 7b 7b
+    ctx: '        <span class="ov-item">�?<b>{{ overview.total }}</b> 个归�?'
+  [e6 a1 3f] pos=1010 after=2f 73 70 61 6e
+    ctx: '{ overview.total }}</b> 个归�?/span>\n          <span class="ov-item'
+  [e4 ba 3f] pos=1998 after=2f 73 70 61 6e
+    ctx: 'le">{{ m.participants_count }}�?/span>\n              <div v-if="m.tod'
+  [e5 8a 3f] pos=2420 after=2f 73 70 61 6e
+    ctx: 'else class="mi-no-todo">无待�?/span>\n            </div>\n          <'
+  [e8 ae 3f] pos=3098 after=20 2f 3e 0a 20
+    ctx: '从左侧选择一个归档会�? />\n        </div>\n        <div v-els'
+  [e4 b8 3f] pos=3276 after=2e 2e 3c 2f 73
+    ctx: 'l-icon>\n          <span>加载�?..</span>\n        </div>\n\n        <te'
+  [e5 a4 3f] pos=3372 after=2d 2d 3e 0a 20
+    ctx: '">\n          <!-- 会议信息�?-->\n          <div class="detail-head'
+  [e6 9c 3f] pos=4461 after=28 2e 74 78 74
+    ctx: 'ment /></el-icon>导出 纯文�?(.txt)</el-dropdown-item>\n           '
+  [e2 80 3f] pos=4982 after=7b 7b 20 66 6d
+    ctx: 'tDate(fullData.start_time) }} �?{{ fmtTime(fullData.end_time) }}</spa'
+  [e4 bc 3f] pos=5277 after=2f 73 70 61 6e
+    ctx: 'a.participants.length }}人参�?/span></div>\n              <el-tag ty'
+  [e6 a1 3f] pos=5364 after=2f 65 6c 2d 74
+    ctx: '="small" effect="plain">已归�?/el-tag>\n            </div>\n         '
+  [e2 91 3f] pos=5522 after=e4 bc 9a e8 ae
+    ctx: 'tail-tabs">\n\n            <!-- �?会议摘要 -->\n            <el-tab-'
+  [e6 88 3f] pos=7922 after=2f 64 69 76 3e
+    ctx: '「AI 生成摘要」自动生�?/div>\n                  </template>\n '
+  [e2 91 3f] pos=8050 after=e4 bc 9a e8 ae
+    ctx: 'l-tab-pane>\n\n            <!-- �?会议记录（含音频转写�?-->\n'
+  [ef bc 3f] pos=8083 after=2d 2d 3e 0a 20
+    ctx: '会议记录（含音频转写�?-->\n            <el-tab-pane label="�'
+  [e6 9e 3f] pos=9514 after=20 20 20 20 20
+    ctx: '字内容即可修改转写结�?                    </div>\n          '
+  [ef bc 3f] pos=9939 after=2f 73 70 61 6e
+    ctx: '.speaker) }">{{ seg.speaker }}�?/span>\n                      <div cla'
+  [e2 91 3f] pos=10502 after=e5 be 85 e5 8a
+    ctx: 'l-tab-pane>\n\n            <!-- �?待办分发 -->\n            <el-tab-'
+  [e2 9c 3f] pos=10554 after=e5 be 85 e5 8a
+    ctx: '          <el-tab-pane label="�?待办分发" name="todos">\n         '
+  [e4 ba 3f] pos=11319 after=20 77 69 64 74
+    ctx: '="assignee_name" label="责任�? width="90" />\n                  <el-'
+  [e7 ba 3f] pos=11385 after=20 77 69 64 74
+    ctx: '<el-table-column label="优先�? width="80" align="center">\n         '
+  [e6 80 3f] pos=11716 after=20 77 69 64 74
+    ctx: '   <el-table-column label="状�? width="130" align="center">\n        '
+  [e6 94 3f] pos=11886 after=20 70 6c 61 63
+    ctx: '流程驱动，不可直接修�? placement="top">\n                   '
+  [e7 a8 3f] pos=12171 after=2f 64 69 76 3e
+    ctx: '="status-no-flow">未关联流�?/div>\n                    </template>'
+  [e7 bd 3f] pos=12409 after=20 7d 7d 3c 2f
+    ctx: ' }">{{ row.due_date || \'未设�? }}</template>\n                  </el'
+  [e6 88 3f] pos=14190 after=2f 73 70 61 6e
+    ctx: '><span class="ts-label">已完�?/span></div>\n                  <div c'
+  [e4 b8 3f] pos=14347 after=2f 73 70 61 6e
+    ctx: '><span class="ts-label">进行�?/span></div>\n                  <div c'
+  [e7 8e 3f] pos=14761 after=2f 73 70 61 6e
+    ctx: ' <span class="ts-label">完成�?/span>\n                  </div>\n     '
+  [e7 ad 3f] pos=16267 after=2d 2d 3e 0a 20
+    ctx: '          <!-- 校对状态标�?-->\n                    <div class="i'
+  [ef bc 3f] pos=16566 after=20 3a 20 27 e6
+    ctx: "roofread ? '已校对（锁定�? : '未校�? }}</el-tag>\n           "
+  [e5 af 3f] pos=16579 after=20 7d 7d 3c 2f
+    ctx: "��校对（锁定�? : '未校�? }}</el-tag>\n                    </di"
+  [e5 ae 3f] pos=17038 after=2f 65 6c 2d 62
+    ctx: 'hiveIssue(issue)">保存并锁�?/el-button>\n                        <'
+  [e6 ac 3f] pos=18059 after=2d 2d 3e 0a 20
+    ctx: '-- 未校对问题可修改一�?-->\n                          <el-but'
+  [e6 a1 3f] pos=18984 after=e2 94 80 e2 94
+    ctx: '- ─── 问题回复对话�?─── -->\n    <el-dialog v-model='
+  [e6 80 3f] pos=19375 after=3e 0a 20 20 20
+    ctx: '<el-form-item label="处理状�?>\n          <el-select v-model="issue'
+  [e5 86 3f] pos=19555 after=20 76 61 6c 75
+    ctx: 'el-option label="采纳-未解�? value="adopted_unresolved" />\n      '
+  [e5 86 3f] pos=19632 after=20 76 61 6c 75
+    ctx: 'el-option label="采纳-已解�? value="adopted_resolved" />\n        '
+  [e4 ba 3f] pos=21666 after=20 73 69 7a 65
+    ctx: '_id" placeholder="指定责任�? size="small" style="width:120px">\n  '
+  [e6 b5 3f] pos=22314 after=20 77 69 64 74
+    ctx: 'lowDialog" title="关联工作�? width="400px">\n      <el-form label-'
+  [e6 b5 3f] pos=22482 after=49 44 20 e6 88
+    ctx: ' placeholder="输入 OA 工作�?ID 或流程编�? />\n        </el-fo'
+  [e5 8f 3f] pos=22500 after=20 2f 3e 0a 20
+    ctx: '�� OA 工作�?ID 或流程编�? />\n        </el-form-item>\n      </e'
+  [e8 bf 3f] pos=23192 after=20 2f 3e 0a 20
+    ctx: 'lder="请输入待办事项描�? />\n        </el-form-item>\n        <'
+  [e7 ba 3f] pos=24014 after=3e 0a 20 20 20
+    ctx: '   <el-form-item label="优先�?>\n          <el-radio-group v-model="'
+  [e9 ab 3f] pos=24115 after=2f 65 6c 2d 72
+    ctx: '       <el-radio value="high">�?/el-radio>\n            <el-radio valu'
+  [e4 b8 3f] pos=24166 after=2f 65 6c 2d 72
+    ctx: '     <el-radio value="medium">�?/el-radio>\n            <el-radio valu'
+  [e4 bd 3f] pos=24214 after=2f 65 6c 2d 72
+    ctx: '        <el-radio value="low">�?/el-radio>\n          </el-radio-group'
+  [e2 95 3f] pos=25186 after=20 20 20 e7 a4
+    ctx: '══════════�?   示例数据\n   ══════'
+  [e2 95 3f] pos=25430 after=2a 2f 0a 0a 63
+    ctx: '══════════�?*/\n\nconst DEMO_PARTICIPANTS = [\n  { i'
+  [e5 9b 3f] pos=25497 after=2c 20 64 65 70
+    ctx: "{ id: 'd1', real_name: '王建�?, department: '局领导', role: '主"
+  [e5 8d 3f] pos=25579 after=2c 20 64 65 70
+    ctx: "{ id: 'd2', real_name: '李敏�?, department: '办公�?, role: '记�"
+  [e5 ae 3f] pos=25603 after=2c 20 72 6f 6c
+    ctx: "李敏�?, department: '办公�?, role: '记录�? },\n  { id: 'd3', r"
+  [e8 8a 3f] pos=25745 after=2c 20 64 65 70
+    ctx: "{ id: 'd4', real_name: '陈秀�?, department: '财务�?, role: '参�"
+  [e7 a7 3f] pos=25769 after=2c 20 72 6f 6c
+    ctx: "陈秀�?, department: '财务�?, role: '参会�? },\n  { id: 'd5', r"
+  [e5 bc 3f] pos=25826 after=2c 20 64 65 70
+    ctx: "{ id: 'd5', real_name: '刘志�?, department: '综合�?, role: '参�"
+  [e7 a7 3f] pos=25850 after=2c 20 72 6f 6c
+    ctx: "刘志�?, department: '综合�?, role: '参会�? },\n  { id: 'd6', r"
+  [e5 a8 3f] pos=25907 after=2c 20 64 65 70
+    ctx: "{ id: 'd6', real_name: '赵丽�?, department: '人事�?, role: '参�"
+  [e7 a7 3f] pos=25931 after=2c 20 72 6f 6c
+    ctx: "赵丽�?, department: '人事�?, role: '参会�? },\n  { id: 'd7', r"
+  [e7 84 3f] pos=25988 after=2c 20 64 65 70
+    ctx: "{ id: 'd7', real_name: '杨浩�?, department: '技术科', role: '参"
+  [e8 8e 3f] pos=26070 after=2c 20 64 65 70
+    ctx: "{ id: 'd8', real_name: '周婉�?, department: '行政�?, role: '参�"
+  [e6 a5 3f] pos=26291 after=e6 a5 bc e7 ac
+    ctx: "11:30:00',\n  location: '行政�?楼第一会议�?,\n  participants_co"
+  [e5 ae 3f] pos=26309 after=2c 0a 20 20 70
+    ctx: "ion: '行政�?楼第一会议�?,\n  participants_count: 8,\n  todo_tot"
+  [e5 85 3f] pos=26535 after=e4 ba ba e5 8f
+    ctx: '由王建国副局长主持，�?人参会，历时2.5小时�?\n会议'
+  [e3 80 3f] pos=26565 after=0a e4 bc 9a e8
+    ctx: '�?人参会，历时2.5小时�?\n会议首先听取了各科室2026�'
+  [e6 88 3f] pos=26750 after=35 25 ef bc 8c
+    ctx: '，目前核心模块开发完�?5%，预�?月中旬完成全部部�'
+  [e8 ae 3f] pos=26761 after=e6 9c 88 e4 b8
+    ctx: '�心模块开发完�?5%，预�?月中旬完成全部部署。财务�'
+  [e3 80 3f] pos=26920 after=0a e4 bc 9a e8
+    ctx: '项经费需加快支出进度�?\n会议重点讨论了第二季度五'
+  [e3 80 3f] pos=27119 after=0a e4 bc 9a e8
+    ctx: '及跨部门协作机制优化�?\n会议决定：各科室�?�?日前'
+  [e6 9c 3f] pos=27150 after=e6 97 a5 e5 89
+    ctx: '�?\n会议决定：各科室�?�?日前提交二季度详细工作计�'
+  [e6 9c 3f] pos=27285 after=30 e6 97 a5 e5
+    ctx: '训计划由人事科牵头�?�?0日前完成方案制定。`,\n\n  key'
+  [e5 8a 3f] pos=27688 after=e5 90 8d e8 bf
+    ctx: '等待正式发证。建议增�?名运维人员保障上线后系统�'
+  [e5 86 3f] pos=27800 after=2c 20 69 6d 70
+    ctx: "预算执行与资金使用情�?, importance: 'high',\n      content: "
+  [e5 b8 3f] pos=28400 after=e5 90 8d ef bc
+    ctx: '交流。计划邀请外部讲�?名，内部讲师4名，培训费用'
+  [e8 ae 3f] pos=28851 after=2c 20 69 6d 70
+    ctx: "跨部门协作机制优化建�?, importance: 'low',\n      content: '"
+  [e5 9b 3f] pos=29169 after=2c 20 74 65 78
+    ctx: ": 0, end: 28, speaker: '王建�?, text: '各位同事上午好，今�"
+  [e5 9b 3f] pos=30072 after=2c 20 74 65 78
+    ctx: "22, end: 140, speaker: '王建�?, text: '嗯，信息化建设进度�"
+  [e8 8a 3f] pos=30270 after=2c 20 74 65 78
+    ctx: "42, end: 198, speaker: '陈秀�?, text: '好的。一季度我们的�"
+  [e5 a8 3f] pos=30882 after=2c 20 74 65 78
+    ctx: "32, end: 290, speaker: '赵丽�?, text: '各位领导好。人事科�"
+  [e7 84 3f] pos=31293 after=2c 20 74 65 78
+    ctx: "92, end: 330, speaker: '杨浩�?, text: '我补充一下会议室改�"
+  [e5 bc 3f] pos=31632 after=2c 20 74 65 78
+    ctx: "32, end: 365, speaker: '刘志�?, text: '我提一个建议，关于�"
+  [e7 bd 3f] pos=32782 after=2c 20 61 73 73
+    ctx: "二期信息化系统全面部�?, assignee_name: '张伟�?, priority"
+  [e8 8a 3f] pos=32999 after=2c 20 70 72 69
+    ctx: "方�?, assignee_name: '陈秀�?, priority: 'high', status: 'complete"
+  [e5 a8 3f] pos=33205 after=2c 20 70 72 69
+    ctx: "��划', assignee_name: '赵丽�?, priority: 'medium', status: 'comple"
+  [e7 84 3f] pos=33422 after=2c 20 70 72 69
+    ctx: "��批', assignee_name: '杨浩�?, priority: 'medium', status: 'comple"
+  [e6 b3 3f] pos=33613 after=2c 20 61 73 73
+    ctx: "起草跨部门协作管理办�?, assignee_name: '刘志�?, priority"
+  [e5 bc 3f] pos=33640 after=2c 20 70 72 69
+    ctx: "办�?, assignee_name: '刘志�?, priority: 'medium', status: 'comple"
+  [e8 8e 3f] pos=33854 after=2c 20 70 72 69
+    ctx: "��批', assignee_name: '周婉�?, priority: 'low', status: 'overdue',"
+  [e7 bb 3f] pos=34649 after=2c 20 72 65 70
+    ctx: "��足，需增加2名专职运�?, reporter_name: '张伟�?, status: "
+  [e5 91 3f] pos=34751 after=e6 9c 3f e6 97
+    ctx: "��完成招聘，2名运维人�?�?日到�? },\n    { id: 'i3', conte"
+  [e5 b2 3f] pos=34763 after=20 7d 2c 0a 20
+    ctx: "��，2名运维人�?�?日到�? },\n    { id: 'i3', content: '会议�"
+  [e6 94 3f] pos=34850 after=2c 20 72 65 70
+    ctx: "进一步细化明确各项开�?, reporter_name: '杨浩�?, status: "
+  [e6 8d 3f] pos=34962 after=20 7d 2c 0a 20
+    ctx: '算表，各项开支均有依�? },\n  ],\n}\n\n/* ═══════�'
+  [e2 95 3f] pos=35202 after=20 20 20 e5 93
+    ctx: '══════════�?   响应式状�?   ═════�'
+  [e6 80 3f] pos=35220 after=20 20 20 e2 95
+    ctx: '════�?   响应式状�?   ═══════════�'
+  [e8 be 3f] pos=36595 after=63 6f 6e 73 74
+    ctx: "')\n// 会议记录关键点编�?const editingKpId = ref(null)\nconst k"
+  [e7 90 3f] pos=37686 after=2c 20 65 78 70
+    ctx: "\n  const map = { open: '待处�?, explained: '解释', adopted_unreso"
+  [e6 96 3f] pos=38987 after=29 0a 20 20 20
+    ctx: "\n    ElMessage.success('已更�?)\n    issueReplyDialog.value = false\n"
+  [e9 99 3f] pos=40085 after=29 0a 20 20 20
+    ctx: "lMessage.success('会议已删�?)\n    if (archiveList.value.length > "
+  [e7 a9 3f] pos=41404 after=20 20 7d 0a 20
+    ctx: '/ API 不可用，列表保持�?  }\n  // 始终将示例数据置顶�'
+  [e6 9d 3f] pos=41800 after=20 20 69 66 20
+    ctx: ' false\n  // 自动选中第一�?  if (!cur.value && archiveList.value'
+  [e5 ad 3f] pos=43567 after=29 0a 7d 0a 66
+    ctx: "lMessage.success('摘要已保�?)\n}\nfunction cancelEditSummary() {\n  "
+  [e8 be 3f] pos=43894 after=20 20 20 e2 95
+    ctx: '�?   会议记录关键点编�?   ═══════════�'
+  [e5 ad 3f] pos=44488 after=29 0a 7d 0a 66
+    ctx: "lMessage.success('记录已保�?)\n}\nfunction cancelEditKp() {\n  editi"
+  [e2 80 3f] pos=46532 after=24 7b 66 6d 74
+    ctx: 'e(fullData.value.start_time)} �?${fmtTime(fullData.value.end_time)}`,'
+  [e6 b5 3f] pos=49363 after=20 20 20 e2 95
+    ctx: '   待办 / AI 提取 / 工作�?   ═══════════�'
+  [e8 b4 3f] pos=49831 after=29 20 7d 0a 7d
+    ctx: "Message.error('状态更新失�?) }\n}\nfunction recalcStats() {\n  if ("
+  [e5 91 3f] pos=50614 after=2c 20 70 72 69
+    ctx: "��维保障招聘2名运维人�?, priority: 'high', due_days: 14, sug"
+  [e5 ba 3f] pos=50820 after=2c 20 70 72 69
+    ctx: "流程瓶颈，加快招标进�?, priority: 'high', due_days: 7, sugg"
+  [e8 b0 3f] pos=50958 after=2c 20 64 65 73
+    ctx: "会议室改造施工时间协�?, description: '与物业协�?月施"
+  [e8 b0 3f] pos=50989 after=e6 9c 88 e6 96
+    ctx: "�?, description: '与物业协�?月施工计划，确保不影响日�"
+  [e8 8e 3f] pos=51100 after=2c 20 5f 61 73
+    ctx: "0, suggested_assignee: '周婉�?, _assignee_id: 'd8' },\n      ]\n    }"
+  [e5 8a 3f] pos=53154 after=24 7b 74 6f 41
+    ctx: '\n    ElMessage.success(`已添�?${toAdd.length} 项待办事项`)\n   '
+  [e8 bf 3f] pos=55173 after=2c 20 74 72 69
+    ctx: ", message: '请输入事项描�?, trigger: 'blur' }],\n  assignee_id: "
+  [e5 bb 3f] pos=56638 after=29 0a 20 20 20
+    ctx: "ge.success('待办事项已创�?)\n    manualTodoDialog.value = false\n"
+  [e7 90 3f] pos=57774 after=2c 20 76 61 6c
+    ctx: "6c6c' } },\n    { name: '待处�?, value: Math.max(pending, 0), itemSt"
+  [e9 ab 3f] pos=59558 after=2c 20 6d 65 64
+    ctx: "nceLabel(v) { return { high: '�?, medium: '�?, low: '�? }[v] || v }"
+  [e4 bd 3f] pos=59583 after=20 7d 5b 76 5d
+    ctx: "gh: '�?, medium: '�?, low: '�? }[v] || v }\nfunction importanceType("
+  [e4 bd 3f] pos=59774 after=20 7d 5b 76 5d
+    ctx: "'高优', medium: '�?, low: '�? }[v] || v }\nfunction priorityType(v)"
+  [e7 90 3f] pos=59945 after=2c 20 69 6e 5f
+    ctx: "v) { return { pending: '待处�?, in_progress: '进行�?, completed:"
+
+=== MeetingTerminal.vue: 0 corruptions ===
+
+

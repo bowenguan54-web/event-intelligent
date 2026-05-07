@@ -1,0 +1,3535 @@
+{
+  "MeetingLive": [
+    {
+      "pos": 55,
+      "before": "late>\n  <div class=\"meeting-live\">\n    <!-- 左栏：会议信",
+      "after": "+ AI 问答 -->\n    <div class=\"panel-left\" :class=\""
+    },
+    {
+      "pos": 299,
+      "before": "g-info\">\n        <h3>{{ meetingInfo.title || '会议进行",
+      "after": " }}</h3>\n        <div class=\"info-row\"><el-icon>"
+    },
+    {
+      "pos": 1158,
+      "before": " size=\"small\">\n              {{ p.checked_in ? '已签",
+      "after": " : '未签�? }}\n            </el-tag>\n          </di"
+    },
+    {
+      "pos": 1166,
+      "before": "mall\">\n              {{ p.checked_in ? '已签�? : '未签",
+      "after": " }}\n            </el-tag>\n          </div>\n     "
+    },
+    {
+      "pos": 3424,
+      "before": "/el-icon>\n      </div>\n    </div>\n\n    <!-- 中栏：实时转",
+      "after": "-->\n    <div class=\"panel-center\">\n      <!-- 控制"
+    },
+    {
+      "pos": 3935,
+      "before": "停' : (recordingStatus === 'paused' ? '继续录音' : '开始录",
+      "after": ") }}\n            </el-button>\n            <el-bu"
+    },
+    {
+      "pos": 4431,
+      "before": "uration) }}\n          </span>\n\n          <!-- 禁忌词警",
+      "after": "-->\n          <el-badge v-if=\"sensitiveCount > 0"
+    },
+    {
+      "pos": 4667,
+      "before": "e\">\n              <el-icon><Warning /></el-icon>敏感",
+      "after": "            </el-button>\n          </el-badge>\n "
+    },
+    {
+      "pos": 5137,
+      "before": "ll\">\n            {{ meetingStore.wsConnected ? '已连",
+      "after": " : '未连�? }}\n          </el-tag>\n        </div>\n "
+    },
+    {
+      "pos": 5145,
+      "before": "         {{ meetingStore.wsConnected ? '已连�? : '未连",
+      "after": " }}\n          </el-tag>\n        </div>\n      </d"
+    },
+    {
+      "pos": 5224,
+      "before": "     </div>\n      </div>\n\n      <!-- 会议记录列表（逐字输出模式",
+      "after": "-->\n      <div class=\"transcript-list\" ref=\"tran"
+    },
+    {
+      "pos": 5345,
+      "before": "l=\"onTranscriptScroll\">\n        <!-- 已完成的行（可编辑、可标注",
+      "after": "-->\n        <div\n          v-for=\"line in simula"
+    },
+    {
+      "pos": 6264,
+      "before": "      >{{ line.text }}</div>\n\n          <!-- 局部标注高",
+      "after": "-->\n          <div v-if=\"getLineAnnotations(line"
+    },
+    {
+      "pos": 7091,
+      "before": " && recordingStatus === 'idle'\" description=\"等待录音开",
+      "after": "..\" />\n      </div>\n    </div>\n\n    <!-- 右栏：辅助工�"
+    },
+    {
+      "pos": 7140,
+      "before": "开�?..\" />\n      </div>\n    </div>\n\n    <!-- 右栏：辅助工",
+      "after": "-->\n    <div class=\"panel-right\">\n      <el-tabs"
+    },
+    {
+      "pos": 9184,
+      "before": "                 </div>\n                  <!-- 状态操",
+      "after": "-->\n                  <div class=\"issue-actions\""
+    },
+    {
+      "pos": 9405,
+      "before": "   <el-button link size=\"small\" type=\"primary\">更改状",
+      "after": "/el-button>\n                      <template #dro"
+    },
+    {
+      "pos": 9655,
+      "before": "              <el-dropdown-item command=\"adopted\">",
+      "after": "采纳</el-dropdown-item>\n                          "
+    },
+    {
+      "pos": 9758,
+      "before": "-dropdown-item command=\"adopted_resolved\" divided>",
+      "after": "采纳 �?已解�?/el-dropdown-item>\n                    "
+    },
+    {
+      "pos": 9763,
+      "before": "down-item command=\"adopted_resolved\" divided>�?采纳 ",
+      "after": "已解�?/el-dropdown-item>\n                         "
+    },
+    {
+      "pos": 9767,
+      "before": "-item command=\"adopted_resolved\" divided>�?采纳 �?已解",
+      "after": "/el-dropdown-item>\n                          <el"
+    },
+    {
+      "pos": 9861,
+      "before": "   <el-dropdown-item command=\"adopted_unresolved\">",
+      "after": "采纳 �?未解�?/el-dropdown-item>\n                    "
+    },
+    {
+      "pos": 9866,
+      "before": "l-dropdown-item command=\"adopted_unresolved\">�?采纳 ",
+      "after": "未解�?/el-dropdown-item>\n                        <"
+    },
+    {
+      "pos": 9870,
+      "before": "opdown-item command=\"adopted_unresolved\">�?采纳 �?未解",
+      "after": "/el-dropdown-item>\n                        </el-"
+    },
+    {
+      "pos": 10821,
+      "before": "ent\" type=\"textarea\" :rows=\"4\" placeholder=\"请输入回复内",
+      "after": "..\" maxlength=\"300\" show-word-limit />\n         "
+    },
+    {
+      "pos": 11703,
+      "before": "button>\n            </div>\n\n            <!-- 标注模式开",
+      "after": "-->\n            <div :class=\"['mark-mode-toggle'"
+    },
+    {
+      "pos": 11960,
+      "before": "el-icon>\n              <span>{{ markMode ? '标注模式已开",
+      "after": " : '开启标注模�? }}</span>\n            </div>\n       "
+    },
+    {
+      "pos": 11971,
+      "before": "            <span>{{ markMode ? '标注模式已开�? : '开启标注模",
+      "after": " }}</span>\n            </div>\n            <p v-i"
+    },
+    {
+      "pos": 12081,
+      "before": "e\" class=\"mark-mode-tip\">\n              点击记录行整行标注，",
+      "after": "strong>选中文字</strong>后点击分类按钮进行局部标�?            </"
+    },
+    {
+      "pos": 12115,
+      "before": "      点击记录行整行标注，�?strong>选中文字</strong>后点击分类按钮进行局部标",
+      "after": "            </p>\n\n            <el-divider style="
+    },
+    {
+      "pos": 12209,
+      "before": "style=\"margin: 10px 0\" />\n\n            <!-- 已标注条目列",
+      "after": "-->\n            <div class=\"marked-list\">\n      "
+    },
+    {
+      "pos": 13255,
+      "before": "v class=\"summary-panel-wrap\">\n            <!-- 等待状",
+      "after": "-->\n            <div v-if=\"recordingStatus !== '"
+    },
+    {
+      "pos": 13714,
+      "before": "    <span class=\"status-dot recording\" /> 录音进行中，已记",
+      "after": "{{ simulatedLines.length }} �?                </"
+    },
+    {
+      "pos": 13744,
+      "before": "cording\" /> 录音进行中，已记�?{{ simulatedLines.length }} ",
+      "after": "                </template>\n                <tem"
+    },
+    {
+      "pos": 13899,
+      "before": "           <span class=\"status-dot paused\" /> 录音已暂",
+      "after": "                </template>\n                <tem"
+    },
+    {
+      "pos": 14019,
+      "before": "            <span class=\"status-dot idle\" /> 尚未开始录",
+      "after": "                </template>\n              </div>"
+    },
+    {
+      "pos": 14111,
+      "before": "  </div>\n            </div>\n\n            <!-- 可生成状",
+      "after": "-->\n            <div v-else class=\"summary-ready"
+    },
+    {
+      "pos": 14342,
+      "before": "       <span>会议记录完成，共 {{ simulatedLines.length }} ",
+      "after": "/span>\n              </div>\n              <el-bu"
+    },
+    {
+      "pos": 14593,
+      "before": "         {{ latestSummary ? '重新生成摘要' : '生成 AI 摘要与要",
+      "after": " }}\n              </el-button>\n              <te"
+    },
+    {
+      "pos": 14946,
+      "before": "class=\"ref-section-title\" style=\"margin-top:16px\">",
+      "after": "关键要点</div>\n                <div v-for=\"kp in key"
+    },
+    {
+      "pos": 16041,
+      "before": "px\" size=\"small\">\n          <el-option label=\"按议题聚",
+      "after": " value=\"by_topic\" />\n          <el-option label="
+    },
+    {
+      "pos": 16097,
+      "before": "ue=\"by_topic\" />\n          <el-option label=\"按发言人聚",
+      "after": " value=\"by_speaker\" />\n          <el-option labe"
+    },
+    {
+      "pos": 17433,
+      "before": "     </template>\n    </el-drawer>\n\n    <!-- 敏感词日志弹",
+      "after": "-->\n    <el-dialog v-model=\"showSensitiveLog\" ti"
+    },
+    {
+      "pos": 17494,
+      "before": "el-dialog v-model=\"showSensitiveLog\" title=\"敏感词屏蔽日",
+      "after": " width=\"500px\">\n      <el-table :data=\"sensitive"
+    },
+    {
+      "pos": 17662,
+      "before": "\n        <el-table-column prop=\"speaker\" label=\"发言",
+      "after": " width=\"80\" />\n        <el-table-column prop=\"co"
+    },
+    {
+      "pos": 18189,
+      "before": "-else class=\"preview-unsupported\">暂不支持该格式在线预览，请下载查",
+      "after": "/div>\n      </div>\n    </el-dialog>\n    <!-- 文字选"
+    },
+    {
+      "pos": 18246,
+      "before": "\n      </div>\n    </el-dialog>\n    <!-- 文字选中标注浮层工具",
+      "after": "-->\n    <Teleport to=\"body\">\n      <div v-if=\"se"
+    },
+    {
+      "pos": 18458,
+      "before": "ck.stop>\n        <span class=\"sel-anno-tip\">标注选中文字",
+      "after": "/span>\n        <button v-for=\"cat in categoryDef"
+    },
+    {
+      "pos": 19484,
+      "before": "s=\"ai-issue-confirm\" @click=\"addAiSuggestedIssue\">",
+      "after": "记录此问�?/button>\n          <button class=\"ai-issue"
+    },
+    {
+      "pos": 19490,
+      "before": "issue-confirm\" @click=\"addAiSuggestedIssue\">�?记录此问",
+      "after": "/button>\n          <button class=\"ai-issue-dismi"
+    },
+    {
+      "pos": 21225,
+      "before": "sueStatusLabel(status) {\n  const map = { open: '待处",
+      "after": ", explained: '已解�?, adopted: '已采�?, adopted_reso"
+    },
+    {
+      "pos": 21243,
+      "before": "tus) {\n  const map = { open: '待处�?, explained: '已解",
+      "after": ", adopted: '已采�?, adopted_resolved: '采纳·已解�?, ad"
+    },
+    {
+      "pos": 21259,
+      "before": "ap = { open: '待处�?, explained: '已解�?, adopted: '已采",
+      "after": ", adopted_resolved: '采纳·已解�?, adopted_unresolved"
+    },
+    {
+      "pos": 21287,
+      "before": "d: '已解�?, adopted: '已采�?, adopted_resolved: '采纳·已解",
+      "after": ", adopted_unresolved: '采纳·未解�? }\n  return map[st"
+    },
+    {
+      "pos": 21317,
+      "before": "ted_resolved: '采纳·已解�?, adopted_unresolved: '采纳·未解",
+      "after": " }\n  return map[status] || status\n}\nfunction iss"
+    },
+    {
+      "pos": 23821,
+      "before": "er'\n  }\n  attPreviewVisible.value = true\n}\n\n// 录音状",
+      "after": "const recordingStatus = ref('idle')\n\n// AI 问答\nco"
+    },
+    {
+      "pos": 23959,
+      "before": " = ref([\n  { id: 1, role: 'system', content: '您好！我",
+      "after": "AI 助手，可以帮您检索系统数据和历史会议信息。请问有什么需要了解的�?, sources: ["
+    },
+    {
+      "pos": 23995,
+      "before": "content: '您好！我�?AI 助手，可以帮您检索系统数据和历史会议信息。请问有什么需要了解的",
+      "after": ", sources: [] },\n])\nconst qaMessagesRef = ref(nu"
+    },
+    {
+      "pos": 24620,
+      "before": "ef('')\nconst generatingSummary = ref(false)\n\n// 敏感",
+      "after": "const sensitiveCount = ref(0)\nconst showSensitiv"
+    },
+    {
+      "pos": 25311,
+      "before": ".value.scrollHeight\n    }\n  })\n}\n\n// 录音模拟（逐字输出文件内容",
+      "after": "const simulatedLines = ref([])\nconst activeTypin"
+    },
+    {
+      "pos": 26698,
+      "before": "veAllRanges()\n  ElMessage.info('已填充到问题记录，点击“记录问题”确",
+      "after": ")\n}\n\n// AI 自动扫描问题\nfunction startAIIssueScan() {\n"
+    },
+    {
+      "pos": 27076,
+      "before": "  tryExtractIssue(newLines.map(l => l.text).join('",
+      "after": "))\n    }\n  }, 25000)\n}\n\nfunction tryExtractIssue"
+    },
+    {
+      "pos": 27189,
+      "before": " (!text || text.length < 20) return\n  // 基于转写内容简单模",
+      "after": "AI 问题提取\n  const issuePatterns = [\n    /存在([^。！？]"
+    },
+    {
+      "pos": 27304,
+      "before": " /([^。！？]{4,30})没有[解决完成]/,\n    /([^。！？]{4,30})需要进一",
+      "after": ",\n    /([^。！？]{4,30})不符�?,\n    /([^。！？]{4,30})质疑"
+    },
+    {
+      "pos": 27329,
+      "before": ",\n    /([^。！？]{4,30})需要进一�?,\n    /([^。！？]{4,30})不符",
+      "after": ",\n    /([^。！？]{4,30})质疑/,\n  ]\n  for (const patte"
+    },
+    {
+      "pos": 27572,
+      "before": ": match[0].length > 60 ? match[0].slice(0, 60) + '",
+      "after": " : match[0],\n      }\n      return\n    }\n  }\n}\n\na"
+    },
+    {
+      "pos": 27963,
+      "before": "htTab.value = 'issues'\n    ElMessage.success('问题已记",
+      "after": ")\n  } catch { ElMessage.error('记录失败') }\n}\n\n// 关闭"
+    },
+    {
+      "pos": 28017,
+      "before": "  } catch { ElMessage.error('记录失败') }\n}\n\n// 关闭选择工具",
+      "after": "function onDocMousedown(e) {\n  if (!e.target.clo"
+    },
+    {
+      "pos": 28241,
+      "before": "et.closest('.ai-issue-popup')) {\n    // 点击其他地方不自动关",
+      "after": "AI 弹窗（用户需点忽略或确认�?  }\n}\nconst categoryDefs = [\n  "
+    },
+    {
+      "pos": 28258,
+      "before": "ssue-popup')) {\n    // 点击其他地方不自动关�?AI 弹窗（用户需点忽略或确认",
+      "after": "  }\n}\nconst categoryDefs = [\n  { key: 'key_point"
+    },
+    {
+      "pos": 28323,
+      "before": "ategoryDefs = [\n  { key: 'key_point', label: '关键讨论",
+      "after": ", color: '#409eff', bg: '#ecf5ff' },\n  { key: 't"
+    },
+    {
+      "pos": 28902,
+      "before": "lt[line.category].push(line)\n    }\n  })\n  // 合并局部标",
+      "after": "  selectionAnnotations.value.forEach(ann => {\n  "
+    },
+    {
+      "pos": 29430,
+      "before": "Info.value = {\n      title: meeting.title || '会议进行",
+      "after": ",\n      time: meeting.start_time\n        ? `${da"
+    },
+    {
+      "pos": 29517,
+      "before": "      ? `${dayjs(meeting.start_time).format('MM月DD",
+      "after": "HH:mm')} - ${dayjs(meeting.end_time).format('HH:"
+    },
+    {
+      "pos": 29954,
+      "before": "  }\n    // 加载问题记录\n    loadIssues()\n    // 启动全局选择监听",
+      "after": "AI 扫描\n    document.addEventListener('mousedown',"
+    },
+    {
+      "pos": 30721,
+      "before": "eporter_name: userStore.userInfo?.real_name || '管理",
+      "after": ",\n    })\n    newIssueContent.value = ''\n    awai"
+    },
+    {
+      "pos": 31200,
+      "before": " await ElMessageBox.confirm('确认结束本次会议？将停止录制并进入纪要编辑",
+      "after": ", '结束会议', {\n      type: 'warning',\n      confirm"
+    },
+    {
+      "pos": 31503,
+      "before": " endMeeting(meetingId)\n    ElMessage.success('会议已结",
+      "after": ")\n    router.push(`/meeting/${meetingId}/minutes"
+    },
+    {
+      "pos": 31682,
+      "before": "   ending.value = false\n  }\n}\n\n// 自动滚动到底部（尊重用户手动滚动",
+      "after": "watch(() => simulatedLines.value.length, () => {"
+    },
+    {
+      "pos": 32161,
+      "before": "tartTypingNextLine()\n    }\n  } else {\n    // idle ",
+      "after": "全新开�?    recordingStatus.value = 'recording'\n   "
+    },
+    {
+      "pos": 32166,
+      "before": "ypingNextLine()\n    }\n  } else {\n    // idle �?全新开",
+      "after": "    recordingStatus.value = 'recording'\n    simu"
+    },
+    {
+      "pos": 32834,
+      "before": " fileLines = ['（未找到会议记录文件，请确认 frontend/会议记录.txt 存在",
+      "after": "]\n  }\n  currentLineIdx = 0\n  currentCharIdx = 0\n"
+    },
+    {
+      "pos": 36115,
+      "before": " || selectedText.length < 2) {\n    // 没有有效选区，关闭小工具",
+      "after": "    selPopover.value.visible = false\n    return\n"
+    },
+    {
+      "pos": 37861,
+      "before": "e: 'assistant',\n      content: '抱歉，AI服务暂时不可用，请稍后重试",
+      "after": ",\n      sources: [],\n    })\n  } finally {\n    qa"
+    },
+    {
+      "pos": 37944,
+      "before": " finally {\n    qaLoading.value = false\n    // 滚动到底",
+      "after": "    nextTick(() => {\n      if (qaMessagesRef.val"
+    },
+    {
+      "pos": 38716,
+      "before": "v => v.id !== item.id)\n  ElMessage.success('已采纳修改建",
+      "after": ")\n}\n\nfunction ignoreSuggestion(item) {\n  validat"
+    },
+    {
+      "pos": 38898,
+      "before": "on autoClassify() {\n  ElMessage.success('AI 自动分类已触",
+      "after": ")\n}\n\n// 音频回放\nfunction playAudio(segmentId) {\n  c"
+    },
+    {
+      "pos": 39390,
+      "before": "      { id: 1, title: '项目进度确认', content: '各模块开发进度整",
+      "after": "5%', importance: 'high', sort_order: 1 },\n      "
+    },
+    {
+      "pos": 39486,
+      "before": "    { id: 2, title: '风险预警', content: '第三方接口对接存在延期风",
+      "after": ", importance: 'high', sort_order: 2 },\n    ]\n  }"
+    },
+    {
+      "pos": 39776,
+      "before": "anceLabel(imp) {\n  return { high: '重要', medium: '一",
+      "after": ", low: '次要', normal: '普�? }[imp] || imp\n}\n\nfunct"
+    },
+    {
+      "pos": 39801,
+      "before": " { high: '重要', medium: '一�?, low: '次要', normal: '普",
+      "after": " }[imp] || imp\n}\n\nfunction exportKeypoints(forma"
+    },
+    {
+      "pos": 40015,
+      "before": "ue.length === 0) { ElMessage.warning('暂无会议记录，无法生成摘",
+      "after": "); return }\n  generatingSummary.value = true\n  l"
+    },
+    {
+      "pos": 40237,
+      "before": "= await aiQA({\n      question: `请对以下完整会议记录生成专业会议摘要",
+      "after": "00字以内），重点提取核心议题、决策结论和待办事项：\\n${transcriptText}`,\n"
+    },
+    {
+      "pos": 40400,
+      "before": "es?.data?.answer || res?.answer || '摘要生成完成，请参阅详细记录",
+      "after": "\n    // 同步提取要点\n    await extractKeypoints()\n    "
+    },
+    {
+      "pos": 40461,
+      "before": "步提取要点\n    await extractKeypoints()\n    // 持久化供纪要页参",
+      "after": "    try {\n      localStorage.setItem(`meeting_re"
+    },
+    {
+      "pos": 40735,
+      "before": "ch {}\n    ElMessage.success('摘要与要点已生成，可在纪要编辑页查看参考资",
+      "after": ")\n  } catch {\n    latestSummary.value = '（AI 服务暂"
+    },
+    {
+      "pos": 40800,
+      "before": "\n    latestSummary.value = '（AI 服务暂时不可用，请在纪要页面重新生成",
+      "after": "\n    ElMessage.warning('AI 服务暂时不可�?)\n  } finally"
+    },
+    {
+      "pos": 40835,
+      "before": "时不可用，请在纪要页面重新生成�?\n    ElMessage.warning('AI 服务暂时不可",
+      "after": ")\n  } finally {\n    generatingSummary.value = fa"
+    },
+    {
+      "pos": 53023,
+      "before": ": #909399;\n  font-size: 14px;\n}\n\n/* ===== 文字选中标注工具",
+      "after": "===== */\n.sel-anno-toolbar {\n  position: fixed;\n"
+    }
+  ],
+  "MeetingMinutes": [
+    {
+      "pos": 67,
+      "before": " class=\"page-container minutes-page\">\n    <!-- 状态横",
+      "after": "-->\n    <div v-if=\"minutesStatus === 'published'"
+    },
+    {
+      "pos": 233,
+      "before": "l-icon>\n      纪要已发布，等待会议端审签。发布后内容不可修改，如需修改请等待会议端驳回",
+      "after": "    </div>\n    <div v-else-if=\"minutesStatus ==="
+    },
+    {
+      "pos": 388,
+      "before": "l-icon><Promotion /></el-icon>\n      纪要审签中，等待会议端审签",
+      "after": "    </div>\n    <div v-else-if=\"minutesStatus ==="
+    },
+    {
+      "pos": 544,
+      "before": "con><Warning /></el-icon>\n      纪要已被会议端驳回，请修改后重新发布",
+      "after": "      <span v-if=\"rejectReason\" style=\"margin-le"
+    },
+    {
+      "pos": 807,
+      "before": "eCheckFilled /></el-icon>\n      所有人已完成审签，纪要签署流程已结束",
+      "after": "      <el-button\n        type=\"primary\"\n        "
+    },
+    {
+      "pos": 1009,
+      "before": "etingId}/issue-review`)\"\n      >\n        前往问题记录审查 ",
+      "after": "      </el-button>\n    </div>\n    <!-- 上部：纰要编辑区 "
+    },
+    {
+      "pos": 1064,
+      "before": "   </el-button>\n    </div>\n    <!-- 上部：纰要编辑区 + 参考面",
+      "after": "-->\n    <div class=\"minutes-body-layout\">\n      "
+    },
+    {
+      "pos": 1606,
+      "before": "con><InfoFilled /></el-icon>{{ showRefPanel ? '收起参",
+      "after": " : '展开参考资�? }}\n              </el-button>\n      "
+    },
+    {
+      "pos": 1617,
+      "before": "lled /></el-icon>{{ showRefPanel ? '收起参�? : '展开参考资",
+      "after": " }}\n              </el-button>\n            </div"
+    },
+    {
+      "pos": 1991,
+      "before": "            </el-button>\n              <!-- 编辑工具栏：",
+      "after": "draft / rejected 可操�?-->\n              <template"
+    },
+    {
+      "pos": 2012,
+      "before": "on>\n              <!-- 编辑工具栏：�?draft / rejected 可操",
+      "after": "-->\n              <template v-if=\"isEditable\">\n "
+    },
+    {
+      "pos": 2856,
+      "before": "           <el-dropdown-item command=\"office\">办公会纪",
+      "after": "/el-dropdown-item>\n                    </el-drop"
+    },
+    {
+      "pos": 5187,
+      "before": "    <div class=\"sign-flow\">\n          <!-- 专家组长签署状",
+      "after": "-->\n          <div class=\"sign-status-item\">\n   "
+    },
+    {
+      "pos": 5343,
+      "before": "\" size=\"small\">\n              {{ draftSigned ? '已签",
+      "after": " : '待签�? }}\n            </el-tag>\n            <s"
+    },
+    {
+      "pos": 5351,
+      "before": "small\">\n              {{ draftSigned ? '已签�? : '待签",
+      "after": " }}\n            </el-tag>\n            <span>{{ d"
+    },
+    {
+      "pos": 5674,
+      "before": ">\n            <el-tag type=\"success\" size=\"large\">",
+      "after": "专家组长已完成签�?/el-tag>\n          </div>\n        </di"
+    },
+    {
+      "pos": 5684,
+      "before": "    <el-tag type=\"success\" size=\"large\">�?专家组长已完成签",
+      "after": "/el-tag>\n          </div>\n        </div>\n      <"
+    },
+    {
+      "pos": 5807,
+      "before": "    </div><!-- /minutes-main -->\n\n      <!-- 右侧参考面",
+      "after": "-->\n      <div v-if=\"showRefPanel\" class=\"minute"
+    },
+    {
+      "pos": 5955,
+      "before": "er\">\n          <span class=\"ref-panel-title\">📋 参考资",
+      "after": "/span>\n          <el-button link size=\"small\" @c"
+    },
+    {
+      "pos": 6520,
+      "before": "on\">\n              <div class=\"ref-section-title\">",
+      "after": "关键要点</div>\n              <div v-for=\"(kp, idx) i"
+    },
+    {
+      "pos": 6879,
+      "before": "d-at\" v-if=\"refData.generatedAt\">\n              生成",
+      "after": "{{ new Date(refData.generatedAt).toLocaleString("
+    },
+    {
+      "pos": 7212,
+      "before": "or:#5e8aad;margin:12px 0 6px;font-size:14px\">暂无参考资",
+      "after": "/p>\n              <p class=\"ref-empty-tip\">在会议进行"
+    },
+    {
+      "pos": 7280,
+      "before": "  <p class=\"ref-empty-tip\">在会议进行中生成摘要后，参考资料将自动显示在此",
+      "after": "/p>\n            </div>\n          </template>\n   "
+    },
+    {
+      "pos": 7415,
+      "before": "<!-- /minutes-body-layout -->\n\n    <!-- 签到管理（审签结束后",
+      "after": "-->\n    <div v-if=\"minutesStatus === 'signed'\" c"
+    },
+    {
+      "pos": 7942,
+      "before": "回退\"让其重新签到（退回后可通过会议端或此界面重新签名）；对于无设备人员，可直接点击\"签到\"代为签字",
+      "after": "/p>\n        <el-table :data=\"checkinParticipants"
+    },
+    {
+      "pos": 8373,
+      "before": "width=\"120\" />\n          <el-table-column label=\"状",
+      "after": " width=\"100\" align=\"center\">\n            <templa"
+    },
+    {
+      "pos": 8548,
+      "before": "ss' : 'info'\" size=\"small\">{{ row.checked_in ? '已签",
+      "after": " : '未签�? }}</el-tag>\n            </template>\n   "
+    },
+    {
+      "pos": 8556,
+      "before": "nfo'\" size=\"small\">{{ row.checked_in ? '已签�? : '未签",
+      "after": " }}</el-tag>\n            </template>\n          <"
+    },
+    {
+      "pos": 9505,
+      "before": "-table>\n      </el-card>\n    </div>\n\n    <!-- 代签到弹",
+      "after": "-->\n    <el-dialog v-model=\"offlineSignVisible\" "
+    },
+    {
+      "pos": 9566,
+      "before": "el-dialog v-model=\"offlineSignVisible\" :title=\"`签到",
+      "after": "{offlineSignTarget?.real_name || ''}`\" width=\"58"
+    },
+    {
+      "pos": 9704,
+      "before": "\"text-align:center;margin:0 0 12px;color:#606266\">",
+      "after": "<strong>{{ offlineSignTarget?.real_name }}</stro"
+    },
+    {
+      "pos": 9764,
+      "before": "{{ offlineSignTarget?.real_name }}</strong> 在下方手写签",
+      "after": "/p>\n      <div style=\"display:flex;align-items:c"
+    },
+    {
+      "pos": 10835,
+      "before": "l=\"offlineSignExpandVisible\"\n      :title=\"`签到（放大）",
+      "after": "{offlineSignTarget?.real_name || ''}`\"\n      wid"
+    },
+    {
+      "pos": 11793,
+      "before": " type=\"primary\" @click=\"confirmOfflineExpand\">使用此签",
+      "after": "/el-button>\n      </template>\n    </el-dialog>\n\n"
+    },
+    {
+      "pos": 12081,
+      "before": ">\n        <el-table-column prop=\"editor\" label=\"编辑",
+      "after": " width=\"100\" />\n        <el-table-column prop=\"c"
+    },
+    {
+      "pos": 13070,
+      "before": "Router()\nconst meetingId = route.params.id\n\n// 会议状",
+      "after": "const meetingStatus = ref('')\nconst endingMeetin"
+    },
+    {
+      "pos": 14468,
+      "before": " ElMessage.error(e?.response?.data?.detail || '退回失",
+      "after": ")\n  } finally {\n    rollbackLoading.value[row.id"
+    },
+    {
+      "pos": 20703,
+      "before": "sageBox }) =>\n      ElMessageBox.confirm('确认结束本次会议",
+      "after": ", '结束会议', {\n        type: 'warning',\n        con"
+    },
+    {
+      "pos": 21027,
+      "before": "tus.value = 'finished'\n    ElMessage.success('会议已结",
+      "after": ")\n  } catch (e) {\n    ElMessage.error(e?.respons"
+    },
+    {
+      "pos": 21924,
+      "before": "icipants()\n    ElMessage.success('已强制结束审签，纪要签署流程已完",
+      "after": ")\n  } catch (e) {\n    ElMessage.error(e?.respons"
+    },
+    {
+      "pos": 22065,
+      "before": "y {\n    forcingComplete.value = false\n  }\n}\n\n// 编辑",
+      "after": "const editorToolbarRef = ref(null)\nconst editorC"
+    },
+    {
+      "pos": 22232,
+      "before": "= ref(false)\nconst publishing = ref(false)\n\n// 纪要状",
+      "after": "const minutesStatus = ref('none') // none | draf"
+    },
+    {
+      "pos": 22527,
+      "before": ") => {\n  const map = { draft: '草稿', published: '已发",
+      "after": ", rejected: '已驳�?, signed: '已签�?, reviewing: '审签"
+    },
+    {
+      "pos": 22544,
+      "before": "p = { draft: '草稿', published: '已发�?, rejected: '已驳",
+      "after": ", signed: '已签�?, reviewing: '审签�?, none: '未创�? }"
+    },
+    {
+      "pos": 22559,
+      "before": "稿', published: '已发�?, rejected: '已驳�?, signed: '已签",
+      "after": ", reviewing: '审签�?, none: '未创�? }\n  return map[m"
+    },
+    {
+      "pos": 22577,
+      "before": "�?, rejected: '已驳�?, signed: '已签�?, reviewing: '审签",
+      "after": ", none: '未创�? }\n  return map[minutesStatus.value"
+    },
+    {
+      "pos": 22590,
+      "before": " '已驳�?, signed: '已签�?, reviewing: '审签�?, none: '未创",
+      "after": " }\n  return map[minutesStatus.value] || minutesS"
+    },
+    {
+      "pos": 22662,
+      "before": "tesStatus.value] || minutesStatus.value\n})\n\n// 审签状",
+      "after": "const loadingStatus = ref(false)\nconst draftSign"
+    },
+    {
+      "pos": 22756,
+      "before": "ftSignature = ref(null)    // sign_step='draft' 的记",
+      "after": "const reviewSignatures = ref([])    // sign_step"
+    },
+    {
+      "pos": 22820,
+      "before": "Signatures = ref([])    // sign_step='review' 的所有记",
+      "after": "const totalParticipants = ref(0)\n\nconst draftSig"
+    },
+    {
+      "pos": 23325,
+      "before": " currentPath = []\nlet signPollTimer = null\n\n// 参考面",
+      "after": "const showRefPanel = ref(false)\nconst refData = "
+    },
+    {
+      "pos": 24279,
+      "before": "anvas()\n  loadMeetingStatus()\n  // 发布/审签中状态自动轮询签署进",
+      "after": "  startSignPoll()\n  // 若已完成签署，加载签到管理数�?  if (min"
+    },
+    {
+      "pos": 24318,
+      "before": "签中状态自动轮询签署进�?  startSignPoll()\n  // 若已完成签署，加载签到管理数",
+      "after": "  if (minutesStatus.value === 'signed') {\n    lo"
+    },
+    {
+      "pos": 25650,
+      "before": "ainerRef.value.innerHTML = '<h1>会议纪要</h1><h2>一、会议概",
+      "after": "/h2><p><strong>时间�?/strong>待填�?/p><p><strong>地点�"
+    },
+    {
+      "pos": 25669,
+      "before": "rHTML = '<h1>会议纪要</h1><h2>一、会议概�?/h2><p><strong>时间",
+      "after": "/strong>待填�?/p><p><strong>地点�?/strong>待填�?/p><p>"
+    },
+    {
+      "pos": 25681,
+      "before": ">会议纪要</h1><h2>一、会议概�?/h2><p><strong>时间�?/strong>待填",
+      "after": "/p><p><strong>地点�?/strong>待填�?/p><p><strong>参会人员"
+    },
+    {
+      "pos": 25699,
+      "before": "概�?/h2><p><strong>时间�?/strong>待填�?/p><p><strong>地点",
+      "after": "/strong>待填�?/p><p><strong>参会人员�?/strong>待填�?/p><"
+    },
+    {
+      "pos": 25711,
+      "before": "trong>时间�?/strong>待填�?/p><p><strong>地点�?/strong>待填",
+      "after": "/p><p><strong>参会人员�?/strong>待填�?/p><h2>二、议题讨论记�?"
+    },
+    {
+      "pos": 25731,
+      "before": "�?/p><p><strong>地点�?/strong>待填�?/p><p><strong>参会人员",
+      "after": "/strong>待填�?/p><h2>二、议题讨论记�?/h2><p>请点击上�?<b>AI 生"
+    },
+    {
+      "pos": 25743,
+      "before": "ong>地点�?/strong>待填�?/p><p><strong>参会人员�?/strong>待填",
+      "after": "/p><h2>二、议题讨论记�?/h2><p>请点击上�?<b>AI 生成纪要</b> 按钮，A"
+    },
+    {
+      "pos": 25759,
+      "before": "待填�?/p><p><strong>参会人员�?/strong>待填�?/p><h2>二、议题讨论记",
+      "after": "/h2><p>请点击上�?<b>AI 生成纪要</b> 按钮，AI 将自动生成完整纪要。也可直接"
+    },
+    {
+      "pos": 25772,
+      "before": "rong>参会人员�?/strong>待填�?/p><h2>二、议题讨论记�?/h2><p>请点击上",
+      "after": "<b>AI 生成纪要</b> 按钮，AI 将自动生成完整纪要。也可直接在此手动编写�?/p><h"
+    },
+    {
+      "pos": 25815,
+      "before": "<p>请点击上�?<b>AI 生成纪要</b> 按钮，AI 将自动生成完整纪要。也可直接在此手动编写",
+      "after": "/p><h2>三、决策结�?/h2><ol><li>待填�?/li></ol><h2>四、待办事"
+    },
+    {
+      "pos": 25829,
+      "before": " 生成纪要</b> 按钮，AI 将自动生成完整纪要。也可直接在此手动编写�?/p><h2>三、决策结",
+      "after": "/h2><ol><li>待填�?/li></ol><h2>四、待办事�?/h2><p>待填�?/"
+    },
+    {
+      "pos": 25845,
+      "before": "将自动生成完整纪要。也可直接在此手动编写�?/p><h2>三、决策结�?/h2><ol><li>待填",
+      "after": "/li></ol><h2>四、待办事�?/h2><p>待填�?/p>'\n      }\n    "
+    },
+    {
+      "pos": 25865,
+      "before": "�?/p><h2>三、决策结�?/h2><ol><li>待填�?/li></ol><h2>四、待办事",
+      "after": "/h2><p>待填�?/p>'\n      }\n    }\n    // 载入纪要状�?    "
+    },
+    {
+      "pos": 25876,
+      "before": "决策结�?/h2><ol><li>待填�?/li></ol><h2>四、待办事�?/h2><p>待填",
+      "after": "/p>'\n      }\n    }\n    // 载入纪要状�?    minutesStat"
+    },
+    {
+      "pos": 25909,
+      "before": ">四、待办事�?/h2><p>待填�?/p>'\n      }\n    }\n    // 载入纪要状",
+      "after": "    minutesStatus.value = data?.status || 'none'"
+    },
+    {
+      "pos": 26082,
+      "before": "value = data?.review_conclusion || ''\n    // 载入签名状",
+      "after": "    const sigs = data?.signatures || []\n    draf"
+    },
+    {
+      "pos": 26300,
+      "before": "n_step === 'review')\n    // 从后端取与会人数（可选，为了判断\"全部已签\"",
+      "after": "    if (data?.participant_count != null) {\n     "
+    },
+    {
+      "pos": 26419,
+      "before": "value = data.participant_count\n    }\n    // 控制编辑器只",
+      "after": "    if (editorContainerRef.value) {\n      editor"
+    },
+    {
+      "pos": 26826,
+      "before": "torContainerRef.value.innerHTML = '<p>纪要加载失败，请刷新页面",
+      "after": "/p>'\n      editorContainerRef.value.contentEdita"
+    },
+    {
+      "pos": 27012,
+      "before": "S_TEMPLATES = {\n  general: '<h1>会议纪要</h1><h2>一、会议概",
+      "after": "/h2><p><strong>会议时间�?/strong>待填�?nbsp;&nbsp;<str"
+    },
+    {
+      "pos": 27033,
+      "before": "eral: '<h1>会议纪要</h1><h2>一、会议概�?/h2><p><strong>会议时间",
+      "after": "/strong>待填�?nbsp;&nbsp;<strong>会议地点�?/strong>待填�"
+    },
+    {
+      "pos": 27045,
+      "before": "议纪要</h1><h2>一、会议概�?/h2><p><strong>会议时间�?/strong>待填",
+      "after": "nbsp;&nbsp;<strong>会议地点�?/strong>待填�?/p><p><stro"
+    },
+    {
+      "pos": 27070,
+      "before": "><strong>会议时间�?/strong>待填�?nbsp;&nbsp;<strong>会议地点",
+      "after": "/strong>待填�?/p><p><strong>主持人：</strong>待填�?nbsp;"
+    },
+    {
+      "pos": 27082,
+      "before": "间�?/strong>待填�?nbsp;&nbsp;<strong>会议地点�?/strong>待填",
+      "after": "/p><p><strong>主持人：</strong>待填�?nbsp;&nbsp;<stron"
+    },
+    {
+      "pos": 27113,
+      "before": "ng>会议地点�?/strong>待填�?/p><p><strong>主持人：</strong>待填",
+      "after": "nbsp;&nbsp;<strong>记录人：</strong>待填�?/p><p><stron"
+    },
+    {
+      "pos": 27149,
+      "before": "持人：</strong>待填�?nbsp;&nbsp;<strong>记录人：</strong>待填",
+      "after": "/p><p><strong>参会人员�?/strong>待填�?/p><h2>二、会议内�?/h"
+    },
+    {
+      "pos": 27169,
+      "before": ";&nbsp;<strong>记录人：</strong>待填�?/p><p><strong>参会人员",
+      "after": "/strong>待填�?/p><h2>二、会议内�?/h2><h3>1. 议题研讨</h3><p"
+    },
+    {
+      "pos": 27181,
+      "before": "ng>记录人：</strong>待填�?/p><p><strong>参会人员�?/strong>待填",
+      "after": "/p><h2>二、会议内�?/h2><h3>1. 议题研讨</h3><p>待填�?/p><h3>"
+    },
+    {
+      "pos": 27195,
+      "before": "g>待填�?/p><p><strong>参会人员�?/strong>待填�?/p><h2>二、会议内",
+      "after": "/h2><h3>1. 议题研讨</h3><p>待填�?/p><h3>2. 主要意见</h3><p"
+    },
+    {
+      "pos": 27222,
+      "before": "strong>待填�?/p><h2>二、会议内�?/h2><h3>1. 议题研讨</h3><p>待填",
+      "after": "/p><h3>2. 主要意见</h3><p>待填�?/p><h2>三、会议决�?/h2><ol>"
+    },
+    {
+      "pos": 27248,
+      "before": "h2><h3>1. 议题研讨</h3><p>待填�?/p><h3>2. 主要意见</h3><p>待填",
+      "after": "/p><h2>三、会议决�?/h2><ol><li>待填�?/li></ol><h2>四、待办事"
+    },
+    {
+      "pos": 27262,
+      "before": "</h3><p>待填�?/p><h3>2. 主要意见</h3><p>待填�?/p><h2>三、会议决",
+      "after": "/h2><ol><li>待填�?/li></ol><h2>四、待办事�?/h2><table><"
+    },
+    {
+      "pos": 27278,
+      "before": "h3>2. 主要意见</h3><p>待填�?/p><h2>三、会议决�?/h2><ol><li>待填",
+      "after": "/li></ol><h2>四、待办事�?/h2><table><thead><tr><th>事项"
+    },
+    {
+      "pos": 27298,
+      "before": "�?/p><h2>三、会议决�?/h2><ol><li>待填�?/li></ol><h2>四、待办事",
+      "after": "/h2><table><thead><tr><th>事项</th><th>责任�?/th><th"
+    },
+    {
+      "pos": 27339,
+      "before": "<h2>四、待办事�?/h2><table><thead><tr><th>事项</th><th>责任",
+      "after": "/th><th>完成时限</th></tr></thead><tbody><tr><td>待填�"
+    },
+    {
+      "pos": 27388,
+      "before": "任�?/th><th>完成时限</th></tr></thead><tbody><tr><td>待填",
+      "after": "/td><td>待填�?/td><td>待填�?/td></tr></tbody></table"
+    },
+    {
+      "pos": 27400,
+      "before": "成时限</th></tr></thead><tbody><tr><td>待填�?/td><td>待填",
+      "after": "/td><td>待填�?/td></tr></tbody></table>',\n  review"
+    },
+    {
+      "pos": 27412,
+      "before": "></thead><tbody><tr><td>待填�?/td><td>待填�?/td><td>待填",
+      "after": "/td></tr></tbody></table>',\n  review: '<h1>评审会议纪"
+    },
+    {
+      "pos": 27477,
+      "before": "ody></table>',\n  review: '<h1>评审会议纪要</h1><h2>一、会议概",
+      "after": "/h2><p><strong>会议时间�?/strong>待填�?nbsp;&nbsp;<str"
+    },
+    {
+      "pos": 27498,
+      "before": "ew: '<h1>评审会议纪要</h1><h2>一、会议概�?/h2><p><strong>会议时间",
+      "after": "/strong>待填�?nbsp;&nbsp;<strong>地点�?/strong>待填�?/"
+    },
+    {
+      "pos": 27510,
+      "before": "议纪要</h1><h2>一、会议概�?/h2><p><strong>会议时间�?/strong>待填",
+      "after": "nbsp;&nbsp;<strong>地点�?/strong>待填�?/p><p><strong"
+    },
+    {
+      "pos": 27533,
+      "before": "<p><strong>会议时间�?/strong>待填�?nbsp;&nbsp;<strong>地点",
+      "after": "/strong>待填�?/p><p><strong>主持人：</strong>待填�?nbsp;"
+    },
+    {
+      "pos": 27545,
+      "before": "议时间�?/strong>待填�?nbsp;&nbsp;<strong>地点�?/strong>待填",
+      "after": "/p><p><strong>主持人：</strong>待填�?nbsp;&nbsp;<stron"
+    },
+    {
+      "pos": 27576,
+      "before": "rong>地点�?/strong>待填�?/p><p><strong>主持人：</strong>待填",
+      "after": "nbsp;&nbsp;<strong>记录人：</strong>待填�?/p><p><stron"
+    },
+    {
+      "pos": 27612,
+      "before": "持人：</strong>待填�?nbsp;&nbsp;<strong>记录人：</strong>待填",
+      "after": "/p><p><strong>参会专家及代表：</strong>待填�?/p><h2>二、评审项目"
+    },
+    {
+      "pos": 27647,
+      "before": "记录人：</strong>待填�?/p><p><strong>参会专家及代表：</strong>待填",
+      "after": "/p><h2>二、评审项目概�?/h2><p>待填写（项目名称、基本情况、评审目的）</p><h"
+    },
+    {
+      "pos": 27663,
+      "before": "?/p><p><strong>参会专家及代表：</strong>待填�?/p><h2>二、评审项目概",
+      "after": "/h2><p>待填写（项目名称、基本情况、评审目的）</p><h2>三、主要审查意�?/h2><"
+    },
+    {
+      "pos": 27706,
+      "before": "二、评审项目概�?/h2><p>待填写（项目名称、基本情况、评审目的）</p><h2>三、主要审查意",
+      "after": "/h2><ol><li>待填�?/li></ol><h2>四、尚列问题清�?/h2><ol><l"
+    },
+    {
+      "pos": 27722,
+      "before": "待填写（项目名称、基本情况、评审目的）</p><h2>三、主要审查意�?/h2><ol><li>待填",
+      "after": "/li></ol><h2>四、尚列问题清�?/h2><ol><li>待填�?/li></ol><"
+    },
+    {
+      "pos": 27744,
+      "before": "><h2>三、主要审查意�?/h2><ol><li>待填�?/li></ol><h2>四、尚列问题清",
+      "after": "/h2><ol><li>待填�?/li></ol><h2>五、专家评审结�?/h2><p>待填�"
+    },
+    {
+      "pos": 27760,
+      "before": "2><ol><li>待填�?/li></ol><h2>四、尚列问题清�?/h2><ol><li>待填",
+      "after": "/li></ol><h2>五、专家评审结�?/h2><p>待填�?/p><h2>六、评审愿�?/"
+    },
+    {
+      "pos": 27782,
+      "before": "><h2>四、尚列问题清�?/h2><ol><li>待填�?/li></ol><h2>五、专家评审结",
+      "after": "/h2><p>待填�?/p><h2>六、评审愿�?/h2><p>待填�?/p>',\n  spec"
+    },
+    {
+      "pos": 27793,
+      "before": "清�?/h2><ol><li>待填�?/li></ol><h2>五、专家评审结�?/h2><p>待填",
+      "after": "/p><h2>六、评审愿�?/h2><p>待填�?/p>',\n  special: '<h1>专"
+    },
+    {
+      "pos": 27807,
+      "before": ">待填�?/li></ol><h2>五、专家评审结�?/h2><p>待填�?/p><h2>六、评审愿",
+      "after": "/h2><p>待填�?/p>',\n  special: '<h1>专题研讨会纪�?/h1><h2"
+    },
+    {
+      "pos": 27818,
+      "before": "ol><h2>五、专家评审结�?/h2><p>待填�?/p><h2>六、评审愿�?/h2><p>待填",
+      "after": "/p>',\n  special: '<h1>专题研讨会纪�?/h1><h2>一、会议概�?/h2"
+    },
+    {
+      "pos": 27848,
+      "before": "<h2>六、评审愿�?/h2><p>待填�?/p>',\n  special: '<h1>专题研讨会纪",
+      "after": "/h1><h2>一、会议概�?/h2><p><strong>时间�?/strong>待填�?nb"
+    },
+    {
+      "pos": 27863,
+      "before": "<p>待填�?/p>',\n  special: '<h1>专题研讨会纪�?/h1><h2>一、会议概",
+      "after": "/h2><p><strong>时间�?/strong>待填�?nbsp;&nbsp;<stron"
+    },
+    {
+      "pos": 27882,
+      "before": "ial: '<h1>专题研讨会纪�?/h1><h2>一、会议概�?/h2><p><strong>时间",
+      "after": "/strong>待填�?nbsp;&nbsp;<strong>地点�?/strong>待填�?/"
+    },
+    {
+      "pos": 27894,
+      "before": "研讨会纪�?/h1><h2>一、会议概�?/h2><p><strong>时间�?/strong>待填",
+      "after": "nbsp;&nbsp;<strong>地点�?/strong>待填�?/p><p><strong"
+    },
+    {
+      "pos": 27917,
+      "before": "2><p><strong>时间�?/strong>待填�?nbsp;&nbsp;<strong>地点",
+      "after": "/strong>待填�?/p><p><strong>主议题：</strong>待填�?/p><p"
+    },
+    {
+      "pos": 27929,
+      "before": ">时间�?/strong>待填�?nbsp;&nbsp;<strong>地点�?/strong>待填",
+      "after": "/p><p><strong>主议题：</strong>待填�?/p><p><strong>主持人"
+    },
+    {
+      "pos": 27960,
+      "before": "rong>地点�?/strong>待填�?/p><p><strong>主议题：</strong>待填",
+      "after": "/p><p><strong>主持人：</strong>待填�?nbsp;&nbsp;<stron"
+    },
+    {
+      "pos": 27991,
+      "before": "ong>主议题：</strong>待填�?/p><p><strong>主持人：</strong>待填",
+      "after": "nbsp;&nbsp;<strong>记录人：</strong>待填�?/p><h2>二、情况通"
+    },
+    {
+      "pos": 28027,
+      "before": "持人：</strong>待填�?nbsp;&nbsp;<strong>记录人：</strong>待填",
+      "after": "/p><h2>二、情况通报</h2><p>待填�?/p><h2>三、主要讨论意�?/h2><h3"
+    },
+    {
+      "pos": 28052,
+      "before": "p;<strong>记录人：</strong>待填�?/p><h2>二、情况通报</h2><p>待填",
+      "after": "/p><h2>三、主要讨论意�?/h2><h3>支持意见</h3><p>待填�?/p><h3>待"
+    },
+    {
+      "pos": 28068,
+      "before": "strong>待填�?/p><h2>二、情况通报</h2><p>待填�?/p><h2>三、主要讨论意",
+      "after": "/h2><h3>支持意见</h3><p>待填�?/p><h3>待商榷事�?/h3><p>待填�?"
+    },
+    {
+      "pos": 28092,
+      "before": "</h2><p>待填�?/p><h2>三、主要讨论意�?/h2><h3>支持意见</h3><p>待填",
+      "after": "/p><h3>待商榷事�?/h3><p>待填�?/p><h2>四、研讨结论与下一步工�?/h2>"
+    },
+    {
+      "pos": 28105,
+      "before": "p><h2>三、主要讨论意�?/h2><h3>支持意见</h3><p>待填�?/p><h3>待商榷事",
+      "after": "/h3><p>待填�?/p><h2>四、研讨结论与下一步工�?/h2><ol><li>待填�?/"
+    },
+    {
+      "pos": 28116,
+      "before": "论意�?/h2><h3>支持意见</h3><p>待填�?/p><h3>待商榷事�?/h3><p>待填",
+      "after": "/p><h2>四、研讨结论与下一步工�?/h2><ol><li>待填�?/li></ol>',\n"
+    },
+    {
+      "pos": 28136,
+      "before": "><p>待填�?/p><h3>待商榷事�?/h3><p>待填�?/p><h2>四、研讨结论与下一步工",
+      "after": "/h2><ol><li>待填�?/li></ol>',\n  office: '<h1>办公会纪�"
+    },
+    {
+      "pos": 28152,
+      "before": "商榷事�?/h3><p>待填�?/p><h2>四、研讨结论与下一步工�?/h2><ol><li>待填",
+      "after": "/li></ol>',\n  office: '<h1>办公会纪�?/h1><h2>一、基本信�?"
+    },
+    {
+      "pos": 28185,
+      "before": "工�?/h2><ol><li>待填�?/li></ol>',\n  office: '<h1>办公会纪",
+      "after": "/h1><h2>一、基本信�?/h2><p><strong>会议时间�?/strong>待填�?"
+    },
+    {
+      "pos": 28200,
+      "before": "待填�?/li></ol>',\n  office: '<h1>办公会纪�?/h1><h2>一、基本信",
+      "after": "/h2><p><strong>会议时间�?/strong>待填�?nbsp;&nbsp;<str"
+    },
+    {
+      "pos": 28221,
+      "before": "ice: '<h1>办公会纪�?/h1><h2>一、基本信�?/h2><p><strong>会议时间",
+      "after": "/strong>待填�?nbsp;&nbsp;<strong>会议地点�?/strong>待填�"
+    },
+    {
+      "pos": 28233,
+      "before": "会纪�?/h1><h2>一、基本信�?/h2><p><strong>会议时间�?/strong>待填",
+      "after": "nbsp;&nbsp;<strong>会议地点�?/strong>待填�?/p><p><stro"
+    },
+    {
+      "pos": 28258,
+      "before": "><strong>会议时间�?/strong>待填�?nbsp;&nbsp;<strong>会议地点",
+      "after": "/strong>待填�?/p><p><strong>主持人：</strong>待填�?nbsp;"
+    },
+    {
+      "pos": 28270,
+      "before": "间�?/strong>待填�?nbsp;&nbsp;<strong>会议地点�?/strong>待填",
+      "after": "/p><p><strong>主持人：</strong>待填�?nbsp;&nbsp;<stron"
+    },
+    {
+      "pos": 28301,
+      "before": "ng>会议地点�?/strong>待填�?/p><p><strong>主持人：</strong>待填",
+      "after": "nbsp;&nbsp;<strong>记录人：</strong>待填�?/p><p><stron"
+    },
+    {
+      "pos": 28337,
+      "before": "持人：</strong>待填�?nbsp;&nbsp;<strong>记录人：</strong>待填",
+      "after": "/p><p><strong>参会人：</strong>待填�?/p><h2>二、据办事�?/h2"
+    },
+    {
+      "pos": 28368,
+      "before": "ong>记录人：</strong>待填�?/p><p><strong>参会人：</strong>待填",
+      "after": "/p><h2>二、据办事�?/h2><h3>1. 研讨</h3><p>待填�?/p><h3>2."
+    },
+    {
+      "pos": 28382,
+      "before": "ng>待填�?/p><p><strong>参会人：</strong>待填�?/p><h2>二、据办事",
+      "after": "/h2><h3>1. 研讨</h3><p>待填�?/p><h3>2. �?/h3><p>待填�?"
+    },
+    {
+      "pos": 28407,
+      "before": "</strong>待填�?/p><h2>二、据办事�?/h2><h3>1. 研讨</h3><p>待填",
+      "after": "/p><h3>2. �?/h3><p>待填�?/p><h3>3. 决议</h3><p>待填�?/"
+    },
+    {
+      "pos": 28419,
+      "before": "?/p><h2>二、据办事�?/h2><h3>1. 研讨</h3><p>待填�?/p><h3>2. ",
+      "after": "/h3><p>待填�?/p><h3>3. 决议</h3><p>待填�?/p><h2>三、其他事�"
+    },
+    {
+      "pos": 28430,
+      "before": "办事�?/h2><h3>1. 研讨</h3><p>待填�?/p><h3>2. �?/h3><p>待填",
+      "after": "/p><h3>3. 决议</h3><p>待填�?/p><h2>三、其他事�?/h2><p>待填�"
+    },
+    {
+      "pos": 28454,
+      "before": ">待填�?/p><h3>2. �?/h3><p>待填�?/p><h3>3. 决议</h3><p>待填",
+      "after": "/p><h2>三、其他事�?/h2><p>待填�?/p><h2>四、散�?/h2><p>会议于待"
+    },
+    {
+      "pos": 28468,
+      "before": " �?/h3><p>待填�?/p><h3>3. 决议</h3><p>待填�?/p><h2>三、其他事",
+      "after": "/h2><p>待填�?/p><h2>四、散�?/h2><p>会议于待填写散会�?/p>',\n}\n"
+    },
+    {
+      "pos": 28479,
+      "before": "填�?/p><h3>3. 决议</h3><p>待填�?/p><h2>三、其他事�?/h2><p>待填",
+      "after": "/p><h2>四、散�?/h2><p>会议于待填写散会�?/p>',\n}\n\nasync func"
+    },
+    {
+      "pos": 28491,
+      "before": " 决议</h3><p>待填�?/p><h2>三、其他事�?/h2><p>待填�?/p><h2>四、散",
+      "after": "/h2><p>会议于待填写散会�?/p>',\n}\n\nasync function applyMi"
+    },
+    {
+      "pos": 28508,
+      "before": "><h2>三、其他事�?/h2><p>待填�?/p><h2>四、散�?/h2><p>会议于待填写散会",
+      "after": "/p>',\n}\n\nasync function applyMinutesTemplate(typ"
+    },
+    {
+      "pos": 28864,
+      "before": "    await ElMessageBox.confirm('应用模板将覆盖当前编辑内容，确认继续",
+      "after": ", '选择模板', { type: 'warning', confirmButtonText: "
+    },
+    {
+      "pos": 29672,
+      "before": "nPollTimer) clearInterval(signPollTimer)\n  // 仅在已发",
+      "after": "审签中时轮询（等待会议端签署或驳回）\n  if (!['published', 'reviewi"
+    },
+    {
+      "pos": 30338,
+      "before": "ant_count\n      }\n      // 如果已签署完成或被驳回，停止轮询并更新编辑器状",
+      "after": "      if (newStatus === 'signed' || newStatus =="
+    },
+    {
+      "pos": 31357,
+      "before": "L || ''\n  if (!content || content.includes('纪要内容加载",
+      "after": ") || content.includes('纪要加载失败')) {\n    ElMessage"
+    },
+    {
+      "pos": 31745,
+      "before": " 'false'\n    }\n    ElMessage.success('纪要已发布，等待会议端审",
+      "after": ")\n    // 初始化签名画�?    setTimeout(() => initCanvas"
+    },
+    {
+      "pos": 31762,
+      "before": "  ElMessage.success('纪要已发布，等待会议端审�?)\n    // 初始化签名画",
+      "after": "    setTimeout(() => initCanvas(), 100)\n    // 启"
+    },
+    {
+      "pos": 32095,
+      "before": "TML || ''\n  if (!content || content === '<p>纪要内容加载",
+      "after": "..</p>') {\n    ElMessage.warning('请先编辑纪要内容')\n   "
+    },
+    {
+      "pos": 32184,
+      "before": "辑纪要内容')\n    return\n  }\n\n  // 如果有选中文本，只润色选中部分，否则润色全",
+      "after": "  const selection = window.getSelection()\n  cons"
+    },
+    {
+      "pos": 33017,
+      "before": "or('润色失败:', e)\n    ElMessage.error('AI 润色失败，请检查网络连",
+      "after": ")\n  } finally {\n    polishing.value = false\n  }\n"
+    },
+    {
+      "pos": 33271,
+      "before": "\n    ElMessage.warning('当前浏览器不支持语音播报功能，请使用 Chrome ",
+      "after": "Edge')\n    return\n  }\n\n  if (isSpeaking.value) {"
+    },
+    {
+      "pos": 33510,
+      "before": ")\n  if (!text) {\n    ElMessage.warning('纪要内容为空，无法播",
+      "after": ")\n    return\n  }\n\n  // 分段处理（SpeechSynthesis 对长文本"
+    },
+    {
+      "pos": 33564,
+      "before": "    return\n  }\n\n  // 分段处理（SpeechSynthesis 对长文本可能截断",
+      "after": "  const chunks = []\n  const maxLen = 200\n  let r"
+    },
+    {
+      "pos": 33790,
+      "before": "k\n    }\n    let splitIdx = remaining.lastIndexOf('",
+      "after": ", maxLen)\n    if (splitIdx < 0) splitIdx = remai"
+    },
+    {
+      "pos": 33858,
+      "before": " (splitIdx < 0) splitIdx = remaining.lastIndexOf('",
+      "after": ", maxLen)\n    if (splitIdx < 0) splitIdx = remai"
+    },
+    {
+      "pos": 35977,
+      "before": "    clearSignature()\n    ElMessage.success('拟稿签署成功",
+      "after": ")\n    await refreshSignStatus()\n  } catch (e) {\n"
+    }
+  ],
+  "MeetingCreate": [
+    {
+      "pos": 598,
+      "before": "/el-button>\n      </div>\n    </div>\n\n    <!-- 步骤条导",
+      "after": "-->\n    <div class=\"steps-nav\">\n      <div\n     "
+    },
+    {
+      "pos": 1355,
+      "before": "   <div class=\"panel-inner\">\n            <!-- 基本信息",
+      "after": "-->\n            <h3 class=\"panel-title\">\n       "
+    },
+    {
+      "pos": 1717,
+      "before": "<el-input v-model=\"form.title\" placeholder=\"请输入会议名",
+      "after": " size=\"large\" maxlength=\"50\" show-word-limit />\n"
+    },
+    {
+      "pos": 2937,
+      "before": "e=\"large\"\n                      format=\"YYYY年MM月DD",
+      "after": "\n                      value-format=\"YYYY-MM-DD\""
+    },
+    {
+      "pos": 3217,
+      "before": "p\">\n                    <span class=\"time-label\">开",
+      "after": "/span>\n                    <el-time-picker v-mod"
+    },
+    {
+      "pos": 3303,
+      "before": "e-picker v-model=\"form.startTime\" placeholder=\"开始时",
+      "after": " size=\"large\" format=\"HH:mm\" style=\"width: 140px"
+    },
+    {
+      "pos": 3825,
+      "before": "                 <span class=\"shortcut-label\">快捷时长",
+      "after": "/span>\n                  <el-button v-for=\"d in "
+    },
+    {
+      "pos": 4602,
+      "before": "del=\"form.has_review_fee\">设置评审费（将在会议大屏为专家开启评审费签名功能",
+      "after": "/el-checkbox>\n              </el-form-item>\n    "
+    },
+    {
+      "pos": 4691,
+      "before": "-item>\n            </el-form>\n\n            <!-- 分割",
+      "after": "-->\n            <div class=\"section-divider\">\n  "
+    },
+    {
+      "pos": 4925,
+      "before": "></span>\n            </div>\n\n            <!-- 参会人员",
+      "after": "-->\n            <h3 class=\"panel-title\" style=\"m"
+    },
+    {
+      "pos": 5194,
+      "before": "\" round style=\"margin-left:8px\">\n                已",
+      "after": "{{ form.participant_ids.length }} �?            "
+    },
+    {
+      "pos": 5230,
+      "before": "             已�?{{ form.participant_ids.length }} ",
+      "after": "              </el-tag>\n            </h3>\n\n     "
+    },
+    {
+      "pos": 5582,
+      "before": "el-button @click=\"selectAll\" link type=\"primary\">全",
+      "after": "/el-button>\n                <el-button @click=\"c"
+    },
+    {
+      "pos": 5988,
+      "before": "div class=\"person-body\">\n              <!-- 左侧：可选人",
+      "after": "-->\n              <div class=\"person-panel\">\n   "
+    },
+    {
+      "pos": 6112,
+      "before": "\"person-panel-header\">\n                  <span>可选人",
+      "after": "/span>\n                  <span class=\"header-cou"
+    },
+    {
+      "pos": 6188,
+      "before": " <span class=\"header-count\">{{ allUsers.length }} ",
+      "after": "/span>\n                </div>\n                <e"
+    },
+    {
+      "pos": 6431,
+      "before": "<Loading /></el-icon>\n                    <span>加载",
+      "after": "..</span>\n                  </div>\n             "
+    },
+    {
+      "pos": 6889,
+      "before": "<span class=\"type-count\">{{ expertUsers.length }} ",
+      "after": "/span>\n                      </div>\n            "
+    },
+    {
+      "pos": 9685,
+      "before": "ltip v-if=\"user.is_participant_only\" content=\"删除此人",
+      "after": " placement=\"top\">\n                              "
+    },
+    {
+      "pos": 10392,
+      "before": " <span class=\"type-count\">{{ otherUsers.length }} ",
+      "after": "/span>\n                      </div>\n            "
+    },
+    {
+      "pos": 13194,
+      "before": "                         <el-tooltip content=\"删除此人",
+      "after": " placement=\"top\">\n                              "
+    },
+    {
+      "pos": 13721,
+      "before": "r>\n              </div>\n\n              <!-- 右侧：已选人",
+      "after": "-->\n              <div class=\"person-panel selec"
+    },
+    {
+      "pos": 13860,
+      "before": "\"person-panel-header\">\n                  <span>已选人",
+      "after": "/span>\n                  <span class=\"header-cou"
+    },
+    {
+      "pos": 13948,
+      "before": "=\"header-count\">{{ form.participant_ids.length }} ",
+      "after": "/span>\n                </div>\n                <e"
+    },
+    {
+      "pos": 14051,
+      "before": "crollbar height=\"320px\">\n                  <!-- 专家",
+      "after": "-->\n                  <div v-if=\"selectedExperts"
+    },
+    {
+      "pos": 15752,
+      "before": "    </TransitionGroup>\n                  <!-- 其他人员",
+      "after": "-->\n                  <div v-if=\"selectedOthers."
+    },
+    {
+      "pos": 17074,
+      "before": "   </div>\n            </div>\n\n            <!-- 冲突检",
+      "after": "-->\n            <div v-if=\"conflicts.length > 0\""
+    },
+    {
+      "pos": 17404,
+      "before": "er_name }}</strong> 与「{{ c.conflict_meeting }}」时间冲",
+      "after": "                  <span class=\"conflict-time\">({"
+    },
+    {
+      "pos": 18237,
+      "before": "n-desc\">选择会议室后，将左侧人员拖到右侧座位上。会议端进入后将显示特定座位上所安排人员的姓名",
+      "after": "/p>\n\n            <div v-if=\"!currentRoomLayout\" "
+    },
+    {
+      "pos": 18680,
+      "before": "             <div class=\"seat-sidebar-hint\">拖拽到右侧座",
+      "after": "/div>\n                <el-scrollbar height=\"420p"
+    },
+    {
+      "pos": 19267,
+      "before": "Participants.length === 0\" class=\"drag-empty\">全部已分",
+      "after": "/div>\n                </el-scrollbar>\n          "
+    },
+    {
+      "pos": 19612,
+      "before": " type=\"warning\" plain @click=\"clearAllSeats\">清空所有座",
+      "after": "/el-button>\n                </div>\n             "
+    },
+    {
+      "pos": 19950,
+      "before": "}\"\n                  >\n                  <!-- 大屏幕标",
+      "after": "-->\n                  <div\n                    v"
+    },
+    {
+      "pos": 20289,
+      "before": "oomLayout.screen.h + 'px' }\"\n                  >大屏",
+      "after": "/div>\n                  <!-- 会议�?-->\n           "
+    },
+    {
+      "pos": 20322,
+      "before": "              >大屏�?/div>\n                  <!-- 会议",
+      "after": "-->\n                  <div\n                    v"
+    },
+    {
+      "pos": 21666,
+      "before": "               <el-icon><ArrowLeft /></el-icon> 上一",
+      "after": "              </el-button>\n              <el-but"
+    },
+    {
+      "pos": 21948,
+      "before": "        <!-- ==================== Tab 3: 会议材料 & 签到",
+      "after": "==================== --> -->\n        <div v-show"
+    },
+    {
+      "pos": 22186,
+      "before": "-icon color=\"#E6A23C\"><Document /></el-icon>会议材料与签",
+      "after": "              <span class=\"optional-badge\">选填</s"
+    },
+    {
+      "pos": 23142,
+      "before": "             <div class=\"el-upload__text\">将文件拖到此处，",
+      "after": "em>点击上传</em></div>\n                <template #ti"
+    },
+    {
+      "pos": 23268,
+      "before": "class=\"el-upload__tip\">支持 PDF、Word、PPT、图片等格式，单文件不超",
+      "after": "50MB</div>\n                </template>\n         "
+    },
+    {
+      "pos": 23375,
+      "before": "el-upload>\n            </div>\n\n            <!-- 分割",
+      "after": "-->\n            <div class=\"section-divider\">\n  "
+    },
+    {
+      "pos": 23607,
+      "before": "t\"></span>\n            </div>\n\n            <!-- 签到",
+      "after": "-->\n            <div class=\"material-section\">\n "
+    },
+    {
+      "pos": 23705,
+      "before": "\n              <h4 class=\"section-subtitle\">📋 生成签到",
+      "after": "/h4>\n              <p class=\"section-desc\">根据已选参"
+    },
+    {
+      "pos": 23793,
+      "before": "-desc\">根据已选参会人员自动生成三类签到表（专家签到、其他人员签到、评审费签收），支持编辑和导",
+      "after": "PDF 打印</p>\n              <div class=\"checkin-act"
+    },
+    {
+      "pos": 24266,
+      "before": "                <el-icon><Tickets /></el-icon>生成签到",
+      "after": "                </el-button>\n                <te"
+    },
+    {
+      "pos": 24876,
+      "before": "ate>\n              </div>\n\n              <!-- 专家签到",
+      "after": "-->\n              <div v-if=\"checkinExpertRows.l"
+    },
+    {
+      "pos": 25925,
+      "before": "   <span v-else class=\"cell-text\">{{ row.name || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 26176,
+      "before": "   <span v-else class=\"cell-text\">{{ row.dept || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 26429,
+      "before": "  <span v-else class=\"cell-text\">{{ row.title || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 26682,
+      "before": "   <span v-else class=\"cell-text\">{{ row.time || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 26931,
+      "before": "   <span v-else class=\"cell-text\">{{ row.sign || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 27139,
+      "before": "isabled=\"idx === 0\" @click=\"moveExpertRowUp(idx)\">",
+      "after": "/el-button>\n                        <el-button s"
+    },
+    {
+      "pos": 27282,
+      "before": "tRows.length - 1\" @click=\"moveExpertRowDown(idx)\">",
+      "after": "/el-button>\n                        <el-button s"
+    },
+    {
+      "pos": 27394,
+      "before": "type=\"danger\" plain @click=\"removeExpertRow(idx)\">",
+      "after": "/el-button>\n                      </td>\n        "
+    },
+    {
+      "pos": 27672,
+      "before": "l\" type=\"primary\" plain @click=\"addExpertRow\">+ 新增",
+      "after": "/el-button>\n                </div>\n             "
+    },
+    {
+      "pos": 27756,
+      "before": "v>\n              </div>\n\n              <!-- 其他人员签到",
+      "after": "-->\n              <div v-if=\"checkinOtherRows.le"
+    },
+    {
+      "pos": 28775,
+      "before": "   <span v-else class=\"cell-text\">{{ row.name || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 29026,
+      "before": "   <span v-else class=\"cell-text\">{{ row.dept || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 29279,
+      "before": "   <span v-else class=\"cell-text\">{{ row.time || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 29528,
+      "before": "   <span v-else class=\"cell-text\">{{ row.sign || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 29735,
+      "before": "disabled=\"idx === 0\" @click=\"moveOtherRowUp(idx)\">",
+      "after": "/el-button>\n                        <el-button s"
+    },
+    {
+      "pos": 29876,
+      "before": "erRows.length - 1\" @click=\"moveOtherRowDown(idx)\">",
+      "after": "/el-button>\n                        <el-button s"
+    },
+    {
+      "pos": 29987,
+      "before": " type=\"danger\" plain @click=\"removeOtherRow(idx)\">",
+      "after": "/el-button>\n                      </td>\n        "
+    },
+    {
+      "pos": 30264,
+      "before": "ll\" type=\"primary\" plain @click=\"addOtherRow\">+ 新增",
+      "after": "/el-button>\n                </div>\n             "
+    },
+    {
+      "pos": 30516,
+      "before": "          <div class=\"checkin-table-title\">三、评审费签收",
+      "after": "/div>\n                <table class=\"checkin-edit"
+    },
+    {
+      "pos": 31557,
+      "before": "   <span v-else class=\"cell-text\">{{ row.name || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 31814,
+      "before": " <span v-else class=\"cell-text\">{{ row.idCard || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 32075,
+      "before": "span v-else class=\"cell-text\">{{ row.bankCard || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 32326,
+      "before": "   <span v-else class=\"cell-text\">{{ row.dept || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 32579,
+      "before": "  <span v-else class=\"cell-text\">{{ row.title || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 32828,
+      "before": "    <span v-else class=\"cell-text\">{{ row.fee || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 33077,
+      "before": "   <span v-else class=\"cell-text\">{{ row.sign || '",
+      "after": " }}</span>\n                      </td>\n         "
+    },
+    {
+      "pos": 33285,
+      "before": "isabled=\"idx === 0\" @click=\"moveExpertRowUp(idx)\">",
+      "after": "/el-button>\n                        <el-button s"
+    },
+    {
+      "pos": 33428,
+      "before": "tRows.length - 1\" @click=\"moveExpertRowDown(idx)\">",
+      "after": "/el-button>\n                        <el-button s"
+    },
+    {
+      "pos": 33540,
+      "before": "type=\"danger\" plain @click=\"removeExpertRow(idx)\">",
+      "after": "/el-button>\n                      </td>\n        "
+    },
+    {
+      "pos": 33818,
+      "before": "l\" type=\"primary\" plain @click=\"addExpertRow\">+ 新增",
+      "after": "/el-button>\n                </div>\n             "
+    },
+    {
+      "pos": 34042,
+      "before": "               <el-icon><ArrowLeft /></el-icon> 上一",
+      "after": "              </el-button>\n              <el-but"
+    },
+    {
+      "pos": 34321,
+      "before": "        <!-- ==================== Tab 3: AI 智能议程（对",
+      "after": "编辑器）==================== -->\n        <div v-show"
+    },
+    {
+      "pos": 35139,
+      "before": "elcome-bubble\">\n                    <p>你好！我是智能会议助手",
+      "after": "/p>\n                    <p>描述需求即可生成议程，也可以随时对话修改已"
+    },
+    {
+      "pos": 35192,
+      "before": "p>\n                    <p>描述需求即可生成议程，也可以随时对话修改已有内容",
+      "after": "/p>\n                  </div>\n                </d"
+    },
+    {
+      "pos": 35278,
+      "before": "           </div>\n\n                <!-- 快捷操作（仅首次显示",
+      "after": "-->\n                <div v-if=\"chatMessages.leng"
+    },
+    {
+      "pos": 35497,
+      "before": "')\">\n                    <span class=\"quick-icon\">",
+      "after": "/span>自动生成议程\n                  </button>\n       "
+    },
+    {
+      "pos": 35629,
+      "before": "btn\" @click=\"quickSend('请生成包含开场致辞、工作汇报、讨论环节、总结的详细议",
+      "after": ")\">\n                    <span class=\"quick-icon\""
+    },
+    {
+      "pos": 35852,
+      "before": "')\">\n                    <span class=\"quick-icon\">",
+      "after": "/span>简洁议�?                  </button>\n         "
+    },
+    {
+      "pos": 35863,
+      "before": "              <span class=\"quick-icon\">�?/span>简洁议",
+      "after": "                  </button>\n                </di"
+    },
+    {
+      "pos": 36541,
+      "before": "ges.length - 1 && msg.content\" class=\"typing-dot\">",
+      "after": "/span>\n                      <div v-if=\"msg.role"
+    },
+    {
+      "pos": 37232,
+      "before": ":placeholder=\"chatMessages.length === 0 ? '描述您的议程需",
+      "after": "..' : '继续对话修改议程...'\"\n                    resize="
+    },
+    {
+      "pos": 37549,
+      "before": "           <span class=\"input-hint\">Ctrl + Enter 发",
+      "after": "/span>\n                  <div class=\"input-btns\""
+    },
+    {
+      "pos": 38016,
+      "before": "                  <el-icon><Position /></el-icon>发",
+      "after": "                    </el-button>\n               "
+    },
+    {
+      "pos": 38645,
+      "before": "\" style=\"margin-right:2px\"><Loading /></el-icon>生成",
+      "after": "                  </el-tag>\n                  <e"
+    },
+    {
+      "pos": 38800,
+      "before": "all\" effect=\"plain\" round style=\"margin-left:8px\">",
+      "after": "已生�?/el-tag>\n                </div>\n            "
+    },
+    {
+      "pos": 38804,
+      "before": " effect=\"plain\" round style=\"margin-left:8px\">�?已生",
+      "after": "/el-tag>\n                </div>\n                "
+    },
+    {
+      "pos": 40747,
+      "before": "y\" ref=\"agendaPreviewRef\">\n                <!-- 空状",
+      "after": "-->\n                <div v-if=\"!agendaContent &&"
+    },
+    {
+      "pos": 40938,
+      "before": ">\n                  <p class=\"empty-main\">议程内容将在此展",
+      "after": "/p>\n                  <p class=\"empty-sub\">在左侧对话"
+    },
+    {
+      "pos": 41004,
+      "before": "        <p class=\"empty-sub\">在左侧对话框中发送需求，AI 将自动生成议",
+      "after": "/p>\n                </div>\n                <!-- "
+    },
+    {
+      "pos": 41063,
+      "before": "             </div>\n                <!-- 预览模式 / 生成",
+      "after": "-->\n                <div v-else-if=\"agendaViewMo"
+    },
+    {
+      "pos": 41635,
+      "before": "                </div>\n                <!-- 源文本编辑模",
+      "after": "-->\n                <textarea v-else class=\"raw-"
+    },
+    {
+      "pos": 42059,
+      "before": "\n              <el-icon><ArrowLeft /></el-icon> 上一",
+      "after": "            </el-button>\n            <el-button "
+    },
+    {
+      "pos": 42627,
+      "before": ">名称</span><span class=\"s-value\">{{ form.title || '",
+      "after": " }}</span></div>\n              <div class=\"s-row"
+    },
+    {
+      "pos": 42897,
+      "before": "/span><span class=\"s-value\">{{ form.startDate || '",
+      "after": " }}</span></div>\n              <div class=\"s-row"
+    },
+    {
+      "pos": 43142,
+      "before": "长</span><span class=\"s-value\">{{ durationText || '",
+      "after": " }}</span></div>\n              <div class=\"s-row"
+    },
+    {
+      "pos": 43268,
+      "before": "</span><span class=\"s-value\">{{ form.location || '",
+      "after": " }}</span></div>\n              <div class=\"s-row"
+    },
+    {
+      "pos": 43344,
+      "before": "       <div class=\"s-row\"><span class=\"s-label\">参会",
+      "after": "/span><span class=\"s-value s-highlight\">{{ form."
+    },
+    {
+      "pos": 43420,
+      "before": "ue s-highlight\">{{ form.participant_ids.length }} ",
+      "after": "/span></div>\n              <div class=\"s-row\"><s"
+    },
+    {
+      "pos": 43543,
+      "before": "/span><span class=\"s-value\">{{ fileList.length }} ",
+      "after": "/span></div>\n              <div class=\"s-row\"><s"
+    },
+    {
+      "pos": 43706,
+      "before": "-highlight': agendaContent }\">{{ agendaContent ? '",
+      "after": "已生�? : '未生�? }}</span></div>\n            </div>\n"
+    },
+    {
+      "pos": 43710,
+      "before": "hlight': agendaContent }\">{{ agendaContent ? '�?已生",
+      "after": " : '未生�? }}</span></div>\n            </div>\n    "
+    },
+    {
+      "pos": 43718,
+      "before": " agendaContent }\">{{ agendaContent ? '�?已生�? : '未生",
+      "after": " }}</span></div>\n            </div>\n            "
+    },
+    {
+      "pos": 44073,
+      "before": "el-affix>\n      </div>\n    </div>\n\n    <!-- 新建人员对话",
+      "after": "-->\n    <el-dialog v-model=\"addPersonVisible\" ti"
+    },
+    {
+      "pos": 44396,
+      "before": "t v-model=\"personForm.real_name\" placeholder=\"请输入姓",
+      "after": " />\n        </el-form-item>\n        <el-form-ite"
+    },
+    {
+      "pos": 44827,
+      "before": "sonForm.professional_title\" placeholder=\"如：高级工程师、教",
+      "after": " />\n        </el-form-item>\n        <el-form-ite"
+    },
+    {
+      "pos": 44968,
+      "before": "el=\"personForm.id_card_number\" placeholder=\"用于评审费签",
+      "after": " />\n        </el-form-item>\n        <el-form-ite"
+    },
+    {
+      "pos": 45182,
+      "before": "   </el-form-item>\n        <el-form-item label=\"手机",
+      "after": ">\n          <el-input v-model=\"personForm.phone\""
+    },
+    {
+      "pos": 45666,
+      "before": "  </template>\n    </el-dialog>\n\n    <!-- 签到表模板选择对话",
+      "after": "-->\n    <el-dialog v-model=\"templateDialogVisibl"
+    },
+    {
+      "pos": 45732,
+      "before": "alog v-model=\"templateDialogVisible\" title=\"选择签到表模",
+      "after": " width=\"620px\" :close-on-click-modal=\"false\">\n  "
+    },
+    {
+      "pos": 46575,
+      "before": "       <div class=\"tpl-cols\">字段：{{ tpl.cols.join('",
+      "after": ") }}</div>\n          </div>\n        </div>\n     "
+    },
+    {
+      "pos": 46648,
+      "before": "</div>\n        </div>\n      </div>\n      <!-- 模板预览",
+      "after": "-->\n      <div v-if=\"previewTemplateKey\" class=\""
+    },
+    {
+      "pos": 47473,
+      "before": "               <span v-else-if=\"col === '职称'\">高级工程",
+      "after": "/span>\n                <span v-else-if=\"col === "
+    },
+    {
+      "pos": 47739,
+      "before": "    <span v-else class=\"tpl-sign-placeholder\">（签名区",
+      "after": "/span>\n              </td>\n            </tr>\n   "
+    },
+    {
+      "pos": 49212,
+      "before": " = computed(() => !!route.params.id)\n\n// ======= 状",
+      "after": "=======\nconst submitting = ref(false)\nconst basi"
+    },
+    {
+      "pos": 49361,
+      "before": "\nconst conflicts = ref([])\n\n// ===== 外部系统冲突检测（前端模拟",
+      "after": "====\n// 模拟外部系统数据：陈东明 每天 18:00-20:00 有政务外联例�?cons"
+    },
+    {
+      "pos": 49405,
+      "before": "测（前端模拟�?====\n// 模拟外部系统数据：陈东明 每天 18:00-20:00 有政务外联例",
+      "after": "const MOCK_EXTERNAL_BUSY = {\n  chen_dongming: {\n"
+    },
+    {
+      "pos": 49641,
+      "before": "部任务信息\n * @param {Object} user - 用户对象（含 username 字段",
+      "after": " * @returns {{ task: string, timeRange: string }"
+    },
+    {
+      "pos": 52956,
+      "before": "   }\n    roomLayoutMap.value = map\n    // 自动选择唯一会议",
+      "after": "    if (availableRooms.value.length > 0) {\n     "
+    },
+    {
+      "pos": 53101,
+      "before": "\n    }\n  } catch (e) {\n    console.error('获取会议室列表失",
+      "after": "', e)\n  }\n}\n\nasync function checkRoomConflictAsy"
+    },
+    {
+      "pos": 53722,
+      "before": "const currentRoomLayout = computed(() => {\n  // 优先",
+      "after": "form.location 匹配，找不到则回退到第一个可用布局\n  if (roomLayout"
+    },
+    {
+      "pos": 57234,
+      "before": ")\nconst steps = [\n  { name: 'info', label: '基本信息与人",
+      "after": " },\n  { name: 'seats', label: '座位排布' },\n  { name"
+    },
+    {
+      "pos": 57311,
+      "before": "bel: '座位排布' },\n  { name: 'materials', label: '材料与签",
+      "after": " },\n  { name: 'agenda', label: '智能议程' },\n]\n\nfunc"
+    },
+    {
+      "pos": 58839,
+      "before": "s = {\n  title: [{ required: true, message: '请输入会议名",
+      "after": ", trigger: 'blur' }],\n  meeting_type: [{ require"
+    },
+    {
+      "pos": 61308,
+      "before": "', '決策依据文件', '评估报告', '财务数据'],\n    review: ['被评审项目方",
+      "after": ", '设计图纸', '技术说明书', '相关计算�?, '局面文�?],\n  }\n  retur"
+    },
+    {
+      "pos": 61334,
+      "before": "'],\n    review: ['被评审项目方�?, '设计图纸', '技术说明书', '相关计算",
+      "after": ", '局面文�?],\n  }\n  return form.meeting_type ? (hin"
+    },
+    {
+      "pos": 61342,
+      "before": "review: ['被评审项目方�?, '设计图纸', '技术说明书', '相关计算�?, '局面文",
+      "after": "],\n  }\n  return form.meeting_type ? (hintsMap[fo"
+    },
+    {
+      "pos": 61557,
+      "before": "Each(u => {\n    const dept = u.department || '未分配部",
+      "after": "\n    if (!map[dept]) map[dept] = []\n    map[dept"
+    },
+    {
+      "pos": 64039,
+      "before": "ype: 'error',\n        message: `${user.real_name} ",
+      "after": "${extConflict.timeRange} 有�?{extConflict.task}」，"
+    },
+    {
+      "pos": 64067,
+      "before": "e: `${user.real_name} �?${extConflict.timeRange} 有",
+      "after": "{extConflict.task}」，与本次会议时间冲突，无法添加。`,\n        du"
+    },
+    {
+      "pos": 64974,
+      "before": "e({\n        type: 'warning',\n        message: `已选人",
+      "after": "${u.real_name} �?${info.timeRange} 有�?{info.task"
+    },
+    {
+      "pos": 64991,
+      "before": " 'warning',\n        message: `已选人�?${u.real_name} ",
+      "after": "${info.timeRange} 有�?{info.task}」，与变更后的会议时间冲突，已自"
+    },
+    {
+      "pos": 65012,
+      "before": "essage: `已选人�?${u.real_name} �?${info.timeRange} 有",
+      "after": "{info.task}」，与变更后的会议时间冲突，已自动移除。`,\n        durati"
+    },
+    {
+      "pos": 66326,
+      "before": " try {\n    await ElMessageBox.confirm(\n      `确认删除",
+      "after": "{user.real_name}」？该操作无法撤销。`,\n      '删除人员',\n     "
+    },
+    {
+      "pos": 66547,
+      "before": "    await deleteParticipant(user.id)\n    // 从本地列表移",
+      "after": "    allUsers.value = allUsers.value.filter(u => "
+    },
+    {
+      "pos": 66764,
+      "before": "pant_ids.splice(idx, 1)\n    ElMessage.success(`已删除",
+      "after": "{user.real_name}」`)\n  } catch (e) {\n    ElMessag"
+    },
+    {
+      "pos": 67236,
+      "before": "= {\n  real_name: [{ required: true, message: '请输入姓",
+      "after": ", trigger: 'blur' }],\n}\n\nfunction generateUserna"
+    },
+    {
+      "pos": 68355,
+      "before": "ue = false\n    await fetchUsers()\n    // 自动勾选刚创建的人",
+      "after": "    if (created?.id && !form.participant_ids.inc"
+    },
+    {
+      "pos": 68712,
+      "before": "n handleFileChange() {\n  // v-model:file-list 已自动同",
+      "after": "}\n\n// ======= AI 对话生成议程 =======\nfunction buildAg"
+    },
+    {
+      "pos": 68841,
+      "before": "da) {\n  let base = `你是一位资深的会议管理专家和行政秘书，擅长撰写规范的会议议程",
+      "after": "\n请严格按照以下纯文本格式输出议程，绝对不要使用任何特殊符号（不要用┌┐└┘│├┤─等框线符号，"
+    },
+    {
+      "pos": 68904,
+      "before": "格式输出议程，绝对不要使用任何特殊符号（不要用┌┐└┘│├┤─等框线符号，不要用Markdown语法",
+      "after": "�?�?*等）�?\n格式要求�?1. 标题行：XX会议议程（单独一行）\n2. 基本信息：每条一行"
+    },
+    {
+      "pos": 68906,
+      "before": "输出议程，绝对不要使用任何特殊符号（不要用┌┐└┘│├┤─等框线符号，不要用Markdown语法�?",
+      "after": "�?*等）�?\n格式要求�?1. 标题行：XX会议议程（单独一行）\n2. 基本信息：每条一行，�"
+    },
+    {
+      "pos": 68908,
+      "before": "议程，绝对不要使用任何特殊符号（不要用┌┐└┘│├┤─等框线符号，不要用Markdown语法�?�?",
+      "after": "*等）�?\n格式要求�?1. 标题行：XX会议议程（单独一行）\n2. 基本信息：每条一行，�?会"
+    },
+    {
+      "pos": 68913,
+      "before": "不要使用任何特殊符号（不要用┌┐└┘│├┤─等框线符号，不要用Markdown语法�?�?�?*等）",
+      "after": "\n格式要求�?1. 标题行：XX会议议程（单独一行）\n2. 基本信息：每条一行，�?会议时间：X"
+    },
+    {
+      "pos": 68920,
+      "before": "殊符号（不要用┌┐└┘│├┤─等框线符号，不要用Markdown语法�?�?�?*等）�?\n格式要求",
+      "after": "1. 标题行：XX会议议程（单独一行）\n2. 基本信息：每条一行，�?会议时间：XXX、会议地点"
+    },
+    {
+      "pos": 68955,
+      "before": "?�?�?*等）�?\n格式要求�?1. 标题行：XX会议议程（单独一行）\n2. 基本信息：每条一行，",
+      "after": "会议时间：XXX、会议地点：XXX、主持人：XXX、参会人员：XXX\n3. 议程条目：用中文序号"
+    },
+    {
+      "pos": 69018,
+      "before": "地点：XXX、主持人：XXX、参会人员：XXX\n3. 议程条目：用中文序号（一、二、三...），格式",
+      "after": "序号、时间段、内容（负责人：XXX�?4. 备注：最后一�?\n注意�?- 只输出议程内容本身，不"
+    },
+    {
+      "pos": 69037,
+      "before": "：XXX\n3. 议程条目：用中文序号（一、二、三...），格式�?序号、时间段、内容（负责人：XXX",
+      "after": "4. 备注：最后一�?\n注意�?- 只输出议程内容本身，不要输出解释性文字或开头寒暄语\n- 时间"
+    },
+    {
+      "pos": 69048,
+      "before": "目：用中文序号（一、二、三...），格式�?序号、时间段、内容（负责人：XXX�?4. 备注：最后一",
+      "after": "\n注意�?- 只输出议程内容本身，不要输出解释性文字或开头寒暄语\n- 时间安排要合理，开�?分钟"
+    },
+    {
+      "pos": 69053,
+      "before": "序号（一、二、三...），格式�?序号、时间段、内容（负责人：XXX�?4. 备注：最后一�?\n注意",
+      "after": "- 只输出议程内容本身，不要输出解释性文字或开头寒暄语\n- 时间安排要合理，开�?分钟、每个议�"
+    },
+    {
+      "pos": 69094,
+      "before": "：最后一�?\n注意�?- 只输出议程内容本身，不要输出解释性文字或开头寒暄语\n- 时间安排要合理，开",
+      "after": "分钟、每个议�?5-30分钟、最后留10分钟总结\n- 语言正式、简洁、专�?- 各部分之间用空行"
+    },
+    {
+      "pos": 69102,
+      "before": "意�?- 只输出议程内容本身，不要输出解释性文字或开头寒暄语\n- 时间安排要合理，开�?分钟、每个议",
+      "after": "5-30分钟、最后留10分钟总结\n- 语言正式、简洁、专�?- 各部分之间用空行分隔`\n\n  i"
+    },
+    {
+      "pos": 69132,
+      "before": "\n- 时间安排要合理，开�?分钟、每个议�?5-30分钟、最后留10分钟总结\n- 语言正式、简洁、专",
+      "after": "- 各部分之间用空行分隔`\n\n  if (previousAgenda) {\n    base "
+    },
+    {
+      "pos": 69797,
+      "before": " agendaViewMode.value = 'preview'\n\n  // 保存当前议程用于上下",
+      "after": "  const previousAgenda = agendaContent.value\n  a"
+    },
+    {
+      "pos": 70012,
+      "before": "selectedPersons.value.map(p => p.real_name).join('",
+      "after": ") || '待定'\n  const timeInfo = (form.startDate && "
+    },
+    {
+      "pos": 70176,
+      "before": "angeLabel.value}`\n    : '待定'\n\n  let prompt = `会议信息",
+      "after": "会议名称�?{form.title}\n会议类型�?{meetingTypeLabel.value"
+    },
+    {
+      "pos": 70182,
+      "before": "bel.value}`\n    : '待定'\n\n  let prompt = `会议信息�?会议名称",
+      "after": "{form.title}\n会议类型�?{meetingTypeLabel.value}\n会议时间"
+    },
+    {
+      "pos": 70201,
+      "before": "待定'\n\n  let prompt = `会议信息�?会议名称�?{form.title}\n会议类型",
+      "after": "{meetingTypeLabel.value}\n会议时间�?{timeInfo}\n会议时长�?"
+    },
+    {
+      "pos": 70232,
+      "before": "�?{form.title}\n会议类型�?{meetingTypeLabel.value}\n会议时间",
+      "after": "{timeInfo}\n会议时长�?{durationText.value || '待定'}\n会议"
+    },
+    {
+      "pos": 70249,
+      "before": "类型�?{meetingTypeLabel.value}\n会议时间�?{timeInfo}\n会议时长",
+      "after": "{durationText.value || '待定'}\n会议地点�?{form.locatio"
+    },
+    {
+      "pos": 70284,
+      "before": "{timeInfo}\n会议时长�?{durationText.value || '待定'}\n会议地点",
+      "after": "{form.location || '待定'}\n会议描述�?{form.description "
+    },
+    {
+      "pos": 70314,
+      "before": ".value || '待定'}\n会议地点�?{form.location || '待定'}\n会议描述",
+      "after": "{form.description || '�?}\n参会人员�?{participantName"
+    },
+    {
+      "pos": 70338,
+      "before": "orm.location || '待定'}\n会议描述�?{form.description || '",
+      "after": "}\n参会人员�?{participantNames}（共${form.participant_i"
+    },
+    {
+      "pos": 70346,
+      "before": "tion || '待定'}\n会议描述�?{form.description || '�?}\n参会人员",
+      "after": "{participantNames}（共${form.participant_ids.lengt"
+    },
+    {
+      "pos": 70406,
+      "before": "pantNames}（共${form.participant_ids.length}人）\n\n用户要求",
+      "after": "{input}`\n\n  abortController = new AbortControlle"
+    },
+    {
+      "pos": 71582,
+      "before": "ta.replace(/\\\\n/g, '\\n')\n        // 同时更新对话气泡和右侧议程内",
+      "after": "        chatMessages.value[assistantIdx].content"
+    },
+    {
+      "pos": 71725,
+      "before": "decoded\n        await nextTick()\n        // 自动滚动对话",
+      "after": "        if (chatMessagesRef.value) {\n          c"
+    },
+    {
+      "pos": 71870,
+      "before": "Ref.value.scrollHeight\n        }\n        // 自动滚动预览",
+      "after": "        if (agendaPreviewRef.value) {\n          "
+    },
+    {
+      "pos": 72164,
+      "before": "ame === 'AbortError') {\n      ElMessage.info('已停止生",
+      "after": ")\n    } else {\n      console.error('生成失败:', e)\n "
+    },
+    {
+      "pos": 72247,
+      "before": "ror('生成失败:', e)\n      ElMessage.error('生成失败，请检查网络连",
+      "after": ")\n      chatMessages.value[assistantIdx].content"
+    },
+    {
+      "pos": 72703,
+      "before": "）\\n二、工作汇报（30分钟）\\n三、讨论研究（15分钟）\\n四、布置部署工作（10分钟）\\n五、散",
+      "after": ",\n    review: '# 评审会议议程\\n\\n一、会议开始，宣读会议纪律�?分钟）\\n二"
+    },
+    {
+      "pos": 72745,
+      "before": "分钟）\\n五、散�?,\n    review: '# 评审会议议程\\n\\n一、会议开始，宣读会议纪律",
+      "after": "分钟）\\n二、项目情况介绍（15分钟）\\n三、专家提问与讨论�?0分钟）\\n四、形成评审意见（2"
+    },
+    {
+      "pos": 72777,
+      "before": "程\\n\\n一、会议开始，宣读会议纪律�?分钟）\\n二、项目情况介绍（15分钟）\\n三、专家提问与讨论",
+      "after": "0分钟）\\n四、形成评审意见（20分钟）\\n五、宣读评审结论（5分钟）\\n六、散�?,\n    "
+    },
+    {
+      "pos": 72819,
+      "before": "、专家提问与讨论�?0分钟）\\n四、形成评审意见（20分钟）\\n五、宣读评审结论（5分钟）\\n六、散",
+      "after": ",\n    special: '# 专题研讨议程\\n\\n一、主题发言�?0分钟）\\n二、专家点评"
+    },
+    {
+      "pos": 72855,
+      "before": "评审结论（5分钟）\\n六、散�?,\n    special: '# 专题研讨议程\\n\\n一、主题发言",
+      "after": "0分钟）\\n二、专家点评（20分钟）\\n三、自由讨论（30分钟）\\n四、总结发言�?0分钟）\\n"
+    },
+    {
+      "pos": 72897,
+      "before": "\\n一、主题发言�?0分钟）\\n二、专家点评（20分钟）\\n三、自由讨论（30分钟）\\n四、总结发言",
+      "after": "0分钟）\\n五、散�?,\n    decision: '# 决策会议议程\\n\\n一、宣读议题（5"
+    },
+    {
+      "pos": 72908,
+      "before": "分钟）\\n二、专家点评（20分钟）\\n三、自由讨论（30分钟）\\n四、总结发言�?0分钟）\\n五、散",
+      "after": ",\n    decision: '# 决策会议议程\\n\\n一、宣读议题（5分钟）\\n二、情况说明"
+    },
+    {
+      "pos": 72973,
+      "before": "n: '# 决策会议议程\\n\\n一、宣读议题（5分钟）\\n二、情况说明（15分钟）\\n三、讨论与决策",
+      "after": "0分钟）\\n四、表决通过�?0分钟）\\n五、宣布决定（5分钟）\\n六、散�?,\n  }\n  ag"
+    },
+    {
+      "pos": 72987,
+      "before": "\\n一、宣读议题（5分钟）\\n二、情况说明（15分钟）\\n三、讨论与决策�?0分钟）\\n四、表决通过",
+      "after": "0分钟）\\n五、宣布决定（5分钟）\\n六、散�?,\n  }\n  agendaContent.va"
+    },
+    {
+      "pos": 73011,
+      "before": "分钟）\\n三、讨论与决策�?0分钟）\\n四、表决通过�?0分钟）\\n五、宣布决定（5分钟）\\n六、散",
+      "after": ",\n  }\n  agendaContent.value = templates[cmd] || "
+    },
+    {
+      "pos": 73669,
+      "before": "\n      continue\n    }\n\n    // 标题行：前几行中包含\"议程\"的、或者第一",
+      "after": "    const isTitle = (i === 0 || (i <= 2 && trimm"
+    },
+    {
+      "pos": 73761,
+      "before": "&& trimmed.includes('议程'))) && !trimmed.includes('",
+      "after": ") && !trimmed.includes(':')\n    if (isTitle) {\n "
+    },
+    {
+      "pos": 73987,
+      "before": "immed}</p>`\n      continue\n    }\n\n    // 基本信息行（包含\"",
+      "after": "的）\n    const isInfoLine = /^(会议时间|会议地点|主\\s*持\\s*人"
+    },
+    {
+      "pos": 74064,
+      "before": " /^(会议时间|会议地点|主\\s*持\\s*人|参会人员|记\\s*录\\s*人|会议类型|会议主题)[",
+      "after": "]/.test(trimmed)\n    if (isInfoLine) {\n      con"
+    },
+    {
+      "pos": 74152,
+      "before": " {\n      const [label, ...rest] = trimmed.split(/[",
+      "after": "]/)\n      const value = rest.join('�?)\n      htm"
+    },
+    {
+      "pos": 74189,
+      "before": "mmed.split(/[�?]/)\n      const value = rest.join('",
+      "after": ")\n      html += `<p style=\"font-size:14px;line-h"
+    },
+    {
+      "pos": 74351,
+      "before": "266;min-width:70px;display:inline-block;\">${label}",
+      "after": "/span>${value}</p>`\n      continue\n    }\n\n    //"
+    },
+    {
+      "pos": 74645,
+      "before": ";\">${trimmed}</p>`\n      continue\n    }\n\n    // 备注",
+      "after": "    if (trimmed.startsWith('备注') || trimmed.star"
+    },
+    {
+      "pos": 74731,
+      "before": "| trimmed.startsWith('注：') || trimmed.startsWith('",
+      "after": "')) {\n      html += `<p style=\"font-size:14px;li"
+    },
+    {
+      "pos": 75615,
+      "before": "  ElMessage.error('导出失败，请重试')\n  }\n}\n\n// ======= 签到",
+      "after": "=======\nconst templateDialogVisible = ref(false)"
+    },
+    {
+      "pos": 75801,
+      "before": "TemplateOptions = [\n  { key: 'expert', name: '专家签到",
+      "after": ", cols: ['序号', '姓名', '单位', '职称', '签到时间', '签名'] }"
+    },
+    {
+      "pos": 75885,
+      "before": " '签到时间', '签名'] },\n  { key: 'others', name: '其他人员签到",
+      "after": ", cols: ['序号', '姓名', '单位', '签到时间', '签名'] },\n  { "
+    },
+    {
+      "pos": 78415,
+      "before": "herRows.value = []\n    ElMessage.success('已生成评审费发放",
+      "after": ")\n  } else if (cmd === 'all') {\n    handleGenera"
+    },
+    {
+      "pos": 79192,
+      "before": "   sign: '',\n    }))\n    ElMessage.success('签到表生成成",
+      "after": ")\n  } catch (e) {\n    ElMessage.error('签到表生成失�?)"
+    },
+    {
+      "pos": 79239,
+      "before": "生成成�?)\n  } catch (e) {\n    ElMessage.error('签到表生成失",
+      "after": ")\n  } finally {\n    generating.checkin = false\n "
+    },
+    {
+      "pos": 79479,
+      "before": "ter;margin-bottom:16px\">${form.title || '会议'} - 签到",
+      "after": "/h3>\n    <p>会议时间�?{form.startDate || '待定'} ${tim"
+    },
+    {
+      "pos": 79497,
+      "before": "16px\">${form.title || '会议'} - 签到�?/h3>\n    <p>会议时间",
+      "after": "{form.startDate || '待定'} ${timeRangeLabel.value}"
+    },
+    {
+      "pos": 79563,
+      "before": "e || '待定'} ${timeRangeLabel.value}</p>\n    <p>会议地点",
+      "after": "{form.location || '待定'}</p>`\n\n  // 专家签到�?  if (c"
+    },
+    {
+      "pos": 79604,
+      "before": "  <p>会议地点�?{form.location || '待定'}</p>`\n\n  // 专家签到",
+      "after": "  if (checkinExpertRows.value.length > 0) {\n    "
+    },
+    {
+      "pos": 79891,
+      "before": ")\n    html += `<h4 style=\"margin-top:20px\">一、专家签到表",
+      "after": "{checkinExpertRows.value.length}人）</h4>\n      <t"
+    },
+    {
+      "pos": 80246,
+      "before": "pertRows}</tbody>\n      </table>`\n  }\n\n  // 其他人员签到",
+      "after": "  if (checkinOtherRows.value.length > 0) {\n    c"
+    },
+    {
+      "pos": 80513,
+      "before": "    html += `<h4 style=\"margin-top:20px\">二、其他人员签到表",
+      "after": "{checkinOtherRows.value.length}人）</h4>\n      <ta"
+    },
+    {
+      "pos": 81191,
+      "before": ")\n    html += `<h4 style=\"margin-top:20px\">三、评审费签收",
+      "after": "/h4>\n      <table border=\"1\" cellpadding=\"8\" cel"
+    },
+    {
+      "pos": 81402,
+      "before": "f0f5ff\"><th>序号</th><th>姓名</th><th>身份证号</th><th>銀行卡",
+      "after": "/th><th>单位</th><th>职称</th><th>金额</th><th>签名</th>"
+    },
+    {
+      "pos": 81688,
+      "before": "alue.length === 0) {\n    ElMessage.warning('请先生成签到",
+      "after": ")\n    return\n  }\n  try {\n    const content = bui"
+    },
+    {
+      "pos": 81861,
+      "before": "charset=\"utf-8\">\n<title>${form.title || '会议'} - 签到",
+      "after": "/title>\n<style>\n  @page { size: A4; margin: 20mm"
+    },
+    {
+      "pos": 82509,
+      "before": "tWindow) {\n      ElMessage.error('弹窗被浏览器拦截，请允许弹窗后重",
+      "after": ")\n      return\n    }\n    printWindow.document.wr"
+    },
+    {
+      "pos": 83355,
+      "before": "veTab.value = 'info'\n    ElMessage.warning('请完善基本信",
+      "after": ")\n    return\n  }\n  if (!form.startDate || !form."
+    },
+    {
+      "pos": 84836,
+      "before": "\n    submitting.value = false\n  }\n}\n\n// ======= 初始",
+      "after": "=======\nfunction resetForm() {\n  form.title = ''"
+    },
+    {
+      "pos": 88275,
+      "before": " border-color: #00bde6; }\n    }\n  }\n}\n\n/* ===== 步骤",
+      "after": "===== */\n.steps-nav {\n  display: flex;\n  align-i"
+    },
+    {
+      "pos": 90873,
+      "before": "0bde6; border-color: #00bde6; }\n  }\n}\n\n/* ===== 分割",
+      "after": "===== */\n.section-divider {\n  display: flex;\n  a"
+    },
+    {
+      "pos": 101617,
+      "before": "ign: center;\n  color: #6a8faf;\n}\n\n/* ===== AI 议程：聊",
+      "after": "编辑器双栏布局 ===== */\n.agenda-chat-layout {\n  display"
+    },
+    {
+      "pos": 105653,
+      "before": " 16px;\n      color: #00d4ff;\n    }\n  }\n}\n\n/* -- 输入",
+      "after": "-- */\n.chat-input-area {\n  padding: 12px 16px;\n "
+    },
+    {
+      "pos": 106812,
+      "before": "rgba(245,108,108,0.1); }\n    }\n  }\n}\n\n/* -- 右侧编辑器面",
+      "after": "-- */\n.editor-panel {\n  flex: 1;\n  display: flex"
+    },
+    {
+      "pos": 112224,
+      "before": " 1px solid rgba(0,212,255,0.2);\n  }\n}\n\n/* ===== 响应",
+      "after": "===== */\n@media (max-width: 960px) {\n  .page-con"
+    },
+    {
+      "pos": 117316,
+      "before": "t;\n  color: #e6a23c !important;\n}\n\n/* ===== 签到表编辑模",
+      "after": "===== */\n.cell-input.readonly {\n  cursor: defaul"
+    }
+  ],
+  "MeetingArchive": [
+    {
+      "pos": 53,
+      "before": "mplate>\n  <div class=\"archive-page\">\n    <!-- 页面标题",
+      "after": "-->\n    <div class=\"page-header\">\n      <div cla"
+    },
+    {
+      "pos": 268,
+      "before": "</p>\n      </div>\n    </div>\n\n    <!-- 主体：左列表 + 右详",
+      "after": "-->\n    <div class=\"main-layout\">\n\n      <!-- =="
+    },
+    {
+      "pos": 656,
+      "before": "del=\"dateRange\" type=\"daterange\" range-separator=\"",
+      "after": " start-placeholder=\"开�?\n            end-placehol"
+    },
+    {
+      "pos": 679,
+      "before": "aterange\" range-separator=\"�? start-placeholder=\"开",
+      "after": "\n            end-placeholder=\"结束\" size=\"small\" s"
+    },
+    {
+      "pos": 857,
+      "before": "=\"list-overview\">\n          <span class=\"ov-item\">",
+      "after": "<b>{{ overview.total }}</b> 个归�?/span>\n         "
+    },
+    {
+      "pos": 889,
+      "before": "n class=\"ov-item\">�?<b>{{ overview.total }}</b> 个归",
+      "after": "/span>\n          <span class=\"ov-item\">待办 <b>{{ "
+    },
+    {
+      "pos": 1863,
+      "before": "<span class=\"mi-people\">{{ m.participants_count }}",
+      "after": "/span>\n              <div v-if=\"m.todo_total > 0"
+    },
+    {
+      "pos": 2280,
+      "before": ">\n              <span v-else class=\"mi-no-todo\">无待",
+      "after": "/span>\n            </div>\n          </div>\n     "
+    },
+    {
+      "pos": 2911,
+      "before": "ion\">\n          <el-empty description=\"请从左侧选择一个归档会",
+      "after": " />\n        </div>\n        <div v-else-if=\"loadi"
+    },
+    {
+      "pos": 3084,
+      "before": "size=\"32\"><Loading /></el-icon>\n          <span>加载",
+      "after": "..</span>\n        </div>\n\n        <template v-el"
+    },
+    {
+      "pos": 3171,
+      "before": "template v-else-if=\"fullData\">\n          <!-- 会议信息",
+      "after": "-->\n          <div class=\"detail-header\">\n      "
+    },
+    {
+      "pos": 4219,
+      "before": "command=\"txt\"><el-icon><Document /></el-icon>导出 纯文",
+      "after": "(.txt)</el-dropdown-item>\n                    </"
+    },
+    {
+      "pos": 4731,
+      "before": "/el-icon><span>{{ fmtDate(fullData.start_time) }} ",
+      "after": "{{ fmtTime(fullData.end_time) }}</span></div>\n  "
+    },
+    {
+      "pos": 5021,
+      "before": "el-icon><span>{{ fullData.participants.length }}人参",
+      "after": "/span></div>\n              <el-tag type=\"success"
+    },
+    {
+      "pos": 5103,
+      "before": "-tag type=\"success\" size=\"small\" effect=\"plain\">已归",
+      "after": "/el-tag>\n            </div>\n          </div>\n\n  "
+    },
+    {
+      "pos": 5256,
+      "before": "detailTab\" class=\"detail-tabs\">\n\n            <!-- ",
+      "after": "会议摘要 -->\n            <el-tab-pane label=\"📊 会议摘要\""
+    },
+    {
+      "pos": 7548,
+      "before": "v v-else class=\"summary-empty\">暂无摘要，点击「AI 生成摘要」自动生",
+      "after": "/div>\n                  </template>\n            "
+    },
+    {
+      "pos": 7675,
+      "before": "div>\n            </el-tab-pane>\n\n            <!-- ",
+      "after": "会议记录（含音频转写�?-->\n            <el-tab-pane label=\""
+    },
+    {
+      "pos": 7687,
+      "before": "     </el-tab-pane>\n\n            <!-- �?会议记录（含音频转写",
+      "after": "-->\n            <el-tab-pane label=\"📋 会议记录\" name"
+    },
+    {
+      "pos": 9042,
+      "before": "                  点击时间标签可跳转到对应语音位置，直接编辑文字内容即可修改转写结",
+      "after": "                    </div>\n                    <"
+    },
+    {
+      "pos": 9466,
+      "before": "or: speakerColor(seg.speaker) }\">{{ seg.speaker }}",
+      "after": "/span>\n                      <div class=\"seg-tex"
+    },
+    {
+      "pos": 10028,
+      "before": "div>\n            </el-tab-pane>\n\n            <!-- ",
+      "after": "待办分发 -->\n            <el-tab-pane label=\"�?待办分发\""
+    },
+    {
+      "pos": 10071,
+      "before": "  <!-- �?待办分发 -->\n            <el-tab-pane label=\"",
+      "after": "待办分发\" name=\"todos\">\n              <div class=\"ta"
+    },
+    {
+      "pos": 10795,
+      "before": "   <el-table-column prop=\"assignee_name\" label=\"责任",
+      "after": " width=\"90\" />\n                  <el-table-colum"
+    },
+    {
+      "pos": 10856,
+      "before": "0\" />\n                  <el-table-column label=\"优先",
+      "after": " width=\"80\" align=\"center\">\n                    "
+    },
+    {
+      "pos": 11184,
+      "before": "olumn>\n                  <el-table-column label=\"状",
+      "after": " width=\"130\" align=\"center\">\n                   "
+    },
+    {
+      "pos": 11323,
+      "before": "              <el-tooltip content=\"状态由关联流程驱动，不可直接修",
+      "after": " placement=\"top\">\n                        <el-ta"
+    },
+    {
+      "pos": 11599,
+      "before": "\"!row.flow_binding_id\" class=\"status-no-flow\">未关联流",
+      "after": "/div>\n                    </template>\n          "
+    },
+    {
+      "pos": 11824,
+      "before": "template #default=\"{ row }\">{{ row.due_date || '未设",
+      "after": " }}</template>\n                  </el-table-colu"
+    },
+    {
+      "pos": 13122,
+      "before": "div>\n            </el-tab-pane>\n\n            <!-- ",
+      "after": "进度跟踪 -->\n            <el-tab-pane label=\"📈 进度跟踪\""
+    },
+    {
+      "pos": 13548,
+      "before": "stats.completed }}</span><span class=\"ts-label\">已完",
+      "after": "/span></div>\n                  <div class=\"ts-ca"
+    },
+    {
+      "pos": 13700,
+      "before": "ats.in_progress }}</span><span class=\"ts-label\">进行",
+      "after": "/span></div>\n                  <div class=\"ts-ca"
+    },
+    {
+      "pos": 14103,
+      "before": "pan>\n                    <span class=\"ts-label\">完成",
+      "after": "/span>\n                  </div>\n                "
+    },
+    {
+      "pos": 14817,
+      "before": "div>\n            </el-tab-pane>\n\n            <!-- ",
+      "after": "评审结论 -->\n            <el-tab-pane label=\"📝 评审结论\""
+    },
+    {
+      "pos": 15210,
+      "before": "div>\n            </el-tab-pane>\n\n            <!-- ",
+      "after": "问题清单 -->\n            <el-tab-pane label=\"🔴 问题清单\""
+    },
+    {
+      "pos": 15546,
+      "before": "ass=\"issue.status\">\n                    <!-- 校对状态标",
+      "after": "-->\n                    <div class=\"ia-proofread"
+    },
+    {
+      "pos": 15832,
+      "before": "                     >{{ issue.proofread ? '已校对（锁定",
+      "after": " : '未校�? }}</el-tag>\n                    </div>\n"
+    },
+    {
+      "pos": 15840,
+      "before": "             >{{ issue.proofread ? '已校对（锁定�? : '未校",
+      "after": " }}</el-tag>\n                    </div>\n        "
+    },
+    {
+      "pos": 16282,
+      "before": "size=\"small\" @click=\"saveArchiveIssue(issue)\">保存并锁",
+      "after": "/el-button>\n                        <el-button s"
+    },
+    {
+      "pos": 17272,
+      "before": "gap:6px\">\n                          <!-- 未校对问题可修改一",
+      "after": "-->\n                          <el-button\n       "
+    },
+    {
+      "pos": 18154,
+      "before": "late>\n      </div>\n    </div>\n\n    <!-- ─── 问题回复对话",
+      "after": "─── -->\n    <el-dialog v-model=\"issueReplyDialog"
+    },
+    {
+      "pos": 18516,
+      "before": "  </el-form-item>\n        <el-form-item label=\"处理状",
+      "after": ">\n          <el-select v-model=\"issueReplyForm.s"
+    },
+    {
+      "pos": 18683,
+      "before": "\"explained\" />\n            <el-option label=\"采纳-未解",
+      "after": " value=\"adopted_unresolved\" />\n            <el-o"
+    },
+    {
+      "pos": 18751,
+      "before": "unresolved\" />\n            <el-option label=\"采纳-已解",
+      "after": " value=\"adopted_resolved\" />\n          </el-sele"
+    },
+    {
+      "pos": 18968,
+      "before": " type=\"textarea\" :rows=\"3\" placeholder=\"请输入回复内容（选填",
+      "after": " maxlength=\"300\" show-word-limit />\n        </el"
+    },
+    {
+      "pos": 19302,
+      "before": "template>\n    </el-dialog>\n\n    <!-- ─── AI 提取待办对话",
+      "after": "─── -->\n    <el-dialog v-model=\"aiTodoDialog\" ti"
+    },
+    {
+      "pos": 20588,
+      "before": "-select v-model=\"s._assignee_id\" placeholder=\"指定责任",
+      "after": " size=\"small\" style=\"width:120px\">\n             "
+    },
+    {
+      "pos": 21199,
+      "before": "   <el-dialog v-model=\"bindFlowDialog\" title=\"关联工作",
+      "after": " width=\"400px\">\n      <el-form label-width=\"80px"
+    },
+    {
+      "pos": 21354,
+      "before": "nput v-model=\"flowBindInput\" placeholder=\"输入 OA 工作",
+      "after": "ID 或流程编�? />\n        </el-form-item>\n      </el-"
+    },
+    {
+      "pos": 21363,
+      "before": "del=\"flowBindInput\" placeholder=\"输入 OA 工作�?ID 或流程编",
+      "after": " />\n        </el-form-item>\n      </el-form>\n   "
+    },
+    {
+      "pos": 21651,
+      "before": "   </template>\n    </el-dialog>\n\n    <!-- 手动新建待办对话",
+      "after": "-->\n    <el-dialog v-model=\"manualTodoDialog\" ti"
+    },
+    {
+      "pos": 21985,
+      "before": "model=\"manualTodoForm.title\" placeholder=\"请输入待办事项描",
+      "after": " />\n        </el-form-item>\n        <el-form-ite"
+    },
+    {
+      "pos": 22216,
+      "before": "   </el-form-item>\n        <el-form-item label=\"责任",
+      "after": " prop=\"assignee_id\">\n          <el-select v-mode"
+    },
+    {
+      "pos": 22314,
+      "before": "del=\"manualTodoForm.assignee_id\" placeholder=\"选择责任",
+      "after": " filterable style=\"width: 100%\">\n            <el"
+    },
+    {
+      "pos": 22742,
+      "before": "   </el-form-item>\n        <el-form-item label=\"优先",
+      "after": ">\n          <el-radio-group v-model=\"manualTodoF"
+    },
+    {
+      "pos": 22842,
+      "before": "orm.priority\">\n            <el-radio value=\"high\">",
+      "after": "/el-radio>\n            <el-radio value=\"medium\">"
+    },
+    {
+      "pos": 22892,
+      "before": "�?/el-radio>\n            <el-radio value=\"medium\">",
+      "after": "/el-radio>\n            <el-radio value=\"low\">�?/"
+    },
+    {
+      "pos": 22939,
+      "before": "m\">�?/el-radio>\n            <el-radio value=\"low\">",
+      "after": "/el-radio>\n          </el-radio-group>\n        <"
+    },
+    {
+      "pos": 23750,
+      "before": "══════════════════════════════════════════════════",
+      "after": "   示例数据\n   ═════════════════════════════════════"
+    },
+    {
+      "pos": 23837,
+      "before": "══════════════════════════════════════════════════",
+      "after": "*/\n\nconst DEMO_PARTICIPANTS = [\n  { id: 'd1', re"
+    },
+    {
+      "pos": 23899,
+      "before": "DEMO_PARTICIPANTS = [\n  { id: 'd1', real_name: '王建",
+      "after": ", department: '局领导', role: '主持�? },\n  { id: 'd2'"
+    },
+    {
+      "pos": 23931,
+      "before": "1', real_name: '王建�?, department: '局领导', role: '主持",
+      "after": " },\n  { id: 'd2', real_name: '李敏�?, department: "
+    },
+    {
+      "pos": 23965,
+      "before": "'局领导', role: '主持�? },\n  { id: 'd2', real_name: '李敏",
+      "after": ", department: '办公�?, role: '记录�? },\n  { id: 'd3'"
+    },
+    {
+      "pos": 23984,
+      "before": "},\n  { id: 'd2', real_name: '李敏�?, department: '办公",
+      "after": ", role: '记录�? },\n  { id: 'd3', real_name: '张伟�?,"
+    },
+    {
+      "pos": 23997,
+      "before": "2', real_name: '李敏�?, department: '办公�?, role: '记录",
+      "after": " },\n  { id: 'd3', real_name: '张伟�?, department: "
+    },
+    {
+      "pos": 24031,
+      "before": "'办公�?, role: '记录�? },\n  { id: 'd3', real_name: '张伟",
+      "after": ", department: '信息中心', role: '汇报�? },\n  { id: 'd4"
+    },
+    {
+      "pos": 24064,
+      "before": "', real_name: '张伟�?, department: '信息中心', role: '汇报",
+      "after": " },\n  { id: 'd4', real_name: '陈秀�?, department: "
+    },
+    {
+      "pos": 24098,
+      "before": "信息中心', role: '汇报�? },\n  { id: 'd4', real_name: '陈秀",
+      "after": ", department: '财务�?, role: '参会�? },\n  { id: 'd5'"
+    },
+    {
+      "pos": 24117,
+      "before": "},\n  { id: 'd4', real_name: '陈秀�?, department: '财务",
+      "after": ", role: '参会�? },\n  { id: 'd5', real_name: '刘志�?,"
+    },
+    {
+      "pos": 24130,
+      "before": "4', real_name: '陈秀�?, department: '财务�?, role: '参会",
+      "after": " },\n  { id: 'd5', real_name: '刘志�?, department: "
+    },
+    {
+      "pos": 24164,
+      "before": "'财务�?, role: '参会�? },\n  { id: 'd5', real_name: '刘志",
+      "after": ", department: '综合�?, role: '参会�? },\n  { id: 'd6'"
+    },
+    {
+      "pos": 24183,
+      "before": "},\n  { id: 'd5', real_name: '刘志�?, department: '综合",
+      "after": ", role: '参会�? },\n  { id: 'd6', real_name: '赵丽�?,"
+    },
+    {
+      "pos": 24196,
+      "before": "5', real_name: '刘志�?, department: '综合�?, role: '参会",
+      "after": " },\n  { id: 'd6', real_name: '赵丽�?, department: "
+    },
+    {
+      "pos": 24230,
+      "before": "'综合�?, role: '参会�? },\n  { id: 'd6', real_name: '赵丽",
+      "after": ", department: '人事�?, role: '参会�? },\n  { id: 'd7'"
+    },
+    {
+      "pos": 24249,
+      "before": "},\n  { id: 'd6', real_name: '赵丽�?, department: '人事",
+      "after": ", role: '参会�? },\n  { id: 'd7', real_name: '杨浩�?,"
+    },
+    {
+      "pos": 24262,
+      "before": "6', real_name: '赵丽�?, department: '人事�?, role: '参会",
+      "after": " },\n  { id: 'd7', real_name: '杨浩�?, department: "
+    },
+    {
+      "pos": 24296,
+      "before": "'人事�?, role: '参会�? },\n  { id: 'd7', real_name: '杨浩",
+      "after": ", department: '技术科', role: '参会�? },\n  { id: 'd8'"
+    },
+    {
+      "pos": 24328,
+      "before": "7', real_name: '杨浩�?, department: '技术科', role: '参会",
+      "after": " },\n  { id: 'd8', real_name: '周婉�?, department: "
+    },
+    {
+      "pos": 24362,
+      "before": "'技术科', role: '参会�? },\n  { id: 'd8', real_name: '周婉",
+      "after": ", department: '行政�?, role: '参会�? },\n]\n\nconst DEM"
+    },
+    {
+      "pos": 24381,
+      "before": "},\n  { id: 'd8', real_name: '周婉�?, department: '行政",
+      "after": ", role: '参会�? },\n]\n\nconst DEMO_LIST_ITEM = {\n  i"
+    },
+    {
+      "pos": 24394,
+      "before": "8', real_name: '周婉�?, department: '行政�?, role: '参会",
+      "after": " },\n]\n\nconst DEMO_LIST_ITEM = {\n  id: 'demo-1',\n"
+    },
+    {
+      "pos": 24552,
+      "before": "  end_time: '2026-03-28T11:30:00',\n  location: '行政",
+      "after": "楼第一会议�?,\n  participants_count: 8,\n  todo_total: "
+    },
+    {
+      "pos": 24559,
+      "before": "ime: '2026-03-28T11:30:00',\n  location: '行政�?楼第一会议",
+      "after": ",\n  participants_count: 8,\n  todo_total: 6,\n  to"
+    },
+    {
+      "pos": 24756,
+      "before": "nts: DEMO_PARTICIPANTS,\n  summary: `本次会议由王建国副局长主持，",
+      "after": "人参会，历时2.5小时�?\n会议首先听取了各科室2026年第一季度工作完成情况汇报。信息中心张伟"
+    },
+    {
+      "pos": 24769,
+      "before": "TICIPANTS,\n  summary: `本次会议由王建国副局长主持，�?人参会，历时2.5小时",
+      "after": "\n会议首先听取了各科室2026年第一季度工作完成情况汇报。信息中心张伟东主任介绍了政务信息化二期"
+    },
+    {
+      "pos": 24835,
+      "before": "6年第一季度工作完成情况汇报。信息中心张伟东主任介绍了政务信息化二期系统建设进展，目前核心模块开发完",
+      "after": "5%，预�?月中旬完成全部部署。财务科陈秀芳科长通报了一季度预算执行情况，总体执行率达72%，部"
+    },
+    {
+      "pos": 24841,
+      "before": "工作完成情况汇报。信息中心张伟东主任介绍了政务信息化二期系统建设进展，目前核心模块开发完�?5%，预",
+      "after": "月中旬完成全部部署。财务科陈秀芳科长通报了一季度预算执行情况，总体执行率达72%，部分专项经费需"
+    },
+    {
+      "pos": 24897,
+      "before": "成全部部署。财务科陈秀芳科长通报了一季度预算执行情况，总体执行率达72%，部分专项经费需加快支出进度",
+      "after": "\n会议重点讨论了第二季度五项重点工作：信息化系统全面上线、预算中期调整、全员业务能力提升培训、会"
+    },
+    {
+      "pos": 24965,
+      "before": "工作：信息化系统全面上线、预算中期调整、全员业务能力提升培训、会议室智能化改造以及跨部门协作机制优化",
+      "after": "\n会议决定：各科室�?�?日前提交二季度详细工作计划；信息化项目纳入月度督办，每周报送进度；培训"
+    },
+    {
+      "pos": 24976,
+      "before": "线、预算中期调整、全员业务能力提升培训、会议室智能化改造以及跨部门协作机制优化�?\n会议决定：各科室",
+      "after": "�?日前提交二季度详细工作计划；信息化项目纳入月度督办，每周报送进度；培训计划由人事科牵头�?�"
+    },
+    {
+      "pos": 24978,
+      "before": "预算中期调整、全员业务能力提升培训、会议室智能化改造以及跨部门协作机制优化�?\n会议决定：各科室�?",
+      "after": "日前提交二季度详细工作计划；信息化项目纳入月度督办，每周报送进度；培训计划由人事科牵头�?�?0"
+    },
+    {
+      "pos": 25023,
+      "before": "各科室�?�?日前提交二季度详细工作计划；信息化项目纳入月度督办，每周报送进度；培训计划由人事科牵头",
+      "after": "�?0日前完成方案制定。`,\n\n  keypoints: [\n    { id: 'k1', t"
+    },
+    {
+      "pos": 25025,
+      "before": "室�?�?日前提交二季度详细工作计划；信息化项目纳入月度督办，每周报送进度；培训计划由人事科牵头�?",
+      "after": "0日前完成方案制定。`,\n\n  keypoints: [\n    { id: 'k1', tit"
+    },
+    {
+      "pos": 25157,
+      "before": ": 'high',\n      content: '张伟东主任汇报：政务信息化二期项目核心模块开发完",
+      "after": "5%，数据库迁移已通过压力测试。移动端适配还需2周，预计4�?5日可完成全部署。安全等保三级测评"
+    },
+    {
+      "pos": 25188,
+      "before": "汇报：政务信息化二期项目核心模块开发完�?5%，数据库迁移已通过压力测试。移动端适配还需2周，预计4",
+      "after": "5日可完成全部署。安全等保三级测评已通过，等待正式发证。建议增�?名运维人员保障上线后系统稳定运"
+    },
+    {
+      "pos": 25221,
+      "before": "力测试。移动端适配还需2周，预计4�?5日可完成全部署。安全等保三级测评已通过，等待正式发证。建议增",
+      "after": "名运维人员保障上线后系统稳定运行�? },\n    { id: 'k2', title: '预算"
+    },
+    {
+      "pos": 25239,
+      "before": "?5日可完成全部署。安全等保三级测评已通过，等待正式发证。建议增�?名运维人员保障上线后系统稳定运行",
+      "after": " },\n    { id: 'k2', title: '预算执行与资金使用情�?, import"
+    },
+    {
+      "pos": 25279,
+      "before": "障上线后系统稳定运行�? },\n    { id: 'k2', title: '预算执行与资金使用情",
+      "after": ", importance: 'high',\n      content: '陈秀芳科长通报：一季"
+    },
+    {
+      "pos": 25390,
+      "before": "，已执行2304万元，执行率72%。其中信息化专项执行率仅58%，需加快招标采购流程。建议对执行率低",
+      "after": "0%的科室进行重点督办，并将预算执行情况纳入季度考核指标�? },\n    { id: 'k3'"
+    },
+    {
+      "pos": 25420,
+      "before": "8%，需加快招标采购流程。建议对执行率低�?0%的科室进行重点督办，并将预算执行情况纳入季度考核指标",
+      "after": " },\n    { id: 'k3', title: '全员业务能力提升培训计划', impor"
+    },
+    {
+      "pos": 25517,
+      "before": "portance: 'medium',\n      content: '赵丽娜科长提出分三批组织培训",
+      "after": "月中旬开展信息化应用培训�?月安排公文写作与办公规范培训�?月组织跨部门业务交流。计划邀请外部讲"
+    },
+    {
+      "pos": 25531,
+      "before": "ium',\n      content: '赵丽娜科长提出分三批组织培训�?月中旬开展信息化应用培训",
+      "after": "月安排公文写作与办公规范培训�?月组织跨部门业务交流。计划邀请外部讲�?名，内部讲师4名，培训费"
+    },
+    {
+      "pos": 25547,
+      "before": "ent: '赵丽娜科长提出分三批组织培训�?月中旬开展信息化应用培训�?月安排公文写作与办公规范培训",
+      "after": "月组织跨部门业务交流。计划邀请外部讲�?名，内部讲师4名，培训费用预算18万元�? },\n   "
+    },
+    {
+      "pos": 25567,
+      "before": "�?月中旬开展信息化应用培训�?月安排公文写作与办公规范培训�?月组织跨部门业务交流。计划邀请外部讲",
+      "after": "名，内部讲师4名，培训费用预算18万元�? },\n    { id: 'k4', title: "
+    },
+    {
+      "pos": 25588,
+      "before": "写作与办公规范培训�?月组织跨部门业务交流。计划邀请外部讲�?名，内部讲师4名，培训费用预算18万元",
+      "after": " },\n    { id: 'k4', title: '会议室智能化改造方�?, importa"
+    },
+    {
+      "pos": 25627,
+      "before": "，培训费用预算18万元�? },\n    { id: 'k4', title: '会议室智能化改造方",
+      "after": ", importance: 'medium',\n      content: '杨浩然副科长介绍"
+    },
+    {
+      "pos": 25677,
+      "before": "�?, importance: 'medium',\n      content: '杨浩然副科长介绍",
+      "after": "楼会议室改造方案：包括无纸化会议系统、智能签到终端、高清录播设备和远程视频接入。预算约45万元，"
+    },
+    {
+      "pos": 25751,
+      "before": "到终端、高清录播设备和远程视频接入。预算约45万元，改造工期约3周，建议5月启动以不影响日常会议使用",
+      "after": " },\n    { id: 'k5', title: '跨部门协作机制优化建�?, import"
+    },
+    {
+      "pos": 25791,
+      "before": "以不影响日常会议使用�? },\n    { id: 'k5', title: '跨部门协作机制优化建",
+      "after": ", importance: 'low',\n      content: '刘志强科长建议建立月度"
+    },
+    {
+      "pos": 25899,
+      "before": "立跨部门项目协调员，使用统一的在线协作平台。计划先在信息化项目上试行，积累经验后推广到其他跨部门项目",
+      "after": " },\n  ],\n\n  transcripts: [\n    { start: 0, end: "
+    },
+    {
+      "pos": 25965,
+      "before": "anscripts: [\n    { start: 0, end: 28, speaker: '王建",
+      "after": ", text: '各位同事上午好，今天召开第一季度工作总结暨第二季度计划部署会议。首先请各科室按"
+    },
+    {
+      "pos": 26038,
+      "before": "第一季度工作总结暨第二季度计划部署会议。首先请各科室按顺序汇报一季度工作完成情况，先请信息中心张主任",
+      "after": " },\n    { start: 30, end: 85, speaker: '张伟�?, te"
+    },
+    {
+      "pos": 26082,
+      "before": "息中心张主任�? },\n    { start: 30, end: 85, speaker: '张伟",
+      "after": ", text: '好的，王局。信息中心一季度主要推进了政务信息化二期项目建设。目前核心模块开发已"
+    },
+    {
+      "pos": 26197,
+      "before": "作在上周通过了压力测试，各项指标均达标。移动端适配还需要大约两周时间，预计四月十五日可以完成全面部署",
+      "after": " },\n    { start: 87, end: 120, speaker: '张伟�?, t"
+    },
+    {
+      "pos": 26242,
+      "before": "成全面部署�? },\n    { start: 87, end: 120, speaker: '张伟",
+      "after": ", text: '另外，安全等保三级测评已经顺利通过，正在等待正式发证。不过我想提一下，系统上线"
+    },
+    {
+      "pos": 26326,
+      "before": "式发证。不过我想提一下，系统上线后运维压力会比较大，建议至少增加两名专职运维人员来保障系统的稳定运行",
+      "after": " },\n    { start: 122, end: 140, speaker: '王建�?, "
+    },
+    {
+      "pos": 26372,
+      "before": "稳定运行�? },\n    { start: 122, end: 140, speaker: '王建",
+      "after": ", text: '嗯，信息化建设进度总体不错。运维人员的事情会后和人事科对接一下。接下来请陈科长"
+    },
+    {
+      "pos": 26428,
+      "before": "xt: '嗯，信息化建设进度总体不错。运维人员的事情会后和人事科对接一下。接下来请陈科长汇报财务情况",
+      "after": " },\n    { start: 142, end: 198, speaker: '陈秀�?, "
+    },
+    {
+      "pos": 26474,
+      "before": "财务情况�? },\n    { start: 142, end: 198, speaker: '陈秀",
+      "after": ", text: '好的。一季度我们的预算总额是三千两百万元，目前已执行两千三百零四万元，总体执行"
+    },
+    {
+      "pos": 26596,
+      "before": "费执行率只有百分之五十八，主要是采购环节流程较长导致的。建议对执行率低于百分之六十的科室进行重点督办",
+      "after": " },\n    { start: 200, end: 230, speaker: '王建�?, "
+    },
+    {
+      "pos": 26642,
+      "before": "重点督办�? },\n    { start: 200, end: 230, speaker: '王建",
+      "after": ", text: '预算执行要抓紧，特别是专项经费不能沉淀太多。陈科长会后拟一个督办方案。接下来请"
+    },
+    {
+      "pos": 26704,
+      "before": "算执行要抓紧，特别是专项经费不能沉淀太多。陈科长会后拟一个督办方案。接下来请赵科长汇报人事和培训情况",
+      "after": " },\n    { start: 232, end: 290, speaker: '赵丽�?, "
+    },
+    {
+      "pos": 26750,
+      "before": "培训情况�? },\n    { start: 232, end: 290, speaker: '赵丽",
+      "after": ", text: '各位领导好。人事科计划在二季度分三批组织全员业务能力提升培训。第一批四月中旬的"
+    },
+    {
+      "pos": 26877,
+      "before": "文写作培训；第三批六月份的跨部门业务交流。我们计划邀请两名外部讲师、四名内部讲师，培训总预算十八万元",
+      "after": " },\n    { start: 292, end: 330, speaker: '杨浩�?, "
+    },
+    {
+      "pos": 26923,
+      "before": "十八万元�? },\n    { start: 292, end: 330, speaker: '杨浩",
+      "after": ", text: '我补充一下会议室改造的方案。三楼第一会议室的智能化改造包括四个部分：无纸化会议"
+    },
+    {
+      "pos": 27026,
+      "before": "智能签到终端、高清录播设备和远程视频接入。初步预算大概四十五万元，改造工期约三周，建议五月份启动施工",
+      "after": " },\n    { start: 332, end: 365, speaker: '刘志�?, "
+    },
+    {
+      "pos": 27072,
+      "before": "启动施工�? },\n    { start: 332, end: 365, speaker: '刘志",
+      "after": ", text: '我提一个建议，关于跨部门协作的问题。目前几个涉及多科室的项目协调成本比较高，建"
+    },
+    {
+      "pos": 27161,
+      "before": "项目协调成本比较高，建议我们建立一个月度联席会议制度，设立跨部门项目协调员。可以先在信息化项目上试行",
+      "after": " },\n    { start: 367, end: 400, speaker: '王建�?, "
+    },
+    {
+      "pos": 27207,
+      "before": "目上试行�? },\n    { start: 367, end: 400, speaker: '王建",
+      "after": ", text: '大家的汇报和建议都很好。我总结一下今天的会议精神和工作部署�? },\n    "
+    },
+    {
+      "pos": 27247,
+      "before": "eaker: '王建�?, text: '大家的汇报和建议都很好。我总结一下今天的会议精神和工作部署",
+      "after": " },\n    { start: 402, end: 440, speaker: '王建�?, "
+    },
+    {
+      "pos": 27293,
+      "before": "工作部署�? },\n    { start: 402, end: 440, speaker: '王建",
+      "after": ", text: '第一，信息化二期项目继续加快推进，四月十五日前完成部署，纳入月度督办。第二，各"
+    },
+    {
+      "pos": 27383,
+      "before": "入月度督办。第二，各科室四月五日前提交二季度详细工作计划。第三，培训方案由人事科牵头，四月十日前定稿",
+      "after": " },\n    { start: 442, end: 475, speaker: '王建�?, "
+    },
+    {
+      "pos": 27429,
+      "before": "日前定稿�? },\n    { start: 442, end: 475, speaker: '王建",
+      "after": ", text: '第四，会议室改造方案请杨科长细化后报办公室。第五，协作机制优化由刘科长牵头起草"
+    },
+    {
+      "pos": 27518,
+      "before": "制优化由刘科长牵头起草管理办法。另外，预算督办方案请陈科长尽快落实。好，今天的会就开到这里，谢谢大家",
+      "after": " },\n    { start: 476, end: 480, speaker: '全体', t"
+    },
+    {
+      "pos": 27578,
+      "before": "{ start: 476, end: 480, speaker: '全体', text: '谢谢王局",
+      "after": " },\n  ],\n\n  todos: [\n    { id: 't1', title: '完成二"
+    },
+    {
+      "pos": 27637,
+      "before": ",\n\n  todos: [\n    { id: 't1', title: '完成二期信息化系统全面部",
+      "after": ", assignee_name: '张伟�?, priority: 'high', status"
+    },
+    {
+      "pos": 27659,
+      "before": ": 't1', title: '完成二期信息化系统全面部�?, assignee_name: '张伟",
+      "after": ", priority: 'high', status: 'in_progress', due_d"
+    },
+    {
+      "pos": 27801,
+      "before": "26-0328-001' },\n    { id: 't2', title: '提交二季度预算调整方",
+      "after": ", assignee_name: '陈秀�?, priority: 'high', status"
+    },
+    {
+      "pos": 27823,
+      "before": "id: 't2', title: '提交二季度预算调整方�?, assignee_name: '陈秀",
+      "after": ", priority: 'high', status: 'completed', due_dat"
+    },
+    {
+      "pos": 28000,
+      "before": "d: 't3', title: '制定全员业务能力培训计划', assignee_name: '赵丽",
+      "after": ", priority: 'medium', status: 'completed', due_d"
+    },
+    {
+      "pos": 28182,
+      "before": "'t4', title: '细化会议室智能化改造方案并报批', assignee_name: '杨浩",
+      "after": ", priority: 'medium', status: 'completed', due_d"
+    },
+    {
+      "pos": 28352,
+      "before": "26-0328-004' },\n    { id: 't5', title: '起草跨部门协作管理办",
+      "after": ", assignee_name: '刘志�?, priority: 'medium', stat"
+    },
+    {
+      "pos": 28374,
+      "before": "id: 't5', title: '起草跨部门协作管理办�?, assignee_name: '刘志",
+      "after": ", priority: 'medium', status: 'completed', due_d"
+    },
+    {
+      "pos": 28555,
+      "before": " 't6', title: '采购新一批办公设备并完成报批', assignee_name: '周婉",
+      "after": ", priority: 'low', status: 'overdue', due_date: "
+    },
+    {
+      "pos": 28849,
+      "before": "项目建设进度符合预期。建议二季度重点关注系统上线后的运维保障和预算执行进度督办，确保各项决议按期落实",
+      "after": ",\n\n  issues: [\n    { id: 'i1', content: '信息化专项经费"
+    },
+    {
+      "pos": 28904,
+      "before": "  issues: [\n    { id: 'i1', content: '信息化专项经费执行率偏低",
+      "after": "8%），采购环节流程较长', reporter_name: '陈秀�?, status: 'ad"
+    },
+    {
+      "pos": 28939,
+      "before": ": '信息化专项经费执行率偏低�?8%），采购环节流程较长', reporter_name: '陈秀",
+      "after": ", status: 'adopted_unresolved', response: '已协调采购"
+    },
+    {
+      "pos": 28998,
+      "before": "s: 'adopted_unresolved', response: '已协调采购部加快招标流程，预",
+      "after": "月底前完�? },\n    { id: 'i2', content: '系统上线后运维人员不足，"
+    },
+    {
+      "pos": 29004,
+      "before": "opted_unresolved', response: '已协调采购部加快招标流程，预�?月底前完",
+      "after": " },\n    { id: 'i2', content: '系统上线后运维人员不足，需增加2名专"
+    },
+    {
+      "pos": 29056,
+      "before": " },\n    { id: 'i2', content: '系统上线后运维人员不足，需增加2名专职运",
+      "after": ", reporter_name: '张伟�?, status: 'adopted_resolve"
+    },
+    {
+      "pos": 29078,
+      "before": "ntent: '系统上线后运维人员不足，需增加2名专职运�?, reporter_name: '张伟",
+      "after": ", status: 'adopted_resolved', response: '已完成招聘，2"
+    },
+    {
+      "pos": 29132,
+      "before": "status: 'adopted_resolved', response: '已完成招聘，2名运维人",
+      "after": "�?日到�? },\n    { id: 'i3', content: '会议室改造预算需进一步细"
+    },
+    {
+      "pos": 29134,
+      "before": "atus: 'adopted_resolved', response: '已完成招聘，2名运维人�?",
+      "after": "日到�? },\n    { id: 'i3', content: '会议室改造预算需进一步细化明"
+    },
+    {
+      "pos": 29138,
+      "before": ": 'adopted_resolved', response: '已完成招聘，2名运维人�?�?日到",
+      "after": " },\n    { id: 'i3', content: '会议室改造预算需进一步细化明确各项开"
+    },
+    {
+      "pos": 29188,
+      "before": "�? },\n    { id: 'i3', content: '会议室改造预算需进一步细化明确各项开",
+      "after": ", reporter_name: '杨浩�?, status: 'explained', res"
+    },
+    {
+      "pos": 29210,
+      "before": "content: '会议室改造预算需进一步细化明确各项开�?, reporter_name: '杨浩",
+      "after": ", status: 'explained', response: '已补充明细预算表，各项开支均"
+    },
+    {
+      "pos": 29262,
+      "before": ", status: 'explained', response: '已补充明细预算表，各项开支均有依",
+      "after": " },\n  ],\n}\n\n/* ═════════════════════════════════"
+    },
+    {
+      "pos": 29353,
+      "before": "══════════════════════════════════════════════════",
+      "after": "   响应式状�?   ════════════════════════════════════"
+    },
+    {
+      "pos": 29362,
+      "before": "═════════════════════════════════════════�?   响应式状",
+      "after": "   ═════════════════════════════════════════════"
+    },
+    {
+      "pos": 29441,
+      "before": "══════════════════════════════════════════════════",
+      "after": "*/\n\nconst loading = ref(false)\nconst archiveList"
+    },
+    {
+      "pos": 30547,
+      "before": "false)\nconst summaryEditText = ref('')\n// 会议记录关键点编",
+      "after": "const editingKpId = ref(null)\nconst kpEditForm ="
+    },
+    {
+      "pos": 31557,
+      "before": "sueStatusLabel(status) {\n  const map = { open: '待处",
+      "after": ", explained: '解释', adopted_unresolved: '采纳-未解�?,"
+    },
+    {
+      "pos": 31604,
+      "before": "'待处�?, explained: '解释', adopted_unresolved: '采纳-未解",
+      "after": ", adopted_resolved: '采纳-已解�?, resolved: '采纳-已解�?"
+    },
+    {
+      "pos": 31632,
+      "before": "ted_unresolved: '采纳-未解�?, adopted_resolved: '采纳-已解",
+      "after": ", resolved: '采纳-已解�? }\n  return map[status] || s"
+    },
+    {
+      "pos": 31652,
+      "before": "未解�?, adopted_resolved: '采纳-已解�?, resolved: '采纳-已解",
+      "after": " }\n  return map[status] || status\n}\nfunction arc"
+    },
+    {
+      "pos": 32822,
+      "before": "ssues[idx], ...updated }\n    ElMessage.success('已更",
+      "after": ")\n    issueReplyDialog.value = false\n  } catch ("
+    },
+    {
+      "pos": 33269,
+      "before": "us')\n    await ElMessageBox.confirm(\n      `确认删除会议",
+      "after": "{meetingTitle}」？删除后数据将无法恢复。`,\n      '删除会议',\n    "
+    },
+    {
+      "pos": 33836,
+      "before": " fullData.value = null\n    ElMessage.success('会议已删",
+      "after": ")\n    if (archiveList.value.length > 0) {\n      "
+    },
+    {
+      "pos": 34134,
+      "before": "══════════════════════════════════════════════════",
+      "after": "   列表 & 选择\n   ══════════════════════════════════"
+    },
+    {
+      "pos": 34224,
+      "before": "══════════════════════════════════════════════════",
+      "after": "*/\n\nasync function fetchList(page) {\n  if (page)"
+    },
+    {
+      "pos": 34824,
+      "before": "iew, res.overview)\n  } catch {\n    // API 不可用，列表保持",
+      "after": "  }\n  // 始终将示例数据置顶（若不存在则插入）\n  if (!archiveList.v"
+    },
+    {
+      "pos": 35171,
+      "before": "7 })\n    }\n  }\n  loading.value = false\n  // 自动选中第一",
+      "after": "  if (!cur.value && archiveList.value.length > 0"
+    },
+    {
+      "pos": 36190,
+      "before": "══════════════════════════════════════════════════",
+      "after": "   会议摘要内联编辑\n   ═════════════════════════════════"
+    },
+    {
+      "pos": 36281,
+      "before": "══════════════════════════════════════════════════",
+      "after": "*/\n\nfunction startEditSummary() {\n  summaryEditT"
+    },
+    {
+      "pos": 36555,
+      "before": "ingSummary.value = false\n  ElMessage.success('摘要已保",
+      "after": ")\n}\nfunction cancelEditSummary() {\n  editingSumm"
+    },
+    {
+      "pos": 36703,
+      "before": "══════════════════════════════════════════════════",
+      "after": "   会议记录关键点编�?   ════════════════════════════════"
+    },
+    {
+      "pos": 36716,
+      "before": "═════════════════════════════════════�?   会议记录关键点编",
+      "after": "   ═════════════════════════════════════════════"
+    },
+    {
+      "pos": 36795,
+      "before": "══════════════════════════════════════════════════",
+      "after": "*/\n\nfunction startEditKp(kp) {\n  editingKpId.val"
+    },
+    {
+      "pos": 37152,
+      "before": "editingKpId.value = null\n  ElMessage.success('记录已保",
+      "after": ")\n}\nfunction cancelEditKp() {\n  editingKpId.valu"
+    },
+    {
+      "pos": 37291,
+      "before": "══════════════════════════════════════════════════",
+      "after": "   会议摘要 & 导出\n   ════════════════════════════════"
+    },
+    {
+      "pos": 37383,
+      "before": "══════════════════════════════════════════════════",
+      "after": "*/\n\nasync function doGenerateSummary() {\n  gener"
+    },
+    {
+      "pos": 38647,
+      "before": "le}.xml`)\n    return\n  }\n  ElMessage.success(`正在导出",
+      "after": "${format.toUpperCase()} 格式...`)\n  if (format ==="
+    },
+    {
+      "pos": 38804,
+      "before": "\n      `时间: ${fmtDate(fullData.value.start_time)} ",
+      "after": "${fmtTime(fullData.value.end_time)}`,\n      `地点:"
+    },
+    {
+      "pos": 38893,
+      "before": "\n      `地点: ${fullData.value.location}`,\n      `参会",
+      "after": " ${fullData.value.participants.map(p => p.real_n"
+    },
+    {
+      "pos": 38954,
+      "before": "ta.value.participants.map(p => p.real_name).join('",
+      "after": ")}`,\n      '', '【会议摘要�?, fullData.value.summary "
+    },
+    {
+      "pos": 38977,
+      "before": "ap(p => p.real_name).join('�?)}`,\n      '', '【会议摘要",
+      "after": ", fullData.value.summary || '（暂无）',\n      '', '【"
+    },
+    {
+      "pos": 39031,
+      "before": "fullData.value.summary || '（暂无）',\n      '', '【转写记录",
+      "after": ",\n      ...fullData.value.transcripts.map(s => `"
+    },
+    {
+      "pos": 39117,
+      "before": "pts.map(s => `[${formatSec(s.start)}] ${s.speaker}",
+      "after": "{s.text}`),\n    ]\n    downloadText(lines.join('\\"
+    },
+    {
+      "pos": 39556,
+      "before": "══════════════════════════════════════════════════",
+      "after": "   音字对照：模拟播放器\n   ═══════════════════════════════"
+    },
+    {
+      "pos": 39649,
+      "before": "══════════════════════════════════════════════════",
+      "after": "*/\n\nfunction toggleAudioPlay() {\n  if (audioPlay"
+    },
+    {
+      "pos": 41094,
+      "before": "══════════════════════════════════════════════════",
+      "after": "   待办 / AI 提取 / 工作�?   ═════════════════════════"
+    },
+    {
+      "pos": 41114,
+      "before": "══════════════════════════════�?   待办 / AI 提取 / 工作",
+      "after": "   ═════════════════════════════════════════════"
+    },
+    {
+      "pos": 41193,
+      "before": "══════════════════════════════════════════════════",
+      "after": "*/\n\nasync function updateTodoStatus(todoId, stat"
+    },
+    {
+      "pos": 41412,
+      "before": "  recalcStats()\n  } catch { ElMessage.error('状态更新失",
+      "after": ") }\n}\nfunction recalcStats() {\n  if (!fullData.v"
+    },
+    {
+      "pos": 42134,
+      "before": " '协调运维人员入职手续', description: '为信息化系统上线后的运维保障招聘2名运维人",
+      "after": ", priority: 'high', due_days: 14, suggested_assi"
+    },
+    {
+      "pos": 42193,
+      "before": "ity: 'high', due_days: 14, suggested_assignee: '赵丽",
+      "after": ", _assignee_id: 'd6' },\n        { title: '信息化专项经"
+    },
+    {
+      "pos": 42249,
+      "before": "ssignee_id: 'd6' },\n        { title: '信息化专项经费加速执行方",
+      "after": ", description: '梳理采购流程瓶颈，加快招标进�?, priority: 'hig"
+    },
+    {
+      "pos": 42281,
+      "before": "tle: '信息化专项经费加速执行方�?, description: '梳理采购流程瓶颈，加快招标进",
+      "after": ", priority: 'high', due_days: 7, suggested_assig"
+    },
+    {
+      "pos": 42339,
+      "before": "rity: 'high', due_days: 7, suggested_assignee: '陈秀",
+      "after": ", _assignee_id: 'd4' },\n        { title: '会议室改造施"
+    },
+    {
+      "pos": 42393,
+      "before": "_assignee_id: 'd4' },\n        { title: '会议室改造施工时间协",
+      "after": ", description: '与物业协�?月施工计划，确保不影响日常会�?, priority"
+    },
+    {
+      "pos": 42415,
+      "before": "        { title: '会议室改造施工时间协�?, description: '与物业协",
+      "after": "月施工计划，确保不影响日常会�?, priority: 'medium', due_days: "
+    },
+    {
+      "pos": 42431,
+      "before": " '会议室改造施工时间协�?, description: '与物业协�?月施工计划，确保不影响日常会",
+      "after": ", priority: 'medium', due_days: 20, suggested_as"
+    },
+    {
+      "pos": 42492,
+      "before": "y: 'medium', due_days: 20, suggested_assignee: '周婉",
+      "after": ", _assignee_id: 'd8' },\n      ]\n    } else {\n   "
+    },
+    {
+      "pos": 44511,
+      "before": "a.value = res.data\n    }\n    ElMessage.success(`已添",
+      "after": "${toAdd.length} 项待办事项`)\n    aiTodoDialog.value ="
+    },
+    {
+      "pos": 45538,
+      "before": "lowDialog.value = false; ElMessage.success('工作流绑定成",
+      "after": ")\n  } catch { ElMessage.error('绑定失败') }\n  finall"
+    },
+    {
+      "pos": 45700,
+      "before": "══════════════════════════════════════════════════",
+      "after": "   手动新建待办\n   ═══════════════════════════════════"
+    },
+    {
+      "pos": 45789,
+      "before": "══════════════════════════════════════════════════",
+      "after": "*/\n\nconst manualTodoDialog = ref(false)\nconst sa"
+    },
+    {
+      "pos": 46092,
+      "before": "s = {\n  title: [{ required: true, message: '请输入事项描",
+      "after": ", trigger: 'blur' }],\n  assignee_id: [{ required"
+    },
+    {
+      "pos": 46165,
+      "before": "\n  assignee_id: [{ required: true, message: '请选择责任",
+      "after": ", trigger: 'change' }],\n}\n\nfunction openManualTo"
+    },
+    {
+      "pos": 47533,
+      "before": "lue = res.data\n    }\n    ElMessage.success('待办事项已创",
+      "after": ")\n    manualTodoDialog.value = false\n  } catch {"
+    },
+    {
+      "pos": 47735,
+      "before": "══════════════════════════════════════════════════",
+      "after": "   ECharts 饼图\n   ═══════════════════════════════"
+    },
+    {
+      "pos": 47828,
+      "before": "══════════════════════════════════════════════════",
+      "after": "*/\n\nfunction initPieChart(stats) {\n  if (!pieCha"
+    },
+    {
+      "pos": 48104,
+      "before": "s - stats.overdue\n  const data = [\n    { name: '已完",
+      "after": ", value: stats.completed, itemStyle: { color: '#"
+    },
+    {
+      "pos": 48182,
+      "before": "itemStyle: { color: '#67c23a' } },\n    { name: '进行",
+      "after": ", value: stats.in_progress, itemStyle: { color: "
+    },
+    {
+      "pos": 48338,
+      "before": "itemStyle: { color: '#f56c6c' } },\n    { name: '待处",
+      "after": ", value: Math.max(pending, 0), itemStyle: { colo"
+    },
+    {
+      "pos": 48692,
+      "before": "a8c4', fontSize: 12 } },\n    series: [{ name: '待办状",
+      "after": ", type: 'pie', radius: ['50%', '70%'], center: ["
+    },
+    {
+      "pos": 49217,
+      "before": "══════════════════════════════════════════════════",
+      "after": "   工具函数\n   ═════════════════════════════════════"
+    },
+    {
+      "pos": 49304,
+      "before": "══════════════════════════════════════════════════",
+      "after": "*/\n\nfunction sleep(ms) { return new Promise(r =>"
+    },
+    {
+      "pos": 49808,
+      "before": "'\n}\nfunction importanceLabel(v) { return { high: '",
+      "after": ", medium: '�?, low: '�? }[v] || v }\nfunction imp"
+    },
+    {
+      "pos": 49821,
+      "before": "importanceLabel(v) { return { high: '�?, medium: '",
+      "after": ", low: '�? }[v] || v }\nfunction importanceType(v"
+    },
+    {
+      "pos": 49831,
+      "before": "Label(v) { return { high: '�?, medium: '�?, low: '",
+      "after": " }[v] || v }\nfunction importanceType(v) { return"
+    },
+    {
+      "pos": 50006,
+      "before": " priorityLabel(v) { return { high: '高优', medium: '",
+      "after": ", low: '�? }[v] || v }\nfunction priorityType(v) "
+    },
+    {
+      "pos": 50016,
+      "before": "abel(v) { return { high: '高优', medium: '�?, low: '",
+      "after": " }[v] || v }\nfunction priorityType(v) { return {"
+    },
+    {
+      "pos": 50182,
+      "before": "unction todoStatusLabel(v) { return { pending: '待处",
+      "after": ", in_progress: '进行�?, completed: '已完�?, overdue:"
+    },
+    {
+      "pos": 50202,
+      "before": "bel(v) { return { pending: '待处�?, in_progress: '进行",
+      "after": ", completed: '已完�?, overdue: '已逾期' }[v] || v }\nf"
+    },
+    {
+      "pos": 50220,
+      "before": "pending: '待处�?, in_progress: '进行�?, completed: '已完",
+      "after": ", overdue: '已逾期' }[v] || v }\nfunction todoStatus"
+    },
+    {
+      "pos": 59519,
+      "before": "lign: right; flex-shrink: 0; }\n  }\n}\n\n/* ─── AI 对话",
+      "after": "─── */\n.ai-loading { display: flex; align-items:"
+    },
+    {
+      "pos": 60406,
+      "before": " }\n  .sg-assignee { flex-shrink: 0; }\n}\n\n/* ─── 响应",
+      "after": "─── */\n@media (max-width: 900px) {\n  .main-layou"
+    }
+  ]
+}

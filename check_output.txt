@@ -1,0 +1,123 @@
+=== MeetingDetail ===
+L3: '    <!-- 顶部标题�?-->'
+L28: '        <!-- 主操作按�?-->'
+L53: '          <el-icon><VideoPlay /></el-icon>开始会�?        </el-button>'
+L60: '          <el-icon><VideoPlay /></el-icon>进入会议�?        </el-button>'
+L76: '          <el-icon><VideoPlay /></el-icon>等待发起人准�?        </el-button>'
+L112: "            {{ meeting.location || '�? }}"
+L114: '          <el-descriptions-item label="开始时�?>'
+L116: "            {{ meeting.start_time ? dayjs(meeting.start_time).format('YYYY年MM月DD�?HH:mm') : '�? }}"
+L120: "            {{ meeting.end_time ? dayjs(meeting.end_time).format('HH:mm') : '�? }}"
+L128: '      <!-- 参会人员 �?名牌展示 -->'
+L153: '        <!-- 编辑模式：拖拽列�?-->'
+L155: '          <p class="edit-tip">拖拽卡片可调整排列顺�?/p>'
+L172: "                  {{ element.checked_in ? '�?已签�? : '未签�? }}"
+L178: '        <!-- 展示模式：名牌卡�?-->'
+L192: "                {{ p.checked_in ? '�?已签�? : '未签�? }}"
+L194: '              <el-button v-if="p.checked_in && p.signature_status === \'signed\'" link type="warning" size="small" @click.stop="hand'
+L207: '            <el-tag type="warning" size="small" effect="plain" style="margin-left:8px">准备�?/el-tag>'
+L211: '          会议准备阶段，管理员可在此手动标记参会人员签到状态�?        </p>'
+L223: "                {{ p.checked_in ? '�?已签�? : '未签�? }}"
+L286: '            <div class="pf-step-tag"><el-tag v-if="aiSummary" type="success" size="small">已完�?/el-tag><el-tag v-else type="info" s'
+L288: '          <div class="pf-arrow">�?/div>'
+L292: '              <div class="pf-step-title">提取关键信息与要�?/div>'
+L293: '              <div class="pf-step-desc">自动识别会议决议、行动项、关键结�?/div>'
+L298: '            <div class="pf-step-tag"><el-tag v-if="aiKeypoints.length" type="success" size="small">已完�?/el-tag><el-tag v-else type'
+L300: '          <div class="pf-arrow">�?/div>'
+L310: '            <div class="pf-step-tag"><el-tag type="info" size="small">待处�?/el-tag></div>'
+L312: '          <div class="pf-arrow">�?/div>'
+L317: '              <div class="pf-step-desc">相关人员电子签署，纪要正式生效归�?/div>'
+L319: '                <el-icon><Edit /></el-icon>待编写完�?              </el-button>'
+L321: '            <div class="pf-step-tag"><el-tag type="info" size="small">待处�?/el-tag></div>'
+L342: '            <span>关键信息与要�?/span>'
+L352: '            <el-tag :type="kp.importance === \'high\' ? \'danger\' : kp.importance === \'medium\' ? \'warning\' : \'info\'" size="small" eff'
+L369: '            <span class="tr-speaker">{{ t.speaker_name || \'未知\' }}�?/span>'
+L424: '        <div v-else class="preview-unsupported">暂不支持该格式在线预览，请下载查�?/div>'
+L509: "    ElMessage.success('排序已保�?)"
+L532: "  return map[meeting.value.meeting_type] || meeting.value.meeting_type || '�?"
+L537: '// 座位号映�?userId -> seatLabel'
+L553: "  const map = { pending: '待开�?, preparing: '准备�?, in_progress: '进行�?, finished: '已结�?, archived: '已归�? }"
+L688: "    ElMessage.error(e?.response?.data?.detail || '开始会议失�?)"
+L696: "    await ElMessageBox.confirm('确认结束本次会议？结束后可生成摘要、提取要点，再编写会议纪要�?, '结束会议', {"
+L707: "    ElMessage.success('会议已结束，请依次完成会后处理流�?)"
+L719: "    aiSummary.value = `本次会议�?${meeting.value.start_time ? dayjs(meeting.value.start_time).format('YYYY年MM月DD�?HH:mm') : '�?} 召开，共 "
+L733: "      { title: '会议决议事项', content: '各科室须按期提交工作计划，信息化项目纳入月度督办，培训方案由人事科牵头制定�?, importance: 'high' },"
+L734: "      { title: '重点工作部署', content: '二季度五项重点工作：信息化系统上线、预算中期调整、全员培训、会议室智能化改造、跨部门协作优化�?, importance: 'high' },"
+L735: "      { title: '待办行动�?, content: '各责任人须在规定时间节点前完成对应工作任务，超期将启动督办程序�?, importance: 'medium' },"
+L760: "      '当前尚有参会人员未完成审签，是否强制结束签署流程？强制完成后纳入占签记录将标注为「管理员强制完成」�?,"
+L772: "      ElMessage.success('审签流程已强制结束，纪要状态已更新为「已完成�?)"
+L775: "    ElMessageBox.confirm('确定要删除该会议吗？此操作不可恢复�?, '确认删除', {"
+L782: "      ElMessage.success('会议已删�?)"
+L1013: '/* 上半区：大名�?*/'
+
+=== RoomManagement ===
+L4: '      <h2>会议室管�?/h2>'
+L7: '    <!-- 座位布局编辑�?-->'
+L10: '        <span class="editor-title">{{ editingRoom.name }} �?座位布局编辑</span>'
+L13: '            �?撤销'
+L16: '            �?重做'
+L55: '            >大屏�?/div>'
+L105: '        <!-- 右侧：属性面�?-->'
+L109: '            <h4>大屏幕位�?/h4>'
+L115: '              <span>�?</span><el-input-number v-model="editorScreen.w" :min="20" size="small" />'
+L116: '              <span>�?</span><el-input-number v-model="editorScreen.h" :min="20" size="small" />'
+L124: '          <!-- 选中座位属�?-->'
+L126: '            <h4>座位属�?�?#{{ editorSeats[selectedIndex]?.id }}</h4>'
+L132: '                <el-input v-model="editorSeats[selectedIndex].label" placeholder="如：1�? />'
+L144: '                <el-button type="danger" size="small" @click="deleteSeat(selectedIndex)">删除此座�?/el-button>'
+L149: '          <!-- 选中桌子属�?-->'
+L151: '            <h4>桌子属�?/h4>'
+L154: '                <el-input v-model="editorTables[selectedIndex].label" placeholder="如：会议�? />'
+L162: '              <el-form-item label="�?>'
+L165: '              <el-form-item label="�?>'
+L172: '                <el-button type="danger" size="small" @click="deleteTable(selectedIndex)">删除此桌�?/el-button>'
+L179: '            <p class="prop-hint">点击画布中的座位或桌子查�?编辑属�?/p>'
+L180: '            <p class="prop-hint">拖拽可移动位�?/p>'
+L187: '            <h4>所有座�?({{ editorSeats.length }})</h4>'
+L197: '                <span class="seat-label">{{ s.label || s.id + \'�? }}</span>'
+L241: '// 编辑器数�?const editorWidth = ref(700)'
+L248: "// 选中状�?const selectedType = ref(null) // 'seat' | 'table' | 'screen'"
+L251: '// 拖拽状�?let dragging = false'
+L259: '// 缩放拖拽状�?let resizing = false'
+L417: "    ElMessage.error('加载会议室列表失�?)"
+L440: "    ElMessage.success('会议室创建成�?)"
+L452: '    await ElMessageBox.confirm(`确定删除会议�?"${room.name}"？`, \'确认删除\', { type: \'warning\' })'
+L456: "    ElMessage.success('已删�?)"
+L537: "    ElMessage.success('布局已保�?)"
+L687: '// ===== 键盘和生命周�?====='
+L701: '/* ===== 深蓝科技风主题变�?===== */'
+L757: '/* ===== 编辑�?===== */'
+L932: '/* ===== 属性面�?===== */'
+
+=== MeetingIssueReview ===
+L6: '      <div class="header-tip">纪要已签署，请逐条确认问题记录，完成后可批量归�?/div>'
+L10: '      <!-- 左侧：问题列�?-->'
+L12: '        <!-- 工具�?-->'
+L18: '          >全�?/el-checkbox>'
+L20: '            已�?{{ selectedIds.length }} / �?{{ issues.length }} �?'
+L25: '              active-text="需要审�?'
+L57: '            <!-- 勾�?+ 校对状�?-->'
+L70: "                {{ issue.proofread ? '已校�? : '未校�? }}"
+L72: '              <el-tag v-if="issue.archived" type="info" size="small" effect="plain">已归�?/el-tag>'
+L75: '            <!-- 内容�?-->'
+L86: '                  <el-button type="primary" size="small" @click="saveEdit(issue)">保存并确认校�?/el-button>'
+L107: '                <!-- 未校对：可修改一�?-->'
+L127: '                <!-- 已校对：只读，显示提�?-->'
+L129: '                  <el-icon><Lock /></el-icon> 已锁�?'
+L137: '      <!-- 右侧：统计面�?-->'
+L147: '            <span class="stats-label">已校�?/span>'
+L151: '            <span class="stats-label">未校�?/span>'
+L155: '            <span class="stats-label">已归�?/span>'
+L163: "              {{ requireSign ? '归档后将触发专家组长在会议端签字确认' : '归档后无需签字，直接完成归�? }}"
+L172: '            <el-tag type="success" size="small" effect="plain">已校�?/el-tag>'
+L176: '            <el-tag type="warning" size="small" effect="plain">未校�?/el-tag>'
+L177: '            <span>可修改一次内容，修改后自动锁�?/span>'
+L186: '        <p>即将�?<strong>{{ selectedIds.length }}</strong> 条问题记录进行归档�?/p>'
+L196: '          title="未启用审签：问题将直接归�?'
+L201: '        <p style="margin-top:12px;color:#8bb3d9;font-size:14px">归档后问题状态不可再次修改，请确认无误后继续�?/p>'
+L229: '// 选择状�?'
+L285: "    ElMessage.success('已标记为已校�?)"
+L292: "  const map = { open: '待处�?, explained: '解释', adopted_unresolved: '采纳-未解�?, adopted_resolved: '采纳-已解�?, adopted: '已采�? }"
+L293: "  return map[s] || s || '待处�?"
+L319: "    ElMessage.success(`已归�?${selectedIds.value.length || '选中'} 条问题记录`)"
+L338: '    // 为每条问题添�?proofread 字段（已采纳-已解决等视为已校对）'

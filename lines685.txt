@@ -1,0 +1,7 @@
+L685: '                  </button>\n'
+L686: '                  <button class="quick-btn" @click="quickSend(\'请生成一个简洁的议程，只包含核心环节\')">\n'
+L687: '                    <span class="quick-icon">�?/span>简洁议�?                  </button>\n'
+L688: '                </div>\n'
+L689: '\n'
+L690: '                <!-- 对话消息列表 -->\n'
+L691: '                <template v-for="(msg, i) in chatMessages" :key="i">\n'

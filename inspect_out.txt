@@ -1,0 +1,6 @@
+L683 hex around FFFD:
+  full: '                  <button class="quick-btn" @click="quickSend(\'请生成包含开场致辞、工作汇报、讨论环节、总结的详细议程)">\n'
+L687 hex around FFFD:
+  pos 45: 0063 006F 006E 0022 003E FFFD 003F 002F 0073 0070 0061 006E 003E
+  pos 56: 006E 003E 7B80 6D01 8BAE FFFD 003F 0020 0020 0020 0020 0020 0020
+  full: '                    <span class="quick-icon">�?/span>简洁议�?                  </button>\n'
