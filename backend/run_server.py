@@ -7,6 +7,10 @@ import os
 import webbrowser
 import threading
 
+for stream in (sys.stdout, sys.stderr):
+    if hasattr(stream, "reconfigure"):
+        stream.reconfigure(encoding="utf-8", errors="replace")
+
 # ── PyInstaller 冻结后的路径修正 ──
 if getattr(sys, 'frozen', False):
     # 打包后: exe 所在目录
@@ -19,6 +23,10 @@ else:
 
 # 将工作目录切到 exe 旁边，让 SQLite DB、uploads 落在同级
 os.chdir(BASE_DIR)
+
+# Portable mode should not inherit a non-boolean DEBUG value from the host.
+os.environ["DEBUG"] = "false"
+os.environ.setdefault("PYTHONIOENCODING", "utf-8")
 
 # 确保 uploads 目录存在
 os.makedirs("uploads", exist_ok=True)

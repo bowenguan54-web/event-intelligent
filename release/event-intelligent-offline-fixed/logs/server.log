@@ -1,0 +1,72 @@
+INFO:     Started server process [29084]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+ℹ️ 管理员账号已存在，跳过创建
+ℹ️ 外部演示人员已存在，跳过创建
+ℹ️ 5 个会议室已就绪，无需补充
+✅ 前端静态文件已挂载: E:\event-intelligent\release\event-intelligent-offline-fixed\app\_internal\frontend_dist
+========================================================
+   智能会议助手 v1.0.0  便携版
+   地址: http://127.0.0.1:8001
+   按 Ctrl+C 停止服务
+========================================================
+🌐 正在打开浏览器: http://127.0.0.1:8001
+INFO:     127.0.0.1:50583 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50584 - "GET /index-Cywy_bfc.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50583 - "GET /index-Uhjd68P1.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50583 - "GET /MainLayout-6HsD1lwn.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50584 - "GET /todo-BfsjnraM.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50585 - "GET /_plugin-vue_export-helper-DlAUqK2U.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50586 - "GET /el-tooltip-l0sNRNKZ.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50588 - "GET /el-overlay-BKLuON5C.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50587 - "GET /MainLayout-CQCeGpwD.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50583 - "GET /el-drawer-4RO73nWn.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50584 - "GET /el-tag-BEfECeMa.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50585 - "GET /el-empty-S7fQQ3B8.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50586 - "GET /el-button-DITZ5HsB.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50588 - "GET /el-popper-C8-vPSoj.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50584 - "GET /MeetingList-9o5mILEA.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50587 - "GET /el-dropdown-item-BeIfAqTO.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50583 - "GET /el-badge-CX4PkJZD.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50585 - "GET /el-input-xaztPnzw.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50586 - "GET /el-select-CK58rX4v.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50588 - "GET /el-pagination-CDeFZDGO.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50587 - "GET /el-card-BAyktVMS.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50584 - "GET /el-checkbox-CzNtyWdF.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50583 - "GET /el-table-column-CApPXkmp.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50585 - "GET /el-avatar-DOlF0Z_P.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50586 - "GET /el-radio-group-iy_biC8N.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50587 - "GET /el-radio-button-BDEDkXh7.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50588 - "GET /el-date-picker-CwXc3eov.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50583 - "GET /meeting-CAr5s5Bq.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50584 - "GET /MeetingList-ikKzPoVD.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50584 - "GET /background-Djv6JrHV.png HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50584 - "GET /api/todo/reminders/pending HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:50583 - "GET /api/meeting/list?page=1&page_size=12 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:50583 - "GET /api/meeting/list?page=1&page_size=12 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:50583 - "GET /vite.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50584 - "GET /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50584 - "GET /Login-O3s7Psor.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50583 - "GET /Login-DcU7tmc0.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50587 - "GET /el-form-item-BUYvSc9V.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50588 - "GET /el-tab-pane-C5lGmld3.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50588 - "GET /earth-bg.jpg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50602 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50602 - "GET /api/todo/reminders/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50603 - "GET /api/meeting/list?page=1&page_size=12 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50602 - "GET /api/meeting/list?page=1&page_size=12 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50602 - "GET /MeetingCreate-jHs2GE8g.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50603 - "GET /room-D4FBIXOp.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50606 - "GET /vuedraggable.umd-BjozKsyO.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50607 - "GET /MeetingCreate-miEHDr65.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50609 - "GET /el-progress-apgqz2By.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50608 - "GET /el-dialog-DdHdkgt4.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50606 - "GET /el-upload-Bit6Pm_l.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50603 - "GET /el-alert-B6UgayC7.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50607 - "GET /el-switch-DpR9-s4E.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50607 - "GET /api/auth/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50603 - "GET /api/room/public/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50607 - "GET /api/room/public/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50607 - "GET /api/auth/users HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50607 - "GET /api/meeting/list?page=1&page_size=12 HTTP/1.1" 200 OK

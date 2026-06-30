@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "main.py", line 472, in init_default_admin
+UnicodeEncodeError: 'gbk' codec can't encode character '\u2139' in position 0: illegal multibyte sequence
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "run_server.py", line 33, in <module>
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "main.py", line 635, in <module>
+  File "main.py", line 475, in init_default_admin
+UnicodeEncodeError: 'gbk' codec can't encode character '\u26a0' in position 0: illegal multibyte sequence
+[PYI-22756:ERROR] Failed to execute script 'run_server' due to unhandled exception!
